@@ -1,0 +1,35 @@
+.input {
+  width: 100%;
+  border: 1px solid var(--color-theme);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.03);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: left;
+  padding: 6px 0 6px 20px;
+
+  &:focus,
+  &:hover,
+  &:active {
+    border-color: var(--color-theme-active);
+    outline: none
+  }
+}
+
+.control {
+  width: 100%;
+}
+
+.control+.control {
+  margin-top: 20px;
+}
+
+
+::placeholder {
+  font-weight: 300;
+  font-size: 14px;
+  transition: $transition-duration;
+  color: rgba(124, 124, 124, 1);
+}

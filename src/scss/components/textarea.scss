@@ -1,0 +1,19 @@
+.textarea {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--background-default);
+  border: 1px solid var(--color-theme);
+  color: var(--color-text);
+  resize: none;
+  width: 100%;
+
+  &:focus,
+  &:hover,
+  &:active {
+    border-color: var(--color-theme-active);
+    outline: none
+  }
+}

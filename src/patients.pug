@@ -1,0 +1,102 @@
+extends pug/base
+
+prepend vars
+  - title = 'Patiënten'
+
+append vars
+  - html.classList.push('brand-2-theme')
+
+block content
+  .page-body
+    aside.page-aside
+      .page-nav
+        .page-nav__body
+          button.page-nav__title(data-collapse-target="page-nav")
+            span Op deze pagina
+            .page-nav__title-icon
+              +svg('chevron-down')
+          ul.page-nav__list(data-collapse-content="page-nav")
+            li.page-nav__item 
+              a(href="#1").page-nav__link
+                +svg('chevron-right')
+                span Uw eerste afspraak
+            li.page-nav__item 
+              a(href="#2").page-nav__link
+                +svg('chevron-right')
+                span Bezoekersinformatie
+            li.page-nav__item 
+              a(href="#3").page-nav__link
+                +svg('chevron-right')
+                span Rechten en plichten
+            li.page-nav__item 
+              a(href="#4").page-nav__link
+                +svg('chevron-right')
+                span Privacy en toestemming
+            li.page-nav__item 
+              a(href="#5").page-nav__link
+                +svg('chevron-right')
+                span Klachten en feedback
+            li.page-nav__item 
+              a(href="#6").page-nav__link
+                +svg('chevron-right')
+                span Snel naar
+    .page-content
+      .page-header.background-theme
+        h1 Patiënten
+        p Bij Sionsberg Netwerk Ziekenhuis staan ú en uw zorgvraag centraal. Wij bieden persoonlijke zorg met korte wachttijden, in een omgeving waar u zich welkom voelt. Op deze pagina vindt u praktische informatie die u helpt om uw bezoek goed voor te bereiden en antwoord geeft op veelgestelde vragen.
+        img.page-header__image(src="images/patients.jpg" alt="Patiënten." width="720" height="320")
+      .page-article
+        article.article
+          h3 Uw eerste afspraak
+          p Gaat u voor het eerst naar Sionsberg? Dan helpen we u graag op weg.Hier leest u wat u kunt verwachten en wat u meeneemt:
+
+          ul
+            li <b>Neem mee</b>: een geldig identiteitsbewijs, uw zorgverzekeringspas en een actuele lijst met medicijnen.
+            li <b>Meld u aan</b>: bij de balie in de centrale hal. Onze medewerkers wijzen u graag de weg.
+            li <b>Plan genoeg tijd in</b>: kom op tijd, zo verloopt uw afspraak rustig en zonder stress.
+
+          p Heeft u vragen vóór uw eerste afspraak? Neem gerust contact met ons op.
+          .article-files
+            a(href="#").file-link
+              +svg('download')
+              span 
+                span Download brochure
+                b Uw eerste afspraak
+
+          h3 Bezoekersinformatie
+          p Sionsberg is een ziekenhuis voor dagbehandelingen bij een polikliniek. U wordt bij ons geholpen en kunt dezelfde dag weer naar huis.
+          p Heeft u iemand die met u meekomt? Dan is dat geen probleem. Onze wachtruimtes zijn comfortabel en er is koffie en thee beschikbaar.
+          p Route en parkeermogelijkheden vindt u op de pagina <a href="#">Contact</a>.
+          .article-files
+            a(href="#").file-link
+              +svg('download')
+              span 
+                span Download brochure
+                b Bezoekersinformatie
+          h3 Rechten en plichten
+          p Als patiënt heeft u rechten, zoals het recht op duidelijke informatie en inzage in uw medisch dossier. Wij vragen u ook om rekening te houden met onze medewerkers en huisregels.
+          p Alles hierover leest u op de pagina <a href="#">Rechten en plichten</a>.
+
+          h3 Privacy en toestemming
+          p Uw medische gegevens zijn vertrouwelijk. We gaan hier zorgvuldig mee om en delen niets met derden zonder uw toestemming.
+          p Wilt u gegevens inzien, wijzigen of laten verwijderen?
+          p Dat kan via het <a href="#">aanvraagformulier medisch dossier</a>.
+
+          h3 Klachten en feedback
+          p Wij willen dat u zich gehoord en goed behandeld voelt. Heeft u tips, een klacht of juist een compliment? <a href="#">Laat het ons weten</a>. Uw feedback helpt ons de zorg steeds beter te maken.
+          
+          h3 Snel naar
+          p Hieronder vindt u directe links naar veelgebruikte informatie. Zo heeft u snel antwoord op uw vragen of vindt u meteen de juiste route.
+          .article-links
+            a(href="#").article-link
+              span Afspraak maken of wijzigen
+              +svg('chevron-right')
+            a(href="#").article-link
+              span Openingstijden en contact
+              +svg('chevron-right')
+            a(href="#").article-link
+              span Route en parkeren
+              +svg('chevron-right')
+            a(href="#").article-link
+              span Veelgestelde vragen
+              +svg('chevron-right')

@@ -1,0 +1,99 @@
+$h1-font-size: 26px;
+$h2-font-size: 26px;
+$h3-font-size: 20px;
+$h4-font-size: 15px;
+$h5-font-size: 10px;
+$h6-font-size: 8px;
+$p-font-size: 15px;
+$h1-font-size-desktop: 34px;
+$h2-font-size-tablet: 28px;
+$h2-font-size-desktop: 34px;
+$h3-font-size-desktop: 26px;
+$h4-font-size-desktop: 16px;
+$h5-font-size-desktop: 20px;
+$h6-font-size-desktop: 16px;
+$p-font-size-desktop: 16px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin-top: 0;
+  word-break: break-word;
+  color: inherit;
+}
+
+h1,
+.h1 {
+  font-size: $h1-font-size;
+  line-height: 44px;
+  font-weight: 400;
+  margin-bottom: 20px;
+
+  @include desktop {
+    font-size: $h1-font-size-desktop;
+  }
+}
+
+h2,
+.h2 {
+  font-size: $h2-font-size;
+
+  @include tablet {
+    font-size: $h2-font-size-tablet;
+  }
+
+  @include desktop {
+    font-size: $h2-font-size-desktop;
+  }
+}
+
+h3,
+.h3 {
+  font-size: $h3-font-size;
+  font-weight: 500;
+  line-height: 44px;
+
+  @include desktop {
+    font-size: $h3-font-size-desktop;
+  }
+}
+
+.h4 {
+  font-size: $h4-font-size;
+
+  @include desktop {
+    font-size: $h4-font-size-desktop;
+  }
+}
+
+.h5 {
+  font-size: $h5-font-size;
+
+  @include desktop {
+    font-size: $h5-font-size-desktop;
+  }
+}
+
+.h6 {
+  font-size: $h6-font-size;
+
+  @include desktop {
+    font-size: $h6-font-size-desktop;
+  }
+}
+
+p {
+  font-size: $p-font-size;
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 25px;
+
+  @include desktop {
+    font-size: $p-font-size-desktop;
+    line-height: 26px;
+  }
+}

@@ -1,0 +1,21 @@
+<svg viewBox="0 0 22.0332 22.0332" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.033203" height="22.033203" fill="none" customFrame="#000000">
+	<defs>
+		<filter id="pixso_custom_mask_type_alpha">
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
+		</filter>
+	</defs>
+	<mask id="mask_1" width="22.033201" height="22.033201" x="0.000000" y="0.000000" maskUnits="objectBoundingBox">
+		<g filter="url(#pixso_custom_mask_type_alpha)">
+			<circle id="Ellipse 3" cx="11.0166006" cy="11.0166006" r="11.0166006" fill="rgb(0,0,0)" transform="matrix(-1,-8.74228e-08,8.74228e-08,-1,22.0332,22.0332)" />
+			<circle id="Ellipse 3" cx="11.0166006" cy="11.0166006" r="10.5166006" stroke="rgb(0,0,0)" stroke-width="1" transform="matrix(-1,-8.74228e-08,8.74228e-08,-1,22.0332,22.0332)" />
+		</g>
+	</mask>
+	<rect id="Group 57" width="22.033203" height="22.033203" x="0.000000" y="0.000000" />
+	<circle id="Ellipse 2" cx="11.0166006" cy="11.0166006" r="11.0166006" fill="none" />
+	<circle id="Ellipse 2" cx="11.0166006" cy="11.0166006" r="10.0166006" stroke="currentColor" stroke-width="2" />
+	<g id="Mask group">
+		<g id="Group 55" mask="url(#mask_1)">
+			<rect id="Rectangle 50" width="11.030180" height="22.033201" x="0.000000" y="0.000000" fill="currentColor" transform="matrix(-1,-8.74228e-08,8.74228e-08,-1,11.0303,22.0332)" />
+		</g>
+	</g>
+</svg>

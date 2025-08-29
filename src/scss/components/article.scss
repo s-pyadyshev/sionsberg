@@ -1,0 +1,262 @@
+.article {
+  font-weight: 300;
+  font-size: 15px;
+
+  @include desktop {
+    font-size: 16px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+    color: var(--color-theme);
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 44px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+
+    @include tablet {
+      margin-bottom: 5px;
+    }
+
+    @include desktop {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+  }
+
+  h4 {
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  b,
+  strong {
+    font-weight: 500;
+  }
+
+  ul,
+  ol {
+    padding-left: 25px;
+    line-height: 25px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+
+  q,
+  .note {
+    display: inline-block;
+    line-height: 25px;
+    border-left: 2px solid var(--color-theme);
+    padding-left: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    b,
+    strong {
+      color: var(--color-theme);
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  a {
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-theme);
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  a.button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 15px;
+    padding: 12px 25px;
+    background-color: var(--color-theme);
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  img {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    @include desktop {
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.article-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style-type: none;
+  padding: 0 !important;
+  margin: 0 0 32px 0;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    margin-top: 30px;
+  }
+}
+
+.article-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  border-bottom: 1px solid var(--color-theme);
+  text-decoration: none;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    padding-top: 28px;
+    padding-bottom: 24px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: none !important;
+
+    >span {
+      color: var(--color-theme);
+    }
+
+    >svg:last-child {
+      transform: translateX(-12px);
+    }
+  }
+
+  >b {
+    width: 42%;
+    flex-shrink: 0;
+  }
+}
+
+.article-link span {
+  font-weight: 300;
+  color: var(--color-text);
+  transition: color 0.4s;
+}
+
+.article-link svg {
+  width: 37px;
+  height: 37px;
+  color: var(--color-theme);
+}
+
+.article-link svg:last-child {
+  width: 8px;
+  height: 12px;
+  margin-left: auto;
+  transition: transform 0.4s;
+}
+
+.article-link span:last-child {
+  margin-left: auto;
+  color: var(--color-theme);
+}
+
+.article-files {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-bottom: 32px;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px
+  }
+}
+
+.file-link {
+  display: flex;
+  padding: 21px 20px 17px;
+  border-radius: 10px;
+  gap: 19px;
+  line-height: 21px;
+  text-decoration: none;
+  background-color: var(--color-theme-light);
+
+  @include desktop {
+    line-height: 14px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: var(--color-theme);
+    text-decoration: none !important;
+    color: var(--color-white);
+
+    >span,
+    >span>b {
+      color: var(--color-white);
+    }
+  }
+
+  >span {
+    font-weight: 300;
+    display: block;
+    font-size: 15px;
+    color: var(--color-text);
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    >b {
+      display: block;
+      color: var(--color-theme);
+
+      @include desktop {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--color-theme);
+  }
+}

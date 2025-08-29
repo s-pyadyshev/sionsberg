@@ -1,0 +1,152 @@
+.card-news {
+    width: 100%;
+    height: 308px;
+    position: relative;
+
+    padding: 26px;
+
+    img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    @include tablet {
+        height: 182px;
+
+        img {
+            width: 182px;
+            height: 100%;
+        }
+    }
+
+    @include desktop {
+        width: 340px;
+        height: 380px;
+        padding: 0px;
+
+        img {
+            width: 100%;
+            height: 260px;
+        }
+    }
+}
+
+.card-news:hover {
+    cursor: pointer;
+
+    .card-news__inner {
+        height: 100%;
+    }
+
+    .card-news__btn {
+        width: 80%;
+        background-color: black;
+    }
+
+    @include desktop {
+        .card-news__inner {
+            height: 190px;
+        }
+    }
+}
+
+.card-news__inner {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+
+    border-radius: 20px;
+    padding: 28px;
+    background-color: rgb(94, 154, 214);
+
+    transition: all 0.3s ease;
+
+    .link {
+        svg {
+            color: var(--color-brand-2);
+        }
+
+        span::after {
+            background-color: var(--color-brand-2);
+        }
+    }
+
+    @include tablet {
+        padding: 60px 26px 26px 230px;
+    }
+
+    @include desktop {
+        width: 100%;
+        height: 145px;
+        bottom: 0px;
+        border-radius: 0px 20px 0px 20px;
+        padding: 25px 36px;
+        z-index: 5;
+    }
+}
+
+.card-news__btn {
+    position: absolute;
+    bottom: 20px;
+    right: 36px;
+    width: 40px;
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+
+    svg {
+        width: 40px;
+        height: 40px;
+        margin-left: auto;
+        margin-right: 0px;
+    }
+}
+
+.card-news__title {
+    width: 100%;
+    margin-top: 170px;
+    margin-bottom: 14px;
+
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+
+    color: var(--color-theme-black);
+
+    @include tablet {
+        margin-top: 0px;
+    }
+
+    @include desktop {
+        font-size: 20px;
+        width: 80%;
+        color: var(--color-white);
+    }
+}
+
+.card-news__subtitle {
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include desktop {
+        display: -webkit-box;
+    }
+}

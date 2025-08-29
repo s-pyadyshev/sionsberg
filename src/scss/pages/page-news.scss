@@ -1,0 +1,221 @@
+.page__news.page-body {
+  padding-bottom: 0px;
+}
+
+.page__news {
+  grid-template-columns: 1fr;
+  background: linear-gradient(180deg, rgba(113, 182, 205, 0) 10.9%, rgba(113, 182, 205, 0.1) 61.62%, rgba(113, 182, 205, 0.14) 100%);
+
+  @include tablet {
+    grid-template-columns: $container-padding-tablet auto auto $container-padding-tablet !important;
+  }
+
+  .page-content {
+    gap: 0px;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 81px;
+
+    @include tablet {
+      flex-direction: row;
+      margin-top: 140px;
+      margin-bottom: 87px;
+      gap: 35px;
+    }
+  }
+
+  .page-header {
+    margin-bottom: 0px;
+    padding: 0px;
+    width: 100%;
+
+    @include tablet {
+      width: 35%;
+      flex-shrink: 0;
+    }
+
+    p {
+      color: var(--color-theme-black);
+    }
+
+    h1 {
+      line-height: 32px;
+    }
+  }
+
+  .page-article {
+    margin-top: 57px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    @include tablet {
+      padding-right: 26px;
+      margin-top: 0px;
+    }
+
+    .page-article__pagination {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: fit-content;
+
+      @include tablet {
+        margin-right: 0px;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .page-aside {
+    display: none;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 860px 80px minmax(320px, 1fr) !important;
+
+    .page-content {
+      margin-top: 120px;
+      margin-bottom: 83px;
+      gap: 0px;
+      flex-direction: column;
+    }
+
+    .page-article {
+      margin-top: -220px;
+      padding-left: 130px;
+
+      .page-article__pagination {
+        margin-left: auto;
+      }
+    }
+
+    .page-aside {
+      display: block;
+    }
+
+    .page-header {
+      margin-bottom: 0px;
+      padding: 65px 60px 287px 160px;
+      width: fit-content;
+
+      p {
+        color: var(--color-theme-black);
+      }
+
+      h1 {
+        line-height: 44px;
+      }
+    }
+  }
+}
+
+.page-article__news {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 40px;
+}
+
+.page-article__news .card-news:nth-child(4n + 2),
+.page-article__news .card-news:nth-child(4n + 3) {
+  .card-news__inner {
+    background-color: rgba(var(--color-brand-2-rgb), 0.12);
+  }
+
+  .card-news__btn {
+    background-color: var(--color-brand-1-hover);
+
+    svg {
+      color: var(--color-brand-1-hover);
+    }
+  }
+
+  @include desktop {
+    .card-news__inner {
+      background-color: var(--color-brand-1);
+    }
+  }
+}
+
+.page-article__news .card-news:nth-child(4n + 1),
+.page-article__news .card-news:nth-child(4n + 4) {
+  .card-news__inner {
+    background-color: rgba(var(--color-brand-2-rgb), 0.12);
+  }
+
+  .card-news__btn {
+    background-color: var(--color-brand-2-active);
+
+    svg {
+      color: var(--color-brand-2-active);
+    }
+  }
+
+  @include desktop {
+    .card-news__inner {
+      background-color: var(--color-brand-2);
+    }
+  }
+}
+
+.page__news {
+  .page-nav {
+    background-color: transparent;
+    border-left: 0px;
+    box-shadow: none;
+    margin-left: 40px;
+    margin-right: 10px;
+
+    font-size: 20px;
+  }
+
+  .page-nav__title {
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 17px;
+
+    span {
+      padding: 0px;
+    }
+  }
+
+  .page-nav__list {
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 330px;
+    justify-content: space-between;
+  }
+
+  .page-nav__item {
+    background-color: var(--color-white);
+    border-radius: 15px;
+    padding: 17px 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.089);
+  }
+
+  .page-nav__item:hover {
+    cursor: pointer;
+    background-color: var(--color-brand-2);
+    color: var(--color-white);
+
+    .page-nav__link>span {
+      color: var(--color-white);
+    }
+  }
+
+  .page-nav__link>span {
+    border-bottom: 0px;
+  }
+
+  .page-nav__link:hover>span,
+  .page-nav__link:focus>span {
+    border-bottom: 0px;
+  }
+}

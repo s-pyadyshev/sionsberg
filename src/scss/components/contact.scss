@@ -1,0 +1,97 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  row-gap: 30px;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 520px 1fr;
+    row-gap: 0;
+    column-gap: 60px;
+  }
+
+  article {
+    @include desktop {
+      padding-right: 45px;
+    }
+  }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 500;
+
+    @include desktop {
+      font-size: 26px;
+      line-height: 44px;
+      letter-spacing: 0;
+      text-align: left;
+      color: var(--color-theme);
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.contact__link a {
+  color: $color-black;
+  font-weight: 300;
+}
+
+.contact__numbers {
+  margin-bottom: 40px;
+
+  @include tablet {
+    width: 90%;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
+
+  [data-collapse-content] {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-default);
+    box-shadow: 0 20px 17px rgba(34, 60, 80, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+
+.contact__link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact__link a {
+  text-decoration: none;
+}
+
+.contact__link a span {
+  color: var(--color-theme);
+}
+
+.contact__bottom h3 {
+  margin-top: 0;
+}
+
+.contact__bottom p {
+  margin-bottom: 25px;
+}
+
+.contact__bottom a {
+  text-decoration: underline;
+}
+
+.contact .contact__form h3 {
+  color: var(--color-theme);
+  font-size: 22px;
+  margin-bottom: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: left;
+}

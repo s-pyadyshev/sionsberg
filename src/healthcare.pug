@@ -1,0 +1,147 @@
+extends pug/base
+
+prepend vars
+  - title = 'Zorgaanbod'
+
+append vars
+  - html.classList.push('brand-3-theme')
+
+block content
+  .page-body
+    aside.page-aside
+      .page-nav
+        .page-nav__body
+          button.page-nav__title(data-collapse-target="page-nav")
+            span Op deze pagina
+            .page-nav__title-icon
+              +svg('chevron-down')
+          ul.page-nav__list(data-collapse-content="page-nav")
+            li.page-nav__item 
+              a(href="#specialismen").page-nav__link
+                +svg('chevron-right')
+                span Specialismen
+            li.page-nav__item 
+              a(href="#aanvraagformulier").page-nav__link
+                +svg('chevron-right')
+                span Aanvraagformulier
+            li.page-nav__item 
+              a(href="#downloads").page-nav__link
+                +svg('chevron-right')
+                span Downloads
+            li.page-nav__item 
+              a(href="#snelnaar").page-nav__link
+                +svg('chevron-right')
+                span Snel naar
+    .page-content
+      .page-header.background-theme
+        h1 Zorgaanbod
+        p Bij Sionsberg Netwerk Ziekenhuis vindt u zorg dicht bij huis. Wij bieden laagcomplexe zorg binnen verschillende specialismen. Onze wachttijden zijn kort en u krijgt altijd persoonlijke aandacht. Hieronder vindt u een overzicht en handige informatie om uw bezoek zo soepel mogelijk te maken.
+        img.page-header__image(src="images/zorgaanbod.jpg" alt="zorgaanbod." width="720" height="320")
+      .page-article
+        article.article
+          #specialismen
+          h3 Specialismen
+          p Klik op een specialisme voor meer informatie over behandelingen, onze specialisten en contactgegevens.
+
+          ul.article-links
+            li 
+              a(href="#").article-link
+                +svg('surgery')
+                span Chirurgie
+                +svg('chevron-right')
+            li 
+              a(href="#").article-link
+                +svg('colon')
+                span Interne geneeskunde
+                +svg('chevron-right')
+            li 
+              a(href="#").article-link
+                +svg('lungs')
+                span Longgeneeskunde
+                +svg('chevron-right')
+            li 
+              a(href="#").article-link
+                +svg('brain')
+                span Neurologie
+                +svg('chevron-right')
+            li 
+              a(href="#").article-link
+                +svg('skin-cancer')
+                span Dermatologie
+                +svg('chevron-right')
+            li 
+              a(href="#").article-link
+                +svg('joints')
+                span Orthopedie
+                +svg('chevron-right')
+            li 
+              a(href="#").article-link
+                +svg('ambulance')
+                span Spoedkliniek
+                +svg('chevron-right')
+            li 
+              a(href="#").article-link
+                +svg('gynecology')
+                span Gynaecologie
+                +svg('chevron-right')
+            li 
+              a(href="#").article-link
+                +svg('ear-nose-throat')
+                span KNO (keel, neus, oren)
+                +svg('chevron-right')
+            li 
+              a(href="#").article-link
+                +svg('urology')
+                span Urologie
+                +svg('chevron-right')
+          #aanvraagformulier
+          h3 Aanvraagformulier medisch dossier
+          p U heeft altijd recht op inzage in uw eigen medisch dossier. Via ons aanvraagformulier kunt u:
+
+          ul
+            li een <b>kopie van uw dossier opvragen</b>, bijvoorbeeld voor uw eigen administratie of om mee te nemen naar een andere zorgverlener;
+            li <b>inzage vragen</b> in uw gegevens;
+            li in sommige gevallen <b>wijziging of vernietiging</b> van bepaalde gegevens aanvragen;
+            li <b>toestemming geven</b> om uw gegevens te delen met iemand anders.
+
+          h4 Hoe werkt het?
+          p Download het formulier hieronder en vul het volledig in. Voeg een veilige kopie van uw identiteitsbewijs toe en stuur beide naar ons terug per post of per e‑mail. Zodra wij uw aanvraag hebben ontvangen, houden we u op de hoogte van de voortgang.
+
+          q.note <b>Let op</b>: Uw gegevens zijn vertrouwelijk. Wij gaan hier altijd zorgvuldig mee om en volgen de wettelijke regels voor privacy en bewaartermijn.
+          a(href="#").button Aanvraagformulier downloaden
+          p Heeft u vragen of hulp nodig bij het invullen? Neem gerust contact met ons op. We helpen u graag verder.
+          #downloads
+          h3 Downloads
+          p Hier vindt u belangrijke informatie die u kunt downloaden en meenemen:
+          .article-files
+            a(href="#").file-link
+              +svg('download')
+              span 
+                span Download brochure
+                b Bezoekersinformatie
+            a(href="#").file-link
+              +svg('download')
+              span 
+                span Download brochure
+                b Uw eerste afspraak
+            a(href="#").file-link
+              +svg('download')
+              span 
+                span Download brochure
+                b Rechten van de patiënt
+          #snelnaar
+          h3 Snel naar
+          p Hieronder vindt u directe links naar veelgebruikte informatie. Zo heeft u snel antwoord op uw vragen of vindt u meteen de juiste route.
+          .article-links
+            a(href="#").article-link
+              span Afspraak maken of wijzigen
+              +svg('chevron-right')
+            a(href="#").article-link
+              span Openingstijden en contact
+              +svg('chevron-right')
+            a(href="#").article-link
+              span Route en parkeren
+              +svg('chevron-right')
+            a(href="#").article-link
+              span Veelgestelde vragen
+              +svg('chevron-right')

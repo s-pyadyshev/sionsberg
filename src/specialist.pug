@@ -1,0 +1,36 @@
+extends pug/base
+
+prepend vars
+  - title = 'Specialist'
+
+append vars
+  - html.classList.push('brand-3-theme')
+
+block content
+  section 
+    .container
+        .specilist
+            .specilist__card
+                .specilist__card-info
+                    .specialist__card_info-wrapper
+                        h3 Dhr. J.M. van Duijnen
+                        .specialist__details
+                            .specialist__details-item
+                                h4 Functie:
+                                p Longarts
+                            .specialist__details-item
+                                h4 Aandachtsgebieden:
+                                p COPD, astma, longfunctieonderzoek, begeleiding bij dagbehandelingen
+                            .specialist__details-item
+                                h4 BIG-registratie: 
+                                p 12345678901
+                    img(src="images/specialist.png" alt="specialist." width="340" height="360").specialist__img 
+            .specilist__info
+                .specilist__quote
+                    blockquote "Goede zorg begint met luisteren. Pas als we weten wat u bezighoudt, kunnen we samen kiezen voor de beste aanpak. Mijn doel is dat u zich op uw gemak voelt en met vertrouwen onze poli verlaat." 
+                .specilist__about.article
+                    h3 Over dhr. Van Duijnen
+                    p Dhr. J.M. van Duijnen is gespecialiseerd in longziekten en werkt al ruim tien jaar in de regio. Hij begeleidt patiënten met uiteenlopende longproblemen en vindt het belangrijk dat iedere patiënt precies begrijpt wat er gebeurt en waarom een behandeling wordt ingezet.
+                    a(href="#").article-link
+                        span Terug naar Longgeneeskunde
+                        +svg('chevron-right')

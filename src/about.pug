@@ -1,0 +1,94 @@
+extends pug/base
+
+prepend vars
+  - title = 'Over ons'
+
+append vars
+  - html.classList.push('brand-1-theme')
+
+block content
+  .page-body
+    aside.page-aside
+      .page-nav
+        .page-nav__body
+          button.page-nav__title(data-collapse-target="page-nav")
+            span Op deze pagina
+            .page-nav__title-icon
+              +svg('chevron-down')
+          ul.page-nav__list(data-collapse-content="page-nav")
+            li.page-nav__item 
+              a(href="#1").page-nav__link
+                +svg('chevron-right')
+                span Verwijzen naar Sionsberg
+            li.page-nav__item 
+              a(href="#2").page-nav__link
+                +svg('chevron-right')
+                span Sneller doorverwijzen via Zorgdomein
+            li.page-nav__item 
+              a(href="#3").page-nav__link
+                +svg('chevron-right')
+                span Huisartsen nieuwsbrief
+            li.page-nav__item 
+              a(href="#4").page-nav__link
+                +svg('chevron-right')
+                span Contact voor verwijzers
+
+    .page-content
+      .page-header.background-theme
+        h1 Over ons
+        p Sionsberg Netwerk Ziekenhuis is een kleinschalig ziekenhuis voor poliklinische zorg en dagbehandelingen. Bij ons krijgt u snel de juiste hulp, met persoonlijke aandacht en korte lijnen met andere zorgverleners in de regio. We werken samen met specialisten uit verschillende ziekenhuizen en bieden zo de beste zorg, dichtbij huis.
+        img.page-header__image(src="images/about.jpg" alt="Over ons." width="720" height="320")
+      .page-article
+        article.article
+          h3 Wie we zijn
+          p Wij zijn een netwerkziekenhuis in Dokkum. Dat betekent dat u bij ons terechtkunt voor onderzoeken, consulten en dagbehandelingen.
+
+          p Voor operaties waarbij een overnachting nodig is, verwijzen we door naar één van onze partnerziekenhuizen. Het voor- en natraject blijft gewoon bij ons, onder begeleiding van uw eigen specialist.
+
+          p Onze kernwaarden:
+          ul
+            li Samen: we werken met u én met elkaar aan de beste zorg.
+            li Dichtbij: persoonlijke zorg in de regio, zonder onnodig reizen.
+            li Met lef: we vernieuwen en verbeteren continu.
+          h3 Organisatiestructuur
+          p Sionsberg Netwerk Ziekenhuis is een stichting met een Raad van Bestuur en een Raad van Toezicht.
+          .article-links
+            div
+              b Raad van Bestuur
+              ul 
+                li M.R. Mac Gillavry – Voorzitter
+                li M.M. Bunt – Lid
+                li R.I. Talstra – Lid
+            div
+              b Raad van Toezicht
+              ul
+                li R.A. Macnack – Voorzitter
+                li S.M. Ensel-Boonstra – Lid
+                li M. van der Sluis – Lid
+          h3 Vacatures
+          p Werken bij Sionsberg? Bekijk onze openstaande functies.
+          a(href="#").button  Bekijk onze vacatures
+
+          h3 Meer onderwerpen
+          p Wilt u snel naar specifieke onderwerpen? Via de links hieronder vindt u praktische informatie en handige diensten:
+
+          a(href="#").article-link
+            b Wachttijden
+            span Bekijk hoe snel u bij ons terechtkunt
+            +svg('chevron-right')
+          a(href="#").article-link
+            b Vergoedingen en passantentarieven
+            span Alles over kosten en dekking
+            +svg('chevron-right')
+          a(href="#").article-link
+            b Registratie oncologische gegevens
+            span Hoe wij gegevens zorgvuldig vastleggen
+            +svg('chevron-right')
+          a(href="#").article-link
+            b Kwaliteit en veiligheid
+            span Zo zorgen wij voor verantwoorde zorg
+            +svg('chevron-right')
+          a(href="#").article-link
+            b MijnDossier
+            span Online inzicht in uw medische gegevens
+            +svg('chevron-right')

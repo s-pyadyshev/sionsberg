@@ -1,0 +1,50 @@
+address {
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.6;
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  @include desktop {
+    margin-top: 45px;
+    margin-bottom: 55px;
+  }
+
+  a {
+    display: flex;
+    font-weight: 300;
+    color: var(--color-text);
+    text-decoration: none;
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: none;
+
+      b {
+        text-decoration: none;
+      }
+    }
+
+    >b {
+      text-decoration: underline;
+    }
+
+    >span {
+      &:first-child {
+        min-width: 85px;
+      }
+    }
+
+  }
+
+  b {
+    font-weight: 500;
+    color: var(--color-theme);
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

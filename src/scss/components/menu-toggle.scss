@@ -1,0 +1,136 @@
+.menu-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  width: inherit;
+  height: inherit;
+  padding: 0;
+  background: none;
+  border: 0;
+  width: 40px;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  .menu-active & {
+    z-index: 10;
+    position: relative;
+    display: flex;
+  }
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+
+  &:focus,
+  &:active {
+    .menu-icon__line:nth-child(3) {
+      width: 21px;
+    }
+  }
+}
+
+.menu-toggle:not(.active) .menu-icon {
+  height: 40px;
+}
+
+.menu-icon .menu-icon__line {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: $color-brand-1;
+  border-radius: 50px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-icon .menu-icon__line:nth-child(1) {
+  top: 0;
+  width: 31px;
+  right: 0;
+  left: 0;
+  margin-inline: auto;
+}
+
+.menu-icon .menu-icon__line:nth-child(2) {
+  top: 13px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: 26px;
+}
+
+.menu-icon .menu-icon__line:nth-child(3) {
+  top: 26px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: 40px;
+}
+
+.menu-toggle.active {
+  top: 28px;
+  right: 40px;
+
+  @include tablet {
+    right: 0;
+  }
+}
+
+.menu-toggle.active .menu-icon__line:nth-child(1) {
+  top: 20px;
+  transform: rotate(135deg);
+}
+
+.menu-toggle.active .menu-icon__line:nth-child(2) {
+  display: none;
+  opacity: 0;
+}
+
+.menu-toggle.active .menu-icon__line:nth-child(3) {
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  transform: rotate(-135deg);
+  width: 31px;
+}
+
+.menu-toggle>.menu-toggle__text {
+  display: block;
+}
+
+.menu-toggle>.menu-toggle__text+.menu-toggle__text {
+  display: none;
+}
+
+.menu-toggle.active>.menu-toggle__text {
+  display: none;
+}
+
+.menu-toggle.active>.menu-toggle__text+.menu-toggle__text {
+  display: block;
+}
+
+.menu-toggle__text {
+  color: $color-black;
+  display: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.menu-toggle__text-active {
+  display: block;
+}

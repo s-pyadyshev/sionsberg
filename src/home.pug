@@ -1,0 +1,178 @@
+extends pug/base
+
+prepend vars
+  - title = 'Homepage'
+
+block content
+  //- section 
+  //-   .container.background-default
+  //-     h1 Homepage
+  section.homepage__hero
+    .hero__img
+      img(src="images/sprites/png/homepage-content-1.png" alt="Dichtbij, betrokken, samen.")
+    .container
+      .hero__text
+        .hero__text-title 
+          h1
+            | Dichtbij, betrokken, 
+            br
+            span samen.
+          a(href="#").link.visible-tablet
+            span Meer over ons
+            +svg('chevron-right')
+        p.hero__text-subtitle Bij ons draait alles om samenwerken. Met u, met collega’s, met andere zorgverleners. Zo zorgen we samen voor snellere, betere én betaalbare zorg. En we blijven vernieuwen – in behandelingen, in preventie en in hoe we technologie inzetten. Altijd dichtbij, altijd met aandacht. Want goede zorg begint met écht contact.
+        a(href="#").hidden-tablet
+            span Meer over ons
+            +svg('chevron-right')
+    .container
+      .hero__nav
+        .hero__nav-search
+          .nav__item-title
+            span 
+              | Waarmee kunnen 
+              br
+              | we u helpen?
+            .nav__title-search 
+              input(type="text", placeholder="Zoeken op de website...", id="search")
+              button
+                +svg('search')
+          .nav__item-btn
+            +svg('arrow-right')
+        a(href="#").hero__nav-calendar
+          .nav__item-title
+            +svg('calendar')
+            span Toegangstijden
+          .nav__item-btn.visible-tablet
+            +svg('arrow-right')
+        a(href="#").hero__nav-phone
+          .nav__item-title
+            +svg('phone')
+            span Afspraak maken
+          .nav__item-btn.visible-tablet
+            +svg('arrow-right')
+
+  section.section-specialties.bacground-default
+    .container
+      .specialties
+        img.specialties__icon(src="images/letter-s.svg", alt="letter S." width="60" height="78")
+
+        .specialties__title
+          h2 Onze specialismen
+          a(href="#").link.visible-tablet
+            span Ons zorgaanbod 
+            +svg('chevron-right')
+
+        ul.specialties-list
+          li.specialties-item 
+            a(href="#").specialties-link
+              span Chirurgie
+              .specialties-link__icon
+                +svg('surgery')
+          li.specialties-item 
+            a(href="#").specialties-link
+              span Interne Geneeskunde
+              .specialties-link__icon
+                +svg('colon')
+          li.specialties-item 
+            a(href="#").specialties-link
+              span Long-geneeskunde
+              .specialties-link__icon
+                +svg('lungs')
+          li.specialties-item 
+            a(href="#").specialties-link
+              span Neurologie
+              .specialties-link__icon
+                +svg('brain')
+          li.specialties-item 
+            a(href="#").specialties-link
+              span Dermatalogie
+              .specialties-link__icon
+                +svg('skin-cancer')
+          li.specialties-item 
+            a(href="#").specialties-link
+              span Orthopedie
+              .specialties-link__icon
+                +svg('joints')
+          li.specialties-item 
+            a(href="#").specialties-link
+              span Spoed-polikliniek
+              .specialties-link__icon
+                +svg('ambulance')
+          li.specialties-item 
+            a(href="#").specialties-link
+              span Gynaecologie
+              .specialties-link__icon
+                +svg('gynecology')
+          li.specialties-item 
+            a(href="#").specialties-link
+              span KNO (keel, neus, oren)
+              .specialties-link__icon
+                +svg('ear-nose-throat')
+          li.specialties-item 
+            a(href="#").specialties-link
+              span Urologie
+              .specialties-link__icon
+                +svg('urology')
+        
+        a(href="#").link.hidden-tablet
+            span Ons zorgaanbod 
+            +svg('chevron-right')
+
+  section.section-quote
+    .quote
+      .quote__text
+        blockquote
+          p “Ik kon hier zo snel terecht en merkte direct hoe betrokken iedereen is. Iedereen neemt echt de tijd voor je. Het gaf me meteen vertrouwen dat ik hier in goede handen ben.”
+        p Peter, patiënt bij Sionsberg
+      span
+    .container
+      .quote__img
+        img(src="images/sprites/png/quote-peter.png" alt="Peter, patiënt bij Sionsberg")
+
+  section.section-recommendation
+    .container
+      .recommendation__inner
+        .recommendation__card
+          img(src="images/sprites/png/recomm-1.png" alt="Verstopt, doof en moe?")
+          .recommendation__card-title
+            div
+              p 
+                | Verstopt, doof
+                br
+                | en moe?
+              p Bij onze KNO-afdeling kijken we verder dan de klacht.
+            +svg('arrow-right-square')
+        .recommendation__card
+          img(src="images/sprites/png/recomm-2.png" alt="Is een onregelmatig hartslag zorgelijk?")
+          .recommendation__card-title
+            div
+              p 
+                | Is een onregelmatig 
+                br
+                | hartslag zorgelijk?
+              p Bij hartritmestoornissen is snel duidelijkheid belangrijk.
+            +svg('arrow-right-square')
+        .recommendation__card-heart
+          .recommendation__back
+          .recommendation__heart
+            .recommendation__icon-title
+              img(src="images/logo-zorgkaart-nederland.svg" alt="logo")
+              span 9,2
+              +svg('heart')
+            p Sionsberg Netwerk Ziekenhuis is 690 keer gewaardeerd en heeft een gemiddeld cijfer van 9.2.
+            .recommendation__heart-footer
+              .recommendation__footer-link
+                a(href="#").link
+                  span Bekijk alle waarderingen
+                  +svg('chevron-right')
+                a(href="#").link
+                  span Plaats een waardering
+                  +svg('chevron-right')
+              +svg('heart').heart
+    .recommendation__text
+      .recommendation__text-title
+        h2 Uitgelicht
+        p Soms wilt u gewoon even weten hoe iets zit. In deze artikelen leggen we veelvoorkomende klachten, behandelingen en onderzoeken helder uit – voor wie graag goed geïnformeerd is.
+      a(href="#").link
+        span Meer artikelen
+        +svg('chevron-right')

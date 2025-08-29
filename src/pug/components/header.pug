@@ -1,0 +1,142 @@
+header.header
+    .container
+        .header__inner
+            a(href="/").header__logo
+                img(src="images/logo.svg" alt="logo")
+            button.header__menu-toggle.visible-desktop(data-collapse-target="zorgaanbod")
+                span Zorgaanbod
+                .header__item-icon
+                    +svg('chevron-down')
+            button.header__menu-toggle.visible-desktop(data-collapse-target="patiënten")
+                span Patiënten
+                .header__item-icon
+                    +svg('chevron-down')
+            button.header__menu-toggle.visible-desktop(data-collapse-target="verwijzers")
+                span Verwijzers
+                .header__item-icon
+                    +svg('chevron-down')
+            button.header__menu-toggle.visible-desktop(data-collapse-target="overons")
+                span Over ons
+                .header__item-icon
+                    +svg('chevron-down')
+            button.header__menu-toggle.hidden-desktop(data-collapse-target="menu")
+                .header__toggle-text Menu
+                .header__toggle-icon
+                    span
+                    span
+                    span
+            a.header__button-contact.visible-tablet Contact
+            label.header__button-theme.visible-desktop
+                input(type="checkbox" id="theme-toggle")
+                span.theme-indicator
+        .header__menu(data-collapse-content="menu")
+            .header__menu-nav.hidden-desktop
+                button.header__nav-toggle(data-collapse-target="zorgaanbod" data-open-delay="350")
+                    span Zorgaanbod
+                    .header__nav-icon
+                        +svg('chevron-down')
+                button.header__nav-toggle(data-collapse-target="patiënten" data-open-delay="350")
+                    span Patiënten
+                    .header__nav-icon
+                        +svg('chevron-down')
+                button.header__nav-toggle(data-collapse-target="verwijzers" data-open-delay="350")
+                    span Verwijzers
+                    .header__nav-icon
+                        +svg('chevron-down')
+                button.header__nav-toggle(data-collapse-target="overons" data-open-delay="350")
+                    span Over ons
+                    .header__nav-icon
+                        +svg('chevron-down')
+            .header__menu-content
+                .header__nav-content(data-collapse-content="zorgaanbod")
+                    span Zorgaanbod
+                    button.header__item-toggle(data-collapse-target="zorgaanbod2").hidden-desktop
+                        span Specialismen
+                        .header__item-icon
+                            +svg('chevron-down')
+                    .header__item-content(data-collapse-content="zorgaanbod2")
+                        .header__item
+                            +svg('surgery')
+                            | Chirurgie
+                        .header__item
+                            +svg('skin-cancer')
+                            | Dermato&shy;logie
+                        .header__item
+                            +svg('lungs')
+                            | Long&shy;geneeskunde
+                        .header__item
+                            +svg('gynecology')
+                            | Gynaeco&shy;logie
+                        .header__item
+                            +svg('brain')
+                            | Neurologie
+                        .header__item
+                            +svg('joints')
+                            | Orthopedie
+                        .header__item
+                            +svg('colon')
+                            | Interne Geneeskunde
+                        .header__item
+                            +svg('ambulance')
+                            | Spoedpoli&shy;kliniek
+                        .header__item
+                            +svg('ear-nose-throat')
+                            | KNO (keel, neus oor)
+                        .header__item
+                            +svg('urology')
+                            | Urologie
+                .header__nav-content(data-collapse-content="patiënten")
+                    span Patiënten
+                    button.header__item-toggle(data-collapse-target="patiënten2").hidden-desktop
+                        span Onderwerpen
+                        .header__item-icon
+                            +svg('chevron-down')
+                    .header__item-content(data-collapse-content="patiënten2")
+                        .header__item
+                            +svg('calendar')
+                            | Toegangstijden
+                        .header__item
+                            +svg('coins')
+                            | Vergoedingen & tarieven
+                        .header__item
+                            +svg('clinical-f')
+                            | Mijn gegevens
+                        .header__item
+                            +svg('question')
+                            | Veelgestelde vragen
+                .header__nav-content(data-collapse-content="verwijzers")
+                    span Verwijzers
+                    button.header__item-toggle(data-collapse-target="verwijzers2").hidden-desktop
+                        span Verwijzers
+                        .header__item-icon
+                            +svg('chevron-down')
+                    .header__item-content(data-collapse-content="verwijzers2")
+                        .header__item
+                            +svg('zorgdomein')
+                            | ZorgDomein
+                        .header__item
+                            +svg('health-worker')
+                            | Contact voor verwijzers
+                        .header__item
+                            +svg('newsletter')
+                            | Nieuwsbrief
+                .header__nav-content(data-collapse-content="overons")
+                    span Over ons
+                    button.header__item-toggle(data-collapse-target="overons2").hidden-desktop
+                        span Over ons
+                        .header__item-icon
+                            +svg('chevron-down')
+                    .header__item-content(data-collapse-content="overons2")
+                        .header__item
+                            +svg('hospital')
+                            | Over ons
+                        .header__item
+                            +svg('health-data')
+                            | Kwaliteit en veiligheid
+                        .header__item
+                            +svg('healthcare-it')
+                            | Werken bij
+                        .header__item
+                            +svg('forum')
+                            | Comliment, tip of klacht
+                a.header__button-contact.hidden-tablet Contact

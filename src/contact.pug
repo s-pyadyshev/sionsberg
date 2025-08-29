@@ -1,0 +1,114 @@
+extends pug/base
+
+prepend vars
+  - title = 'Contact'
+
+append vars
+  - html.classList.push('brand-1-theme')
+
+block content
+  .page-body.page-body--image-left
+    .page-content
+      .page-header.page-header--image-left.background-none
+        img.page-header__image(src="images/contact.jpg" alt="zorgaanbod." width="720" height="320")
+      section.section-contact.background-default
+        h1 Contact
+        .contact
+          .contact__top
+            article.article 
+              p Heeft u een vraag of wilt u iets doorgeven? Wij helpen u graag. Hier vindt u onze contactgegevens, openingstijden en een contactformulier.
+
+              q.note <b>Let op:</b> voor het wijzigen of afzeggen van een afspraak, of voor het opvragen van medische informatie, vragen wij u telefonisch contact op te nemen met de betreffende polikliniek.
+
+            address
+              b Sionsberg Netwerk Ziekenhuis
+              p Birdaarderstraatweg 70
+              p 9101 DC Dokkum
+              br
+              a(href="tel:+0880708888")
+                span Receptie: 
+                span 088 0708 888
+              a(href="mailto:communicatie@sionsberg.nl").contact__email
+                span E-mail: 
+                b communicatie@sionsberg.nl
+
+            .contact__numbers
+              h3 Telefoonnummers poliklinieken
+              .toggle-wrap
+                button.toggle(data-collapse-target="content1")
+                  span Kies hier een polikliniek
+                  .toggle__wrapper-svg
+                    +svg('chevron-down').button__icon
+                div(data-collapse-content="content1")
+                  ul.toggle__content
+                    li
+                      a(href="tel:+088 032 984 55").toggle__item-wrapper
+                          span Interne Geneeskunde 
+                          span 088 032 984 55
+                    li 
+                      a(href="tel:+088 032 984 55").toggle__item-wrapper
+                          span Interne Geneeskunde 
+                          span 088 032 984 55
+                    li
+                      a(href="tel:+088 032 984 55").toggle__item-wrapper
+                          span Interne Geneeskunde 
+                          span 088 032 984 55
+                    li 
+                      a(href="tel:+088 032 984 55").toggle__item-wrapper
+                          span Interne Geneeskunde 
+                          span 088 032 984 55
+                    li
+                      a(href="tel:+088 032 984 55").toggle__item-wrapper
+                          span Interne Geneeskunde 
+                          span 088 032 984 55
+                    li 
+                      a(href="tel:+088 032 984 55").toggle__item-wrapper
+                          span Interne Geneeskunde 
+                          span 088 032 984 55
+                    li
+                      a(href="tel:+088 032 984 55").toggle__item-wrapper
+                          span Interne Geneeskunde 
+                          span 088 032 984 55
+                    li 
+                      a(href="tel:+088 032 984 55").toggle__item-wrapper
+                          span Interne Geneeskunde 
+                          span 088 032 984 55
+                    li
+                      a(href="tel:+088 032 984 55").toggle__item-wrapper
+                          span Interne Geneeskunde 
+                          span 088 032 984 55
+                    li 
+                      a(href="tel:+088 032 984 55").toggle__item-wrapper
+                          span Interne Geneeskunde 
+                          span 088 032 984 55
+          .contact__form
+            h3 Contactformulier
+            form(action="", method="post").form
+              .control
+                input.input(type="text", name="name", placeholder="Voornaam" required)
+              .control
+                input.input(type="text", name="surname", placeholder="Achternaam" required)
+              .control
+                input.input(type="email", name="email", placeholder="E-mailadres")
+              .control
+                input.input(type="tel", name="tel", placeholder="Telefoonnummer" required)
+              .control
+                textarea.textarea(name="message" rows="5" placeholder="Waar kunnen we u mee helpen?Type hier uw bericht..." required)
+              .control
+                button(type="submit").button.button--brand-1 Versturen
+
+          .contact__bottom
+            article.article
+                h3 Openingstijden
+                p <b>Algemeen:</b> maandag vrijdag van 08.00 tot 16.30 uur
+                p <b>Bloedafnamepoli:</b> maandag t/m vrijdag van 08.00 tot 16.30 uur
+                p <b>Weekend:</b> gesloten
+                p <b>Heeft u in de avond of in het weekend medische klachten?</b> Bel de Dokterswacht Friesland, locatie Sionsberg: 0900 112 7 112
+                h3 Verwijzers
+                p Bent u een verwijzer? <a href="#">Klik hier</a> voor de contactinformatie voor verwijzers.
+            
+          .contact__map
+            #map
+            h3 Route en parkeren
+            p Onze locatie is goed bereikbaar met auto en openbaar vervoer. Parkeren kan direct bij het ziekenhuis. 
+

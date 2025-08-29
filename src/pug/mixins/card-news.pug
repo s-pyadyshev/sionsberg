@@ -1,0 +1,11 @@
+mixin card-news(img, title, subtitle, link_text)
+    .card-news
+        img(src=img, alt=title)
+        .card-news__inner
+            p.card-news__title= title
+            p.card-news__subtitle.visible-desktop= subtitle
+            .card-news__btn.visible-desktop
+                +svg('arrow-right-square')
+            a(href="#").link.hidden-desktop
+                span= link_text
+                +svg('chevron-right')

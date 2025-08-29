@@ -1,0 +1,42 @@
+extends pug/base
+
+prepend vars
+  - title = 'Artikel'
+
+append vars
+  - html.classList.push('brand-2-theme')
+
+block content
+  .page-body.page-body--inverse
+    aside.page-aside
+      .page-nav
+        .page-nav__body
+          button.page-nav__title(data-collapse-target="page-nav")
+            span Gerelateerde artikelen
+    .page-content
+      .page-header.background-theme
+        img.page-header__image(src="images/article.jpg" alt="article." width="720" height="320")
+      .page-article
+        article.article
+          h1 Verwijzen naar SionsbergBlijvend hoesten: wanneer naar de arts?
+          b Iedereen hoest wel eens. Meestal is het onschuldig en gaat het vanzelf weer over, bijvoorbeeld bij een verkoudheid of na een griepje. Maar soms blijft de hoest aanhouden en vraag je je af of het tijd is om naar de huisarts of specialist te gaan.
+
+          h3 Wanneer is hoesten normaal?
+          p Een gewone verkoudheid of luchtweginfectie kan ervoor zorgen dat je een paar weken blijft hoesten. Zolang je je verder goed voelt en de klachten langzaam minder worden, is er meestal niets aan de hand. Voldoende rust, drinken en eventueel een simpele hoestdrank helpen vaak al.
+
+          h3 Signalen om op te letten
+          p Blijft het hoesten langer dan zes weken aanhouden? Of merk je een van de volgende klachten? Dan is het verstandig om een arts te bellen:
+          ul
+            li Je hoest slijm op met bloed
+            li Je hebt kortademigheid of benauwdheid
+            li Je hebt onverklaarbaar veel afgevallen
+            li Je hebt koorts die steeds terugkomt
+            li Je wordt er ’s nachts vaak wakker van
+
+          h3 Hoe kan de arts helpen?
+          p Een arts kan onderzoeken of er een onderliggende oorzaak is, zoals astma, een longontsteking of een allergie. Soms is aanvullend onderzoek nodig, zoals een longfoto of een longfunctieonderzoek. Hoe eerder de oorzaak bekend is, hoe sneller je de juiste behandeling krijgt.
+
+          h3 Twijfel je?
+          p Bel dan liever een keer te vroeg dan te laat met je huisarts. Een aanhoudende hoest kan onschuldig zijn, maar soms wijst het op iets dat beter even bekeken kan worden.
+
+          a(href="#").button Terug naar overzicht

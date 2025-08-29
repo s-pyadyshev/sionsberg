@@ -1,0 +1,47 @@
+extends pug/base
+
+prepend vars
+  - title = 'Index'
+
+append vars
+
+block content 
+  .container
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    div(style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 60px")
+      h2
+        a(href="home.html") Homepage
+      h2
+        a(href="healthcare.html") Zorgaanbod
+      h2
+        a(href="patients.html") Patiënten
+      h2
+        a(href="referrers.html") Verwijzers
+      h2
+        a(href="about.html") Over ons
+      h2
+        a(href="contact.html") Contact
+      h2
+        a(href="news.html") Artikelen & nieuws
+      h2
+        a(href="article.html") Artikel
+      h2 
+        a(href="speciality.html") Specialisme
+      h2 
+        a(href="specialist.html") Specialist
+      h2 
+        a(href="rights.html") Rechten en plichten
+    br
+    br
+    br
+    br
+    br
+    br

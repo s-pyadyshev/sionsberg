@@ -1,0 +1,5 @@
+mixin checkbox(label, checked, name)
+  label.checkbox
+    input.checkbox-input(type="checkbox" name=name checked=checked)
+    .checkbox-box
+      span.checkbox-box__label= label

@@ -1,0 +1,225 @@
+extends pug/base
+
+prepend vars
+  - title = 'Rechten en plichten'
+
+append vars
+  - html.classList.push('brand-2-theme')
+
+block content
+  .page-body.page-body--inverse
+    aside.page-aside
+      .page-nav
+        .page-nav__body
+          button.page-nav__title(data-collapse-target="page-nav")
+            span Andere onderwerpen
+            .page-nav__title-icon
+              +svg('chevron-down')
+          ul.page-nav__list(data-collapse-content="page-nav")
+            li.page-nav__item 
+              a(href="#specialismen").page-nav__link
+                +svg('chevron-right')
+                span Privacy en toestemming
+            li.page-nav__item 
+              a(href="#aanvraagformulier").page-nav__link
+                +svg('chevron-right')
+                span Klachten en feedback
+            li.page-nav__item 
+              a(href="#downloads").page-nav__link
+                +svg('chevron-right')
+                span Veelgestelde vragen
+    .page-content
+      .page-article
+        article.article
+          h1 Rechten en plichten
+          p Bij Sionsberg Netwerk Ziekenhuis vindt u waar u recht op heeft als patiënt – en wat wij van u mogen verwachten. Deze informatie is gebaseerd op onze gebruikersrichtlijnen en privacyprincipes.
+
+          h3 Uw rechten
+          ul
+            li U heeft het recht op duidelijke en begrijpelijke uitleg over uw behandeling, uw gezondheid én uw medische dossier.
+            li U kunt uw medisch dossier inzien en een kopie aanvragen. Daarvoor gebruikt u ons aanvraagformulier.
+            li Uw gegevens worden vertrouwelijk behandeld en alleen gedeeld met uw toestemming.
+            li U mag een tweede oordeel vragen bij een andere arts of instelling.
+            li U mag feedback geven – positief of negatief. Wij luisteren en gebruiken uw ervaringen om te groeien.
+
+          h3 Uw plichten
+          ul
+            li Geef volledige gegevens. Vertel ons eerlijk over uw medische situatie en leefstijl. Daarmee helpt u ons u goed te behandelen.
+            li Meldt u op tijd bij onze polikliniek of spreekuren. Annuleer of wijzig afspraken op tijd als dat nodig is.
+            li Wij vragen u om elkaar met respect te behandelen – zowel onze medewerkers als andere patiënten.
+            li Vergeet uw identiteitsbewijs, zorgpas en medicijnlijst niet mee te nemen naar uw afspraak.
+
+          h3 Privacy en gebruik van uw gegevens
+          p Uw persoonlijke en medische gegevens worden veilig bewaard volgens wettelijke richtlijnen. Wij delen deze niet zonder uw toestemming, tenzij dat noodzakelijk is voor bijvoorbeeld zorgverlening. U leest hierover bij Privacy & toestemming.
+
+          h3 Inzage in uw dossier
+          p Wilt u gegevens inzien, wijzigen of laten verwijderen? Gebruik dan ons  officiële formulier. 
+          p Dat kan via het <a href="#">aanvraagformulier medisch dossier</a>.
+
+          h3 Hebt u vragen?
+          p Als iets niet duidelijk is of wilt u meer weten, neem dan gerust contact op via receptie of specifieke polikliniek. We helpen u graag verder.
+
+          table.table.table-bordered.table-striped
+            thead
+              tr
+                th(rowspan="2") Specialisme
+                th(rowspan="2") Omschrijving
+                th(colspan="2") Wachttijd in dagen
+                th(rowspan="2") Wachttijd in weken
+              tr
+                th Polikliniek
+                th Behandeling
+            tbody
+              tr
+                td(rowspan="5") Chirurgie
+                td Nieuwe patient chirurgie
+                td 3
+                td 
+                td 1
+              tr
+                td Kleine verrichting chirurgie
+                td 
+                td 4
+                td 1
+              tr
+                td Kleine verrichting CTS chirurgie
+                td 
+                td 5
+                td 1
+              tr
+                td Proctoscopie chirurgie
+                td 
+                td 9
+                td 2
+              tr
+                td ACNES
+                td 
+                td 21
+                td 3
+              tr
+                td Dermatologie
+                td Nieuwe patient dermatologie
+                td 29
+                td 
+                td 5
+              tr
+                td Diabetes
+                td Nieuwe patient diabeteszorg
+                td 5
+                td 
+                td 1
+              tr
+                td(rowspan="2") Gynaecologie
+                td Nieuwe patient gynaecologie
+                td 43
+                td 
+                td 7
+              tr
+                td Incontinentie / prolaps
+                td 
+                td 51
+                td 8
+              tr
+                td Interne geneeskunde
+                td Nieuwe patient interne geneeskunde
+                td 46
+                td 
+                td 7
+              tr
+                td(rowspan="2") KNO
+                td Nieuwe patient KNO
+                td 31
+                td 
+                td 5
+              tr
+                td Audiometrie / gehoortest
+                td 31
+                td 
+                td 5
+              tr
+                td Long-geneeskunde
+                td Nieuwe patient longgeneeskunde
+                td 12
+                td 
+                td 4
+              tr
+                td(rowspan="2") Neurologie
+                td Nieuwe patient neurologie
+                td 56
+                td 
+                td 8
+              tr
+                td EMG / CTS
+                td 25
+                td 
+                td 4
+              tr
+                td Orthopedie
+                td Nieuwe patient orthopedie
+                td 28
+                td 
+                td 4
+              tr
+                td(rowspan="2") Urologie
+                td Nieuwe patient urologie
+                td 16
+                td 
+                td 3
+              tr
+                td Vasectomie urologie
+                td 
+                td 63
+                td 9
+
+          h3 Veelgestelde vragen
+          details.accordion
+            summary.accordion-header
+              h3 Hoe wijzig ik mijn afspraak of zeg ik deze af?
+              +svg('chevron-down').accordion-icon
+            .accordion-content
+              p Neem uiterlijk 24 uur vooraf contact op via telefoon of e-mail om uw afspraak te wijzigen of af te zeggen. Zo voorkomt u wachttijdgebrek voor anderen en behoudt u uw plek.
+          details.accordion
+            summary.accordion-header
+              h3 Hoe kan ik mijn medische dossier inzien of opvragen?
+              +svg('chevron-down').accordion-icon
+            .accordion-content
+              p Neem uiterl
+          details.accordion
+            summary.accordion-header
+              h3 Wat zijn de wachttijden per specialisme?
+              +svg('chevron-down').accordion-icon
+            .accordion-content
+              p Neem uiterl
+          details.accordion
+            summary.accordion-header
+              h3 Hoe dien ik een klacht of compliment in?
+              +svg('chevron-down').accordion-icon
+            .accordion-content
+              p Neem uiterl
+          details.accordion
+            summary.accordion-header
+              h3 Wat kost mijn behandeling en wat wordt vergoed?
+              +svg('chevron-down').accordion-icon
+            .accordion-content
+              p Neem uiterl
+          details.accordion
+            summary.accordion-header
+              h3 Wat betekent patiëntveiligheid zoals ID-controle?
+              +svg('chevron-down').accordion-icon
+            .accordion-content
+              p Neem uiterl
+          h3 Compliment, tip of klacht
+          form(action="", method="post")
+            .control 
+              input.input(type="text", name="name" placeholder="Uw voor- en achternaam*" required)
+            .control 
+              input.input(type="email", name="name" placeholder="E-mailadres*" required)
+            .control 
+              input.input(type="tel", name="name" placeholder="Telefoonnummer*" required)
+            .control 
+              textarea.textarea(name="message" placeholder="Uw ervaring...") 
+            .control
+              +checkbox('Ik geef indien nodig toestemming van inzage dossier door de klachtenfunctionaris en de klachtencommissie', false, name="permission")
+
+            .control 
+              button(type="submit").button Versturen

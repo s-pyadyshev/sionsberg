@@ -1,0 +1,258 @@
+.specilist__card {
+  border-top: 1px solid $color-brand-3;
+  border-right: 1px solid $color-brand-3;
+  border-bottom: 1px solid $color-brand-3;
+  border-left: 28px solid $color-brand-3;
+  border-radius: 15px;
+  padding: 0 30px 25px 29px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 251px;
+
+  @include tablet {
+    padding: 46px 0 63px 53px;
+    border-radius: 20px;
+    margin-top: 163px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include desktop {
+    padding: 0;
+    margin: 10px 100px 0 100px;
+    margin-top: 170px;
+    max-width: 981px;
+    border-radius: 20px;
+    border-left: 20px solid $color-brand-3;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0;
+    text-align: left;
+    color: $color-black;
+
+    @include desktop {
+      font-size: 28px;
+      line-height: 44px;
+    }
+  }
+}
+
+.specialist__img {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  top: 0;
+  width: 168px;
+  height: 168px;
+  border-radius: 15px;
+  object-fit: cover;
+
+  @include tablet {
+    position: static;
+    padding-right: 30px;
+    margin-top: -20px;
+    width: 182px;
+    height: 156px;
+    transform: none;
+    border-radius: 12px;
+  }
+
+  @include desktop {
+    width: 340px;
+    height: 100%;
+    margin: 0;
+    border-radius: 0px 20px 20px 0px;
+    padding: 0;
+  }
+}
+
+.specilist__card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  margin-top: 114px;
+  letter-spacing: 0;
+
+  @include tablet {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+}
+
+.specialist__card_info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include desktop {
+    padding: 56px 56px 72px 62px;
+    gap: 0;
+    box-sizing: border-box;
+  }
+}
+
+
+.specilist__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 92px;
+
+  @include tablet {
+    align-items: center;
+    flex-direction: row;
+    gap: 52px;
+    margin-top: 52px;
+  }
+
+  @include desktop {
+    gap: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  blockquote {
+    margin: 0;
+    height: 100%;
+  }
+}
+
+.specilist__quote {
+  padding: 34px 39px 29px 39px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgba(247, 162, 18, 0.1);
+  height: 100%;
+
+  @include tablet {
+    max-width: 236px;
+    padding: 34px 27px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  @include desktop {
+    max-width: 320px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
+
+.specilist__about {
+  margin: 0 auto;
+  margin-top: 40px;
+
+  @include tablet {
+    margin-top: 16px;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 22px;
+    margin-top: 0;
+  }
+}
+
+
+.specilist__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  width: 100%;
+  position: relative;
+
+  a {
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    text-decoration: none;
+
+    @include tablet {
+      font-weight: 400;
+    }
+
+    @include desktop {
+      font-weight: 400;
+    }
+  }
+
+
+  a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -13px;
+    width: 100%;
+    height: 1px;
+    background-color: $color-brand-3;
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+}
+
+.specialist__details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.specialist__details-item {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+    gap: 52px;
+  }
+
+  h4 {
+    font-size: 15px;
+    margin-bottom: -3px;
+    font-weight: 500;
+
+    @include tablet {
+      min-width: 143px;
+    }
+
+    @include desktop {
+      font-size: 16px;
+      min-width: 152px;
+      line-height: 26px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: 200;
+    font-size: 16px;
+
+    @include desktop {
+      font-weight: 400;
+    }
+  }
+}

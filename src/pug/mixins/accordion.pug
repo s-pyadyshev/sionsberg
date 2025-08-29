@@ -1,0 +1,31 @@
+mixin accordion(title, content)
+  li.accordion-list__item
+    .accordion-vertical
+      .accordion__header-vertical
+        button.accordion__toggle(data-accordion aria-expanded="false")
+          h3.accordion__title= title
+          .accordion__toggle-icon
+            +svg("arrow-down")
+      article.article.accordion__content-vertical!= content
+
+mixin accordion-native(title, content, img, open = false)
+  details.accordion(open=open ? '' : null)
+    summary.accordion__summary
+      .accordion__header
+        h3.accordion__title.accordion__title--vertical= title
+        .accordion__icons
+          .accordion__icon-closed
+            +svg('arrow-down-bold').hidden-laptop
+            +svg("arrow-left").visible-laptop
+          .accordion__icon-opened
+            +svg('arrow-up-bold').hidden-laptop
+            +svg("arrow-right").visible-laptop
+    .accordion__content
+      .accordion__text
+        p= content
+        if img
+          .accordion__image
+            img(src=img, alt=title)
+        //- a.link__more(href="#")
+        //-   span.link__more-title Meer informatie
+        //-   +svg("arrow-right-bold")

@@ -1,0 +1,100 @@
+extends pug/base
+
+prepend vars
+  - title = 'Verwijzers'
+
+append vars
+  - html.classList.push('brand-4-theme')
+
+block content
+  .page-body
+    aside.page-aside
+      .page-nav
+        .page-nav__body
+          button.page-nav__title(data-collapse-target="page-nav")
+            span Op deze pagina
+            .page-nav__title-icon
+              +svg('chevron-down')
+          ul.page-nav__list(data-collapse-content="page-nav")
+            li.page-nav__item 
+              a(href="#1").page-nav__link
+                +svg('chevron-right')
+                span Verwijzen naar Sionsberg
+            li.page-nav__item 
+              a(href="#2").page-nav__link
+                +svg('chevron-right')
+                span Sneller doorverwijzen via Zorgdomein
+            li.page-nav__item 
+              a(href="#3").page-nav__link
+                +svg('chevron-right')
+                span Huisartsen nieuwsbrief
+            li.page-nav__item 
+              a(href="#4").page-nav__link
+                +svg('chevron-right')
+                span Contact voor verwijzers
+
+    .page-content
+      .page-header.background-theme
+        h1 Verwijzers
+        p Als huisarts of andere zorgprofessional wilt u zeker weten dat uw patiënt snel en goed wordt geholpen. Bij Sionsberg Netwerk Ziekenhuis bent u verzekerd van korte wachttijden, duidelijke communicatie en een laagdrempelige samenwerking. Op deze pagina vindt u alle informatie om eenvoudig te verwijzen en contact met ons te onderhouden.
+        img.page-header__image(src="images/referrers.jpg" alt="Verwijzers." width="720" height="320")
+      .page-article
+        article.article
+          h3 Verwijzen naar Sionsberg
+          p U kunt patiënten naar ons verwijzen voor poliklinische zorg en dagbehandelingen binnen onze specialismen. Wij werken met Zorgdomein. 
+          p Heeft u liever persoonlijk overleg? Bel ons gerust voor afstemming of advies.
+
+          h3 Sneller doorverwijzen via ZorgDomein
+          p Sionsberg Netwerk Ziekenhuis is aangesloten op ZorgDomein. Met deze online verwijsapplicatie kunnen huisartsen patiënten sneller doorverwijzen naar de gewenste zorginstelling. ZorgDomein biedt  snel en op een overzichtelijk wijze een overzicht van welke zorg wij te bieden hebben met de bijbehorende toegangstijden.
+
+          p Bent u huisarts en heeft u interesse in deze verwijsapplicatie, maar bent u nog niet aangesloten? Via onderstaande button kunt u zich aanmelden bij Zorgdomein of neem contact op; ze helpen u graag met het installeren van de applicatie.
+
+          img(src="images/logo-zorgdomein.png" alt="logo ZorgDomein." width="180" height="58")
+          a(href="#").button Aanmelden bij Zorgdomein
+
+          h3 Huisartsen nieuwsbrief
+          p Wilt u op de hoogte blijven van ons zorgaanbod? Meld u dan via onderstaande button aan voor onze Huisartsen Nieuwsbrief ( 4x per jaar ). Wilt u geen Huisartsen Nieuwsbrief meer ontvangen? Dan kunt u zich laten uitschrijven via communicatie@sionsberg.nl.
+
+          a.button(href="#") Aanmelden Huisartsen Nieuwsbrief
+
+          h3 Contact voor verwijzers
+          p Wilt u overleggen over een patiënt, een uitslag nabespreken of heeft u een andere vraag?Intercollegiaal overleg, bereikbaar maandag t/m vrijdag tussen 08.00 en 16.30. Onze specialisten en medewerkers staan u graag direct te woord.
+
+          p De <b>receptie</b> is bereikbaar op telefoonnummer 088 0708 888. Geopend van maandag t/m vrijdag van 08.00 - 16.30 uur, in het weekend gesloten. Mail: communicatie@sionsberg.nl.
+
+          p De <b>poli bloedafname</b> is geopend van maandag t/m vrijdag van 8.00 uur tot 16.30 uur(alleen op afspraak).
+
+          p <b>Afstemming met verpleegkundig specialist</b> voor verwijzing naar de Spoedpolikliniek: 088 07 08 835 (bereikbaar van maandag t/m vrijdag tussen 08.30 en 17.00)
+          p <b>Opvragen patiëntgegevens</b> buiten kantooruren via de achterwachtlijn: 088 07 08 886 (alleen voor SEH / 24-uurspost ziekenhuizen)
+
+          .article-links
+            a(href="#").article-link
+              span Chirurgie
+              span 088 07 08 800
+            a(href="#").article-link
+              span Chirurgie
+              span 088 07 08 800
+            a(href="#").article-link
+              span Chirurgie
+              span 088 07 08 800
+            a(href="#").article-link
+              span Chirurgie
+              span 088 07 08 800
+            a(href="#").article-link
+              span Chirurgie
+              span 088 07 08 800
+            a(href="#").article-link
+              span Chirurgie
+              span 088 07 08 800
+            a(href="#").article-link
+              span Chirurgie
+              span 088 07 08 800
+            a(href="#").article-link
+              span Chirurgie
+              span 088 07 08 800
+            a(href="#").article-link
+              span Chirurgie
+              span 088 07 08 800
+            a(href="#").article-link
+              span Chirurgie
+              span 088 07 08 800

@@ -1,0 +1,50 @@
+extends pug/base
+
+prepend vars
+  - title = 'Artikelen & nieuws'
+
+append vars
+  - html.classList.push('brand-2-theme')
+
+block content
+  .page__news.page-body.page-body--inverse
+    aside.page-aside
+      .page-nav
+        .page-nav__body
+          button.page-nav__title(data-collapse-target="page-nav")
+            span Veelgezochte onderwerpen
+            .page-nav__title-icon
+          ul.page-nav__list(data-collapse-content="page-nav")
+            li.page-nav__item 
+              a(href="#specialismen").page-nav__link
+                span Verkoudheid
+            li.page-nav__item 
+              a(href="#aanvraagformulier").page-nav__link
+                span Astma
+            li.page-nav__item 
+              a(href="#downloads").page-nav__link
+                span Hoge bloeddruk
+            li.page-nav__item 
+              a(href="#snelnaar").page-nav__link
+                span Rugklachten
+    .page-content
+      .page-header.background-theme
+        h1 Artikelen & nieuws
+        p Van het laatste nieuws uit ons ziekenhuis tot heldere uitleg over klachten, onderzoeken en behandelingen. In deze artikelen vindt u betrouwbare informatie, eenvoudig uitgelegd en altijd gericht op wat u in de praktijk helpt. Voor wie graag goed geïnformeerd is.
+      .page-article 
+        .page-article__news
+          +card-news("images/sprites/png/recomm-1.png", "Verstopt, doof en moe?", "Een aanhoudend vol hoofd, oren die dof aanvoelen of plotseling minder goed horen...", "Verder lezen")
+          +card-news("images/sprites/png/news-2.png", "Verstopt, doof en moe?", "Een aanhoudend vol hoofd, oren die dof aanvoelen of plotseling minder goed horen...", "Verder lezen")
+          +card-news("images/sprites/png/news-2.png", "Verstopt, doof en moe?", "Een aanhoudend vol hoofd, oren die dof aanvoelen of plotseling minder goed horen...", "Verder lezen")
+          +card-news("images/sprites/png/recomm-1.png", "Verstopt, doof en moe?", "Een aanhoudend vol hoofd, oren die dof aanvoelen of plotseling minder goed horen...", "Verder lezen")
+        .page-article__pagination
+          nav.pagination(aria-label="pagination")
+            a.pagination__prev(href="#")
+              +svg('arrow-right')
+            ul.pagination__list
+              li.pagination__item
+                a(href="#").pagination__link 1
+              li.pagination__item
+                span.pagination__link 2
+            a.pagination__next(href="#")
+              +svg('arrow-right')

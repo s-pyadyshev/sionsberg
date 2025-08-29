@@ -1,0 +1,244 @@
+.section-specialties {
+  margin-left: 0px;
+
+  @include tablet {
+    margin-left: 0px;
+  }
+
+  @include desktop {
+    margin-left: 0px;
+  }
+}
+
+.specialties {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 60px 28px 30px 28px;
+  border-radius: 20px;
+  box-shadow: 0px -25px 30px rgba(50, 107, 123, 0.08);
+
+  .link.hidden-tablet {
+    margin-top: 36px;
+
+    svg {
+      color: var(--color-brand-3);
+    }
+
+    span:after {
+      background-color: var(--color-brand-3);
+    }
+  }
+
+  @include tablet {
+    padding: 53px 40px 52px 77px;
+    box-shadow: -25px -10px 30px rgba(50, 107, 123, 0.08);
+    margin-left: 52px;
+  }
+
+  @include desktop {
+    margin-left: 0px;
+    padding: 45px 0px 30px 60px;
+  }
+}
+
+.specialties-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+  }
+}
+
+.specialties-item {
+  display: flex;
+  width: 100%;
+  height: 45px;
+
+  @include tablet {
+    height: 52px;
+  }
+
+  @include desktop {
+    height: 80px;
+    max-height: 80px;
+  }
+}
+
+.specialties-link {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid $color-brand-3;
+  border-radius: 10px;
+  width: inherit;
+  text-decoration: none;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    border-radius: 20px;
+  }
+
+  &:hover .specialties-link__icon {
+    @include desktop {
+      width: 75px;
+    }
+  }
+}
+
+.specialties-link span {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  width: fit-content;
+  height: fit-content;
+  text-align: left;
+  padding: 10px 20px;
+
+  @include tablet {
+    padding: 0px 0px 0px 20px;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    font-size: 15px;
+    padding: 28px 0px 28px 20px;
+  }
+}
+
+.specialties-link__icon {
+  width: 41px;
+  height: calc(100% + 2px);
+  padding: 10px;
+  background-color: $color-brand-3;
+  color: $color-white;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  transition: all 0.4s ease-in-out;
+
+  @include tablet {
+    width: 56px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  @include desktop {
+    width: 64px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  svg {
+    width: 40px;
+    margin: 0 auto;
+  }
+}
+
+
+.specialties__icon {
+  position: absolute;
+  top: -27px;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  width: 42px;
+  height: 54px;
+  transition: transform 1.2s;
+
+  @include tablet {
+    top: -33px;
+    left: -28px;
+    right: auto;
+    width: 48px;
+    height: 62px;
+  }
+
+  @include desktop {
+    top: -39px;
+    left: -30px;
+    right: auto;
+    width: 60px;
+    height: 78px;
+  }
+
+  &:hover {
+    transform: rotate(-180deg);
+  }
+}
+
+.specialties__title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 31px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 26px;
+  }
+
+  .link {
+    svg {
+      color: var(--color-brand-3);
+    }
+
+    span::after {
+      background-color: var(--color-brand-3);
+    }
+  }
+
+  @include tablet {
+    justify-content: space-between;
+    margin-bottom: 45px;
+
+    h2 {
+      text-align: start;
+    }
+
+    .link {
+      margin-top: 5px;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 35px;
+
+    h2 {
+      font-size: 34px;
+    }
+
+    .link {
+      margin-top: 10px;
+    }
+  }
+}

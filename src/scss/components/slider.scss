@@ -1,0 +1,19 @@
+.swiper-button-prev,
+.swiper-button-next {
+    position: static;
+    margin: 0;
+    background: none;
+    color: var(--color-theme);
+
+    &:after {
+        display: none;
+    }
+}
+
+.swiper-navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 30px;
+}

@@ -1,0 +1,85 @@
+extends pug/base
+
+prepend vars
+  - title = 'Specialisme'
+
+append vars
+  - html.classList.push('brand-3-theme')
+
+block content
+  .page-body.page-body--inverse
+    aside.page-aside
+      .page-nav
+        .page-nav__body
+          button.page-nav__title(data-collapse-target="page-nav")
+            span Op deze pagina
+            .page-nav__title-icon
+              +svg('chevron-down')
+          ul.page-nav__list(data-collapse-content="page-nav")
+            li.page-nav__item 
+              a(href="#specialismen").page-nav__link
+                +svg('chevron-right')
+                span Specialismen
+            li.page-nav__item 
+              a(href="#aanvraagformulier").page-nav__link
+                +svg('chevron-right')
+                span Aanvraagformulier
+            li.page-nav__item 
+              a(href="#downloads").page-nav__link
+                +svg('chevron-right')
+                span Downloads
+            li.page-nav__item 
+              a(href="#snelnaar").page-nav__link
+                +svg('chevron-right')
+                span Snel naar
+    .page-content
+      .page-header.background-theme
+        h1 Zorgaanbod
+        p Bij Sionsberg Netwerk Ziekenhuis vindt u zorg dicht bij huis. Wij bieden laagcomplexe zorg binnen verschillende specialismen. Onze wachttijden zijn kort en u krijgt altijd persoonlijke aandacht. Hieronder vindt u een overzicht en handige informatie om uw bezoek zo soepel mogelijk te maken.
+        img.page-header__image(src="images/zorgaanbod.jpg" alt="zorgaanbod." width="720" height="320")
+      .page-article
+        article.article
+          h3 De medisch specialisten
+      //- .page-article__slider
+      //-   .swiper.slider-specialists
+      //-     .swiper-navigation
+      //-       button.swiper-button-prev
+      //-         +svg('chevron-left')
+      //-       button.swiper-button-next
+      //-         +svg('chevron-right')
+      //-     .swiper-wrapper
+      //-       .swiper-slide
+      //-         a(href="/").card-person
+      //-           .card-person__text
+      //-             h3 J.M. van Duijnen
+      //-             p Longarts
+      //-           img(src="images/card-image-1.png" alt="")
+      //-       .swiper-slide
+      //-         a(href="#").card-person
+      //-           .card-person__text
+      //-             h3 A.D.F Groenenwegen
+      //-             p Longarts
+      //-           img(src="images/card-image-2.png" alt="")
+      //-       .swiper-slide
+      //-         a(href="#").card-person
+      //-           .card-person__text
+      //-             h3 J.J. Kombaria
+      //-             p Longarts
+      //-           img(src="images/card-image-3.png" alt="")
+      //-       .swiper-slide
+      //-         a(href="#").card-person
+      //-           .card-person__text
+      //-             h3 Y. Moosend
+      //-             img(src="images/card-image-1.png" alt="")
+      //-         .swiper-slide
+      //-           a(href="#").card-person
+      //-             .card-person__text
+      //-               h3 Slide 2
+      //-               p Longarts
+      //-             img(src="images/card-image-1.png" alt="")
+      //-       .swiper-slide
+      //-         a(href="#").card-person
+      //-           .card-person__text
+      //-             h3 Slide 3
+      //-             p Longarts
+      //-           img(src="images/card-image-1.png" alt="")
