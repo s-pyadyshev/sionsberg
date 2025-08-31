@@ -54,22 +54,11 @@
   margin-right: 0px;
   border-radius: 20px 0px 0px 20px;
 
-  span {
-    background-color: var(--color-brand-2);
-    display: block;
-    width: 20px;
-    border-radius: 20px 0px 0px 20px;
-  }
-
   @include tablet {
     margin-left: 0px;
     margin-right: 90px;
     flex-direction: row;
     border-radius: 0px 20px 20px 0px;
-
-    span {
-      border-radius: 0px 20px 20px 0px;
-    }
   }
 
   @include desktop {
@@ -81,6 +70,17 @@
   }
 }
 
+.quote span {
+  background-color: var(--color-brand-2);
+  display: block;
+  width: 20px;
+  border-radius: 20px 0px 0px 20px;
+
+  @include tablet {
+    border-radius: 0px 20px 20px 0px;
+  }
+}
+
 .quote__text {
   margin-left: 0px;
   margin-right: auto;
@@ -88,49 +88,49 @@
   padding: 143px 30px 25px 35px;
   height: fit-content;
 
-  blockquote {
-    margin: 0px;
-
-    p {
-      margin: 0px;
-      font-size: 16px;
-      line-height: 26px;
-      font-weight: 400;
-      color: var(--color-theme-black);
-    }
-  }
-
-  p {
-    color: var(--color-brand-2);
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: 400;
-  }
-
   @include tablet {
     width: 305px;
     padding: 40px 55px 20px 0px;
     margin-left: auto;
     margin-right: 0px;
-
-    blockquote p {
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    p {
-      font-size: 16px;
-    }
   }
 
   @include desktop {
     width: 500px;
     padding: 50px 55px 39px 0px;
+  }
+}
 
-    blockquote p {
-      font-size: 20px;
-      line-height: 30px;
-    }
+.quote__text blockquote {
+  margin: 0px;
+}
+
+.quote__text blockquote p {
+  margin: 0px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--color-theme-black-inverse);
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.quote__text p {
+  color: var(--color-brand-2);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+
+  @include tablet {
+    font-size: 16px;
   }
 }
 
@@ -140,40 +140,14 @@
   left: $container-padding;
   right: $container-padding;
 
-
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 224px;
-    margin-left: 0px;
-    transition: transform 0.3s ease;
-    border-radius: 20px;
-    object-position: 50% 20%;
-  }
-
   @include tablet {
     top: 29px;
     left: $container-padding-tablet;
     right: auto;
-
-    img {
-      margin-left: 0px;
-      width: 260px;
-      height: 208px;
-    }
-
-    img:hover {
-      transform: scale(1.1);
-    }
   }
 
   @media (min-width: 1110px) {
     top: 0;
-
-    img {
-      width: 420px;
-      height: 340px;
-    }
   }
 
   @media (min-width: 1350px) {
@@ -183,5 +157,26 @@
   @include desktop {
     left: $container-padding-desktop;
     right: auto;
+  }
+}
+
+.quote__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 224px;
+  margin-left: 0px;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+  object-position: 50% 20%;
+
+  @include tablet {
+    margin-left: 0px;
+    width: 260px;
+    height: 208px;
+  }
+
+  @media (min-width: 1110px) {
+    width: 420px;
+    height: 340px;
   }
 }

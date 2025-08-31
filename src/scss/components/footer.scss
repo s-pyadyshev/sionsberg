@@ -16,7 +16,7 @@
   margin-top: 9px;
   padding: 10px 20px;
   border-radius: 20px;
-  color: var(--color-white);
+  color: var(--background-default);
   line-height: 20px;
   font-size: 14px;
   font-weight: 400;
@@ -43,16 +43,17 @@
   background-image: linear-gradient(to left,
       var(--color-brand-1) 0%,
       var(--color-brand-1) 28px,
-      var(--color-white) 28px,
-      var(--color-white) 100%);
+      var(--background-default) 28px,
+      var(--background-default) 100%);
   border-radius: 15px 15px 0 0;
-  box-shadow: 0px 4px 28px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 4px 28px 3px var(--box-shadow-default);
   height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 40px;
+  color: var(--color-text);
 
   @include tablet {
     padding: 62px 52px;
@@ -60,8 +61,8 @@
     background-image: linear-gradient(to left,
         var(--color-brand-1) 0%,
         var(--color-brand-1) 38px,
-        var(--color-white) 38px,
-        var(--color-white) 100%);
+        var(--background-default) 38px,
+        var(--background-default) 100%);
     display: grid;
     grid-template-columns: 28% repeat(2, 36%);
     grid-template-rows: repeat(3, 1fr);
@@ -78,13 +79,13 @@
     background-image: linear-gradient(to left,
         var(--color-brand-1) 0%,
         var(--color-brand-1) 60px,
-        var(--color-white) 60px,
-        var(--color-white) 100%);
+        var(--background-default) 60px,
+        var(--background-default) 100%);
   }
 }
 
 
-.footer__asterisk {
+.footer__icon {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -109,12 +110,12 @@
   }
 }
 
-.footer__asterisk>img {
+.footer__icon>img {
   width: 55px;
   height: 60px;
 }
 
-.footer__asterisk>img {
+.footer__icon>img {
   @include tablet {
     width: 68px;
     height: 75px;
@@ -126,7 +127,7 @@
   }
 }
 
-.footer__asterisk:hover {
+.footer__icon:hover {
   transform: rotate(90deg);
 }
 
@@ -190,7 +191,6 @@
     display: block;
     font-size: 12px;
     line-height: 22px;
-    color: rgba(177, 179, 180, 1);
   }
 }
 
@@ -348,6 +348,7 @@
   flex-direction: column;
   row-gap: 15px;
 
+
   @include desktop {
     row-gap: 16px;
   }
@@ -357,6 +358,7 @@
   text-decoration: none;
   text-align: left;
   font-weight: 500;
+  color: var(--color-gray-dark);
 
   @include desktop {
     font-size: 16px;
@@ -366,7 +368,7 @@
   &:focus,
   &:hover,
   &:active {
-    color: var(--color-theme-black);
+    color: var(--color-theme-black-inverse);
     text-decoration: underline;
   }
 }

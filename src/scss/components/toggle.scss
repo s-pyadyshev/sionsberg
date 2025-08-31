@@ -1,6 +1,6 @@
 .toggle-wrap {
   position: relative;
-  box-shadow: 1px 1px 29px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 1px 1px 29px 0 var(--box-shadow-default);
   border-radius: 10px;
 }
 
@@ -9,8 +9,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: $color-white;
-  color: $color-brand-1;
+  background-color: var(--background-default);
+  color: var(--color-theme);
   border-radius: 10px;
   font-size: 13px;
   font-weight: 400;
@@ -55,7 +55,7 @@
   display: flex;
   width: 60px;
   height: 60px;
-  background-color: $color-brand-1;
+  background-color: var(--color-theme);
   color: $color-white;
   border-radius: 0 10px 10px 0;
   justify-content: center;
@@ -75,7 +75,7 @@
   text-align: left;
   padding: 10px 10px 15px 20px;
   list-style-type: none;
-  border-right: 60px solid $color-brand-1;
+  border-right: 60px solid var(--color-theme);
   border-radius: 0 0 10px 0;
 
   @include tablet {
@@ -95,8 +95,7 @@
 }
 
 a.toggle__item-wrapper {
-  color: $color-black;
-
+  color: var(--color-black-inverse);
 
   @include desktop {
     text-decoration: none;

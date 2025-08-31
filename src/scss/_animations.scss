@@ -171,16 +171,20 @@
   }
 }
 
-.animate__slideInRight {
-  animation-name: slideInRight;
+.animate__scaleUp {
+  animation-name: scaleUp;
 }
 
-.animate__fadeInDownBefore {
-  &:before {
-    animation-name: fadeInDownMoon;
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
   }
 }
 
-[data-scrollspy=animate__fadeInDownBefore]::before {
-  opacity: 0;
+.animate__scaleUp {
+  animation-name: scaleUp;
 }

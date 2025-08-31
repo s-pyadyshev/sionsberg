@@ -33,7 +33,7 @@
     line-height: 25px;
     letter-spacing: 0;
     text-align: left;
-    color: $color-black;
+    color: var(--color-black-inverse);
 
     @include desktop {
       font-size: 28px;

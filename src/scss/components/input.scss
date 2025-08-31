@@ -9,6 +9,8 @@
   letter-spacing: 0;
   text-align: left;
   padding: 6px 0 6px 20px;
+  background-color: var(--background-default);
+  color: var(--color-text);
 
   &:focus,
   &:hover,
@@ -31,5 +33,5 @@
   font-weight: 300;
   font-size: 14px;
   transition: $transition-duration;
-  color: rgba(124, 124, 124, 1);
+  color: #7c7c7c;
 }

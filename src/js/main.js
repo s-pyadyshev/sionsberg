@@ -3,6 +3,7 @@ import { toggle } from './components/toggle.js';
 import { headerToggle } from './pages/header-toggle.js';
 import { sliderSpecialists } from './components/sliderSpecialists.js';
 import { themeToggle } from './components/themeToggle.js';
+import { scrollspy } from './components/scrollspy.js';
 
 window.addEventListener(
   'load',
@@ -12,6 +13,7 @@ window.addEventListener(
     headerToggle.init();
     sliderSpecialists.init();
     themeToggle.init();
+    scrollspy.init();
 
     document.querySelector('body').classList.add('page-loaded');
   },

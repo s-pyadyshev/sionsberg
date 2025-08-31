@@ -4,9 +4,6 @@ prepend vars
   - title = 'Homepage'
 
 block content
-  //- section 
-  //-   .container.background-default
-  //-     h1 Homepage
   section.homepage__hero
     .hero__img
       img(src="images/sprites/png/homepage-content-1.png" alt="Dichtbij, betrokken, samen.")
@@ -20,8 +17,8 @@ block content
           a(href="#").link.visible-tablet
             span Meer over ons
             +svg('chevron-right')
-        p.hero__text-subtitle Bij ons draait alles om samenwerken. Met u, met collega’s, met andere zorgverleners. Zo zorgen we samen voor snellere, betere én betaalbare zorg. En we blijven vernieuwen – in behandelingen, in preventie en in hoe we technologie inzetten. Altijd dichtbij, altijd met aandacht. Want goede zorg begint met écht contact.
-        a(href="#").hidden-tablet
+        p Bij ons draait alles om samenwerken. Met u, met collega’s, met andere zorgverleners. Zo zorgen we samen voor snellere, betere én betaalbare zorg. En we blijven vernieuwen – in behandelingen, in preventie en in hoe we technologie inzetten. Altijd dichtbij, altijd met aandacht. Want goede zorg begint met écht contact.
+        a(href="#").link.hidden-tablet
             span Meer over ons
             +svg('chevron-right')
     .container
@@ -127,52 +124,50 @@ block content
       span
     .container
       .quote__img
-        img(src="images/sprites/png/quote-peter.png" alt="Peter, patiënt bij Sionsberg")
+        img(src="images/sprites/png/quote-peter.png" alt="Peter, patiënt bij Sionsberg." width="420" height="340" data-scrollspy="animate__scaleUp")
 
-  section.section-recommendation
-    .container
-      .recommendation__inner
-        .recommendation__card
-          img(src="images/sprites/png/recomm-1.png" alt="Verstopt, doof en moe?")
-          .recommendation__card-title
-            div
-              p 
-                | Verstopt, doof
-                br
-                | en moe?
-              p Bij onze KNO-afdeling kijken we verder dan de klacht.
-            +svg('arrow-right-square')
-        .recommendation__card
-          img(src="images/sprites/png/recomm-2.png" alt="Is een onregelmatig hartslag zorgelijk?")
-          .recommendation__card-title
-            div
-              p 
-                | Is een onregelmatig 
-                br
-                | hartslag zorgelijk?
-              p Bij hartritmestoornissen is snel duidelijkheid belangrijk.
-            +svg('arrow-right-square')
-        .recommendation__card-heart
-          .recommendation__back
-          .recommendation__heart
-            .recommendation__icon-title
-              img(src="images/logo-zorgkaart-nederland.svg" alt="logo")
-              span 9,2
-              +svg('heart')
-            p Sionsberg Netwerk Ziekenhuis is 690 keer gewaardeerd en heeft een gemiddeld cijfer van 9.2.
-            .recommendation__heart-footer
-              .recommendation__footer-link
-                a(href="#").link
-                  span Bekijk alle waarderingen
-                  +svg('chevron-right')
-                a(href="#").link
-                  span Plaats een waardering
-                  +svg('chevron-right')
-              +svg('heart').heart
-    .recommendation__text
-      .recommendation__text-title
+  section.recommend
+    a(href="#").recommend__card
+      img(src="images/sprites/png/recomm-1.png" alt="Verstopt, doof en moe?")
+      .recommend__card-title
+        div
+          p 
+            | Verstopt, doof
+            br
+            | en moe?
+          p Bij onze KNO-afdeling kijken we verder dan de klacht.
+        +svg('arrow-right-square')
+    a(href="#").recommend__card
+      img(src="images/sprites/png/recomm-2.png" alt="Is een onregelmatig hartslag zorgelijk?")
+      .recommend__card-title
+        div
+          p 
+            | Is een onregelmatig 
+            br
+            | hartslag zorgelijk?
+          p Bij hartritmestoornissen is snel duidelijkheid belangrijk.
+        +svg('arrow-right-square')
+    .recommend__card-icon
+      .recommend__back
+      .recommend__icon
+        .recommend__icon-title
+          img(src="images/logo-zorgkaart-nederland.svg" alt="logo")
+          span 9,2
+          +svg('heart')
+        p Sionsberg Netwerk Ziekenhuis is 690 keer gewaardeerd en heeft een gemiddeld cijfer van 9.2.
+        .recommend__icon-footer
+          .recommend__footer-link
+            a(href="#").link
+              span Bekijk alle waarderingen
+              +svg('chevron-right')
+            a(href="#").link
+              span Plaats een waardering
+              +svg('chevron-right')
+          +svg('heart').heart
+    .recommend__text
+      .recommend__text-wrap
         h2 Uitgelicht
         p Soms wilt u gewoon even weten hoe iets zit. In deze artikelen leggen we veelvoorkomende klachten, behandelingen en onderzoeken helder uit – voor wie graag goed geïnformeerd is.
-      a(href="#").link
-        span Meer artikelen
-        +svg('chevron-right')
+        a(href="#").link
+          span Meer artikelen
+          +svg('chevron-right')
