@@ -38,7 +38,7 @@
   .brand-2-theme & {
     background-color: transparent;
 
-    @include desktop {
+    @include tablet {
       background-color: var(--color-theme-light);
     }
   }

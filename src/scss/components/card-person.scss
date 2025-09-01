@@ -19,10 +19,20 @@
 .card-person__text {
     position: absolute;
     color: $color-white;
-    bottom: 3px;
-    left: 19px;
+    bottom: -3px;
+    left: 18px;
     font-weight: 300;
     z-index: 1;
+
+    @include tablet{
+        bottom: 0px;
+        left: 17px;
+    }
+
+    @include desktop{
+        bottom: 7px;
+        left: 15px;
+    }
 }
 
 .card-person__text h3 {
@@ -36,6 +46,11 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 26px;
+    margin-top: -3px;
+
+    @include tablet{
+        margin-top: -5px;
+    }
 }
 
 .card-person img {

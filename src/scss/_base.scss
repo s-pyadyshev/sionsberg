@@ -85,10 +85,10 @@ html {
     --color-theme-black-inverse: var(--color-white);
     --color-white-80: var(--color-theme-black);
     --box-shadow-default: rgba(255, 255, 255, 0.04);
-  }
 
-  ::placeholder {
-    color: var(--color-white);
+    ::placeholder {
+      color: var(--color-white);
+    }
   }
 }
 
