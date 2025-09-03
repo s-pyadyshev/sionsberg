@@ -1,29 +1,145 @@
 .page__speciality {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 
     @include tablet {
         grid-template-columns: 0px 1fr 99px 180px !important;
     }
 
+    @include desktop {
+        grid-template-columns: 1fr 865px 140px minmax(260px, 1fr) !important;
+    }
+}
+
+.page-content-last {
+    grid-row-start: 3;
+    grid-column: 2 / 4;
+    margin-top: -2px;
+    margin-bottom: 10px;
+}
+
+.page__speciality .page-header {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 45px;
+    height: 313px;
+
     @include desktop{
-        grid-template-columns: 1fr 860px 80px minmax(320px, 1fr) !important;
+        margin-top: 120px;
+        margin-bottom: 50px;
+        height: fit-content;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-bottom-left-radius: 50px;
+    }
+}
+
+.page-article.specialists {
+
+    h3 {
+        color: var(--color-brand-3);
+        margin-bottom: 6px;
+
+        @include desktop {
+            margin-top: 45px;
+        }
+    }
+
+    ul {
+        margin-top: 24px;
+        margin-bottom: 25px;
+        margin-left: -5px;
+
+        @include desktop {
+            margin-top: 27px;
+            margin-bottom: 26px;
+            margin-left: 0px;
+        }
+    }
+
+    @include tablet{
+        padding-left: 80px;
+    }
+
+    @include desktop{
+        padding: 0px 80px 0px 79px;
+    }
+}
+
+.page-article.specialists .article-files {
+    margin-top: 30px;
+    margin-bottom: 48px;
+}
+
+.page-article.specialists .article-links {
+    margin-right: 40px;
+    margin-top: 0px;
+    gap: 0px;
+    column-gap: 80px;
+}
+
+.page-article.specialists .article-link{
+    font-size: 14px;
+    padding-top: 24px;
+}
+
+.speciality__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -8px;
+    margin-bottom: 26px;
+
+    @include desktop{
+        margin-bottom: 23px;
+    }
+
+    h1 {
+        margin-bottom: 0px;
+        margin-left: 16px;
+
+        @include desktop{
+            margin-left: 21px;
+        }
+    }
+
+    svg {
+        width: 45px;
+        height: 45px;
+        color: var(--color-brand-3);
+
+        @include desktop{
+            width: 83px;
+            height: 83px;
+        }
     }
 }
 
 .page__speciality .page-aside {
     margin-left: 17px;
     display: none;
+    grid-row: 1 / 4;
 
     @include tablet {
         display: block;
+        margin-left: 30px;
     }
 
-    @include desktop{
+    @include desktop {
         margin-left: 15px;
     }
 }
 
 .page__speciality .page-nav__body {
     padding: 44px 40px 42px 35px;
+
+    @include tablet {
+        padding: 44px 30px 42px 35px;
+    }
 
     @include desktop {
         padding: 30px 90px 43px 60px;
@@ -69,11 +185,10 @@
     margin-bottom: 0px;
 
     @include desktop {
-            font-size: 16px;
-    line-height: 26px;
-    margin-top: 11px;
-        }
-
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 11px;
+    }
 }
 
 .page__speciality .page-nav__title {
@@ -98,4 +213,13 @@
     @include desktop {
         display: flex;
     }
+}
+
+.page__speciality .page-article__slider {
+    margin-top: 50px;
+    height: fit-content;
+
+    @include desktop{
+        margin-top: 55px;
+        }
 }

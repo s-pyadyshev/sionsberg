@@ -33,6 +33,10 @@ h1,
   font-weight: 400;
   margin-bottom: 20px;
 
+  @include tablet{
+    letter-spacing: -0.3px;
+  }
+
   @include desktop {
     font-size: $h1-font-size-desktop;
   }
@@ -95,5 +99,25 @@ p {
   @include desktop {
     font-size: $p-font-size-desktop;
     line-height: 26px;
+  }
+}
+
+ul {
+  padding-left: 20px;
+
+  li {
+    font-size: $p-font-size;
+    font-weight: 300;
+    color: var(--color-text);
+    line-height: 25px;
+
+    @include desktop {
+      font-size: $p-font-size-desktop;
+      line-height: 26px;
+    }
+  }
+
+  li::marker {
+    font-size: 0.9em; 
   }
 }

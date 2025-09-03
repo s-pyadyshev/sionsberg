@@ -21,15 +21,15 @@ block content
               +svg('chevron-down')
           ul.page-nav__list(data-collapse-content="page-nav")
             li.page-nav__item 
-              a(href="#specialismen").page-nav__link
+              a(href="#watdoenwij").page-nav__link
                 +svg('chevron-right')
                 span Wat doen wij?
             li.page-nav__item 
-              a(href="#aanvraagformulier").page-nav__link
+              a(href="#samenwerking").page-nav__link
                 +svg('chevron-right')
                 span Samenwerking in de regio
             li.page-nav__item 
-              a(href="#downloads").page-nav__link
+              a(href="#medisch").page-nav__link
                 +svg('chevron-right')
                 span De medisch specialisten
             li.page-nav__item 
@@ -37,7 +37,7 @@ block content
                 +svg('chevron-right')
                 span Vergoeding en verzekering
             li.page-nav__item 
-              a(href="#patiëntenfolders").page-nav__link
+              a(href="#patientfolders").page-nav__link
                 +svg('chevron-right')
                 span Patiëntenfolders
             li.page-nav__item 
@@ -46,13 +46,33 @@ block content
                 span Snel naar
     .page-content
       .page-header.background-theme
-        img.page-header__image(src="images/zorgaanbod.jpg" alt="zorgaanbod." width="720" height="320")
+        img(src="images/sprites/png/speciality.png" alt="speciality")
 
-      //- .page-article.specialists
-      //-   article.article
-      //-     h3 De medisch specialisten
+      .page-article.specialists
+        article.article
+          .speciality__title
+            +svg('lungs')
+            h1 Longgeneeskunde
+      
+          p Bij de polikliniek Longgeneeskunde van Sionsberg Netwerk Ziekenhuis kunt u terecht voor onderzoeken en behandelingen rondom uw longen en luchtwegen. U wordt bij ons geholpen in een kleinschalige, toegankelijke omgeving, met persoonlijke aandacht en korte wachttijden.
 
-      .page-article__slider
+          #watdoenwij
+            h3 Wat doen wij?
+            p Onze longartsen onderzoeken en behandelen uiteenlopende longproblemen. U kunt bij ons terecht voor consulten en onderzoeken zoals:
+            ul
+              li Longfunctieonderzoek
+              li Onderzoek van de longbloedvaten
+              li Laboratoriumonderzoek
+            p Mocht er een operatie nodig zijn, dan vindt deze plaats in één van de omliggende ziekenhuizen. Het voor- en natraject verzorgen wij gewoon hier, dichtbij huis. Uw eigen longarts begeleidt u gedurende het hele traject.
+          
+          #samenwerking
+            h3 Samenwerking in de regio
+            p Wij werken nauw samen met de maatschap longartsen in Noord-Nederland. Deze samenwerking bestaat al meer dan 25 jaar en zorgt ervoor dat u profiteert van de kennis en ervaring van een breed netwerk van specialisten. U bent dus altijd verzekerd van optimale zorg, ook als een deel van uw behandeling elders plaatsvindt.
+
+    #medisch.page-article__slider
+      .page-slider__inner
+        .swiper-back
+          span
         .swiper.slider-specialists
           .swiper-title
             h3 De medisch specialisten
@@ -92,3 +112,64 @@ block content
                   h3 Slide 3
                   p Longarts
                 img(src="images/card-image-1.png" alt="")
+            .swiper-slide
+              a(href="#").card-person
+                .card-person__text
+                  h3 Slide 3
+                  p Longarts
+                img(src="images/card-image-1.png" alt="")
+            .swiper-slide
+              a(href="#").card-person
+                .card-person__text
+                  h3 Slide 3
+                  p Longarts
+                img(src="images/card-image-1.png" alt="")
+
+    .page-content-last
+      .page-article.specialists
+        article.article
+          #vergoeding
+            h3 Vergoeding en verzekering
+            p De zorg van de polikliniek Longgeneeskunde valt onder de basisverzekering. Met een verwijzing van uw (huis)arts worden de kosten vergoed door uw zorgverzekeraar. Houd wel rekening met uw eigen risico.
+    
+          #patientfolders
+            h3 Patiëntenfolders
+            p Meer informatie nodig over een onderzoek of behandeling? Download hieronder onze folders met duidelijke uitleg en praktische tips.
+            .article-files
+              a(href="#").file-link
+                +svg('download')
+                span 
+                  span Download brochure
+                  b Longfunctieonderzoek
+              a(href="#").file-link
+                +svg('download')
+                span 
+                  span Download brochure
+                  b Behandeling van COPD
+              a(href="#").file-link
+                +svg('download')
+                span 
+                  span Download brochure
+                  b Inhalatiemedicatie
+              a(href="#").file-link
+                +svg('download')
+                span 
+                  span Download brochure
+                  b Roken en uw longen
+
+          #snelnaar
+            h3 Snel naar
+            p Hieronder vindt u directe links naar veelgebruikte informatie. Zo heeft u snel antwoord op uw vragen of vindt u meteen de juiste route.
+            .article-links
+              a(href="#").article-link
+                span Afspraak maken of wijzigen
+                +svg('chevron-right')
+              a(href="#").article-link
+                span Openingstijden en contact
+                +svg('chevron-right')
+              a(href="#").article-link
+                span Route en parkeren
+                +svg('chevron-right')
+              a(href="#").article-link
+                span Veelgestelde vragen
+                +svg('chevron-right')

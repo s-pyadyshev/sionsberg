@@ -1281,6 +1281,21 @@ p {
   line-height: 25px;
 }
 
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 25px;
+}
+
+ul li::marker {
+  font-size: 0.9em;
+}
+
 [data-scrollspy] {
   opacity: 1;
 }
@@ -4525,7 +4540,7 @@ a.toggle__item-wrapper {
   display: flex;
   flex-direction: row;
   align-content: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
   transition: all 0.3s ease;
 }
 
@@ -4536,7 +4551,7 @@ a.toggle__item-wrapper {
 
 .recommend__card-title p {
   margin: 0px;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 400;
   color: var(--color-white);
@@ -4545,7 +4560,7 @@ a.toggle__item-wrapper {
 .recommend__card-title p:nth-child(2) {
   max-height: 0px;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.5s;
   margin-top: 10px;
   margin-bottom: 40px;
   font-size: 14px;
@@ -4554,11 +4569,11 @@ a.toggle__item-wrapper {
 }
 
 .recommend__card-title svg {
-  max-height: 30px;
   opacity: 1;
   width: 40px;
+  height: 40px;
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 0;
 }
 
 .recommend__card:hover {
@@ -4567,12 +4582,12 @@ a.toggle__item-wrapper {
 }
 
 .recommend__card:hover .recommend__card-title {
-  max-height: 95px;
+  height: 180px;
 }
 
 .recommend__card:hover .recommend__card-title p:nth-child(2) {
   max-height: 0px;
-  opacity: 0;
+  opacity: 1;
 }
 
 .recommend__icon {
@@ -4945,9 +4960,44 @@ address p {
 }
 
 .page-article__slider {
-  padding: 40px 0px 66px 27px;
-  margin-right: 0px;
+  grid-column: 1/5;
+  grid-row-start: 2;
+  max-width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.page-slider__inner {
+  display: grid;
+  grid-template-columns: 1fr 30px 945px 216px 30px 1fr;
+  position: relative;
   overflow: hidden;
+}
+
+.slider-specialists {
+  grid-column: 3/4;
+  overflow: hidden;
+  width: calc(100% - 752px);
+  margin-left: 27px;
+  padding: 48px 0px 60px 0px;
+}
+
+.swiper-back {
+  grid-column: 1/4;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: calc(100% - 725px);
+}
+
+.swiper-back span {
+  display: block;
+  background-color: var(--color-gray);
+  border-radius: 0px 30px 30px 0px;
+  height: 100%;
+  width: 100%;
 }
 
 .swiper-title {
@@ -4965,10 +5015,11 @@ address p {
   font-weight: 400;
   line-height: 30px;
   width: 150px;
+  color: var(--color-brand-3);
 }
 
 .swiper-navigation {
-  margin-right: 3px;
+  margin-right: 15px;
   display: flex;
   gap: 5px;
 }
@@ -4989,12 +5040,12 @@ address p {
 }
 
 .swiper-wrapper {
-  height: 242px;
+  height: 240px;
 }
 
 .swiper-slide {
-  width: auto !important;
-  flex-shrink: 0;
+  flex: 0 0 auto;
+  width: 220px;
 }
 
 .homepage__hero {
@@ -5476,9 +5527,85 @@ address p {
   border-bottom: 0px;
 }
 
+.page__speciality {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.page-content-last {
+  grid-row-start: 3;
+  grid-column: 2/4;
+  margin-top: -2px;
+  margin-bottom: 10px;
+}
+
+.page__speciality .page-header {
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 45px;
+  height: 313px;
+}
+
+.page__speciality .page-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-bottom-left-radius: 50px;
+}
+
+.page-article.specialists h3 {
+  color: var(--color-brand-3);
+  margin-bottom: 6px;
+}
+
+.page-article.specialists ul {
+  margin-top: 24px;
+  margin-bottom: 25px;
+  margin-left: -5px;
+}
+
+.page-article.specialists .article-files {
+  margin-top: 30px;
+  margin-bottom: 48px;
+}
+
+.page-article.specialists .article-links {
+  margin-right: 40px;
+  margin-top: 0px;
+  gap: 0px;
+  -moz-column-gap: 80px;
+  column-gap: 80px;
+}
+
+.page-article.specialists .article-link {
+  font-size: 14px;
+  padding-top: 24px;
+}
+
+.speciality__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -8px;
+  margin-bottom: 26px;
+}
+
+.speciality__title h1 {
+  margin-bottom: 0px;
+  margin-left: 16px;
+}
+
+.speciality__title svg {
+  width: 45px;
+  height: 45px;
+  color: var(--color-brand-3);
+}
+
 .page__speciality .page-aside {
   margin-left: 17px;
   display: none;
+  grid-row: 1/4;
 }
 
 .page__speciality .page-nav__body {
@@ -5529,6 +5656,12 @@ address p {
   margin-top: 11px;
   gap: 11px;
   display: none;
+}
+
+.page__speciality .page-article__slider {
+  margin-top: 50px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 @media (min-width: 0) {
@@ -5659,6 +5792,20 @@ address p {
 @media (min-width: 373px) {
   .section-quote {
     height: 500px;
+  }
+}
+
+@media (min-width: 393px) {
+  .slider-specialists {
+    width: calc(100% - 652px);
+  }
+
+  .swiper-back {
+    width: calc(100% - 625px);
+  }
+
+  .swiper-navigation {
+    margin-right: 7px;
   }
 }
 
@@ -5814,6 +5961,16 @@ address p {
 @media (min-width: 586px) {
   .section-quote {
     height: 430px;
+  }
+}
+
+@media (min-width: 650px) {
+  .slider-specialists {
+    width: calc(100% - 417px);
+  }
+
+  .swiper-back {
+    width: calc(100% - 390px);
   }
 }
 
@@ -6032,6 +6189,11 @@ address p {
 
   .hidden-tablet {
     display: none;
+  }
+
+  h1,
+  .h1 {
+    letter-spacing: -0.3px;
   }
 
   h2,
@@ -6638,8 +6800,8 @@ address p {
   }
 
   .card-person__text {
-    bottom: 0px;
-    left: 17px;
+    bottom: -2px;
+    left: 20px;
   }
 
   .card-person__text p {
@@ -6730,7 +6892,7 @@ address p {
 
   .recommend__card-title {
     width: 260px;
-    max-height: 80px;
+    height: 80px;
     bottom: 0;
     border-radius: 0px 20px 0px 20px;
     padding: 17px 18px 20px 32px;
@@ -6750,18 +6912,20 @@ address p {
     margin-bottom: 0px;
   }
 
+  .recommend__card-title p {
+    font-size: 17px;
+  }
+
   .recommend__card:hover {
     transform: translateY(-20px);
   }
 
   .recommend__card:hover .recommend__card-title {
-    max-height: 180px;
-    height: 100%;
+    height: 180px;
   }
 
   .recommend__card:hover .recommend__card-title p:nth-child(2) {
     max-height: 65px;
-    opacity: 1;
   }
 
   .recommend__card:hover .recommend__card-title svg {
@@ -6873,9 +7037,18 @@ address p {
     -webkit-line-clamp: 3;
   }
 
-  .page-article__slider {
-    padding: 49px 0px 60px 80px;
-    margin-right: 145px;
+  .page-slider__inner {
+    grid-template-columns: 1fr 80px 945px 216px 80px 1fr;
+  }
+
+  .slider-specialists {
+    width: calc(100% - 533px);
+    margin-left: 0px;
+  }
+
+  .swiper-back {
+    width: calc(100% - 533px);
+    margin-left: 0px;
   }
 
   .swiper-title {
@@ -6890,7 +7063,12 @@ address p {
   }
 
   .swiper-navigation {
-    margin-right: 45px;
+    margin-right: 40px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    margin-top: 2px;
   }
 
   .hero__img {
@@ -7107,8 +7285,27 @@ address p {
     grid-template-columns: 0px 1fr 99px 180px !important;
   }
 
+  .page-article.specialists {
+    padding-left: 80px;
+  }
+
   .page__speciality .page-aside {
     display: block;
+    margin-left: 30px;
+  }
+
+  .page__speciality .page-nav__body {
+    padding: 44px 30px 42px 35px;
+  }
+}
+
+@media (min-width: 950px) {
+  .slider-specialists {
+    width: calc(100% - 390px);
+  }
+
+  .swiper-back {
+    width: calc(100% - 390px);
   }
 }
 
@@ -7453,6 +7650,16 @@ address p {
   }
 }
 
+@media (min-width: 1050px) {
+  .slider-specialists {
+    width: calc(100% - 290px);
+  }
+
+  .swiper-back {
+    width: calc(100% - 290px);
+  }
+}
+
 @media (min-width: 1110px) {
   .section-quote {
     height: 340px;
@@ -7471,6 +7678,16 @@ address p {
 @media (min-width: 1140px) {
   .page-header {
     border-bottom-right-radius: 50px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .slider-specialists {
+    width: calc(100% - 190px);
+  }
+
+  .swiper-back {
+    width: calc(100% - 190px);
   }
 }
 
@@ -7763,6 +7980,11 @@ address p {
   }
 
   p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  ul li {
     font-size: 16px;
     line-height: 26px;
   }
@@ -8501,7 +8723,6 @@ address p {
 
   .card-person__text {
     bottom: 7px;
-    left: 15px;
   }
 
   .section-quote {
@@ -8568,7 +8789,7 @@ address p {
 
   .recommend__card-title {
     width: 300px;
-    max-height: 95px;
+    height: 95px;
     padding: 20px 18px 20px 40px;
   }
 
@@ -8583,6 +8804,10 @@ address p {
 
   .recommend__card-title div {
     padding-right: 20px;
+  }
+
+  .recommend__card-title p {
+    font-size: 20px;
   }
 
   .recommend__icon {
@@ -8716,24 +8941,34 @@ address p {
     margin-bottom: 55px;
   }
 
-  .page-article__slider {
-    padding: 49px 0px 60px 0px;
+  .page-slider__inner {
+    grid-template-columns: 1fr 100px 945px 216px 180px 1fr;
+  }
+
+  .slider-specialists {
+    margin-left: 60px;
+    width: calc(100% - 150px);
+  }
+
+  .swiper-back {
+    width: calc(100% - 90px);
   }
 
   .swiper-title h3 {
-    margin-left: 75px;
+    margin-left: 80px;
     font-size: 26px;
   }
 
   .swiper-navigation {
-    margin-right: 75px;
+    margin-right: 69px;
     gap: 7px;
   }
 
   .swiper-button-prev,
   .swiper-button-next {
-    height: 20px;
+    height: 19px;
     width: 30px;
+    margin-top: -3px;
   }
 
   .hero__img {
@@ -8951,7 +9186,41 @@ address p {
   }
 
   .page__speciality {
-    grid-template-columns: 1fr 860px 80px minmax(320px, 1fr) !important;
+    grid-template-columns: 1fr 865px 140px minmax(260px, 1fr) !important;
+  }
+
+  .page__speciality .page-header {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .page-article.specialists h3 {
+    margin-top: 45px;
+  }
+
+  .page-article.specialists ul {
+    margin-top: 27px;
+    margin-bottom: 26px;
+    margin-left: 0px;
+  }
+
+  .page-article.specialists {
+    padding: 0px 80px 0px 79px;
+  }
+
+  .speciality__title {
+    margin-bottom: 23px;
+  }
+
+  .speciality__title h1 {
+    margin-left: 21px;
+  }
+
+  .speciality__title svg {
+    width: 83px;
+    height: 83px;
   }
 
   .page__speciality .page-aside {
@@ -8983,6 +9252,10 @@ address p {
 
   .page__speciality .page-nav__list {
     display: flex;
+  }
+
+  .page__speciality .page-article__slider {
+    margin-top: 55px;
   }
 }
 

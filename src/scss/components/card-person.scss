@@ -25,13 +25,12 @@
     z-index: 1;
 
     @include tablet{
-        bottom: 0px;
-        left: 17px;
+        bottom: -2px;
+        left: 20px;
     }
 
     @include desktop{
         bottom: 7px;
-        left: 15px;
     }
 }
 

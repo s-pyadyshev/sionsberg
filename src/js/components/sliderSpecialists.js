@@ -9,11 +9,11 @@ export const sliderSpecialists = (function () {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       },
-      slidesPerView: 2,
+      slidesPerView: 'auto',
       spaceBetween: 20,
-      breakpoints: {
-        1440: { slidesPerView: 4 }
-      }
+      // breakpoints: {
+      //   1440: { slidesPerView: 4 }
+      // }
     });
   };
 
