@@ -24,12 +24,12 @@
     font-weight: 300;
     z-index: 1;
 
-    @include tablet{
+    @include tablet {
         bottom: -2px;
         left: 20px;
     }
 
-    @include desktop{
+    @include desktop {
         bottom: 7px;
     }
 }
@@ -46,8 +46,9 @@
     font-size: 14px;
     line-height: 26px;
     margin-top: -3px;
+    color: var(--color-white);
 
-    @include tablet{
+    @include tablet {
         margin-top: -5px;
     }
 }

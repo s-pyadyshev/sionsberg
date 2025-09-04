@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="KEIM" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="./css/main.css?v=1756852640391">
+    <link rel="stylesheet" href="./css/main.css?v=1756971371989">
 </head>
 
 <body>
@@ -258,13 +258,27 @@
                 <aside class="page-aside">
                     <div class="page-nav">
                         <div class="page-nav__body">
-                            <div class="page-nav__phone">
-                                <svg>
-                                    <use xlink:href="./images/sprites.svg#phone"></use>
-                                </svg><span>088 07 08 866</span>
+                            <button class="page-nav__title-contact hidden-tablet" data-collapse-target="page-nav-phone"><span>Contact Polikliniek</span>
+                                <div class="page-nav__phone">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#phone"></use>
+                                    </svg><span>088 07 08 866</span>
+                                </div>
+                                <div class="page-nav__title-icon">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#chevron-down"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="page-nav__phone-inner" data-collapse-content="page-nav-phone">
+                                <div class="page-nav__phone">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#phone"></use>
+                                    </svg><span>088 07 08 866</span>
+                                </div>
+                                <p>Polikliniek Longgeneeskunde telefonisch bereikbaar: van maandag tot en met vrijdag van 08.00 tot 16.30 uur</p>
                             </div>
-                            <p>Polikliniek Longgeneeskunde telefonisch bereikbaar: van maandag tot en met vrijdag van 08.00 tot 16.30 uur</p>
-                            <button class="page-nav__title"><span>Op deze pagina</span>
+                            <button class="page-nav__title" data-collapse-target="page-nav"><span>Op deze pagina</span>
                                 <div class="page-nav__title-icon">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#chevron-down"></use>
@@ -319,7 +333,7 @@
                     </div>
                 </aside>
                 <div class="page-content">
-                    <div class="page-header background-theme">
+                    <div class="page-header background-theme visible-tablet">
                         <img src="images/sprites/png/speciality.png" alt="speciality">
                     </div>
                     <div class="page-article specialists">
@@ -331,6 +345,7 @@
                                 <h1>Longgeneeskunde</h1>
                             </div>
                             <p>Bij de polikliniek Longgeneeskunde van Sionsberg Netwerk Ziekenhuis kunt u terecht voor onderzoeken en behandelingen rondom uw longen en luchtwegen. U wordt bij ons geholpen in een kleinschalige, toegankelijke omgeving, met persoonlijke aandacht en korte wachttijden.</p>
+                            <img class="hidden-tablet" src="images/sprites/png/speciality.png" alt="speciality">
                             <div id="watdoenwij">
                                 <h3>Wat doen wij?</h3>
                                 <p>Onze longartsen onderzoeken en behandelen uiteenlopende longproblemen. U kunt bij ons terecht voor consulten en onderzoeken zoals:</p>
@@ -564,7 +579,7 @@
             </div>
         </footer>
     </div>
-    <script src="./js/vendor.js?v=1756852640391"></script>
-    <script src="./js/main.js?v=1756852640391"></script>
+    <script src="./js/vendor.js?v=1756971371989"></script>
+    <script src="./js/main.js?v=1756971371989"></script>
 </body>
 </html>

@@ -11,11 +11,19 @@ block content
     aside.page-aside
       .page-nav
         .page-nav__body
-          .page-nav__phone
-            +svg('phone')
-            span 088 07 08 866
-          p Polikliniek Longgeneeskunde telefonisch bereikbaar: van maandag tot en met vrijdag van 08.00 tot 16.30 uur
-          button.page-nav__title
+          button.page-nav__title-contact(data-collapse-target="page-nav-phone").hidden-tablet
+            span Contact Polikliniek
+            .page-nav__phone
+              +svg('phone')
+              span 088 07 08 866
+            .page-nav__title-icon
+              +svg('chevron-down')
+          .page-nav__phone-inner(data-collapse-content="page-nav-phone")
+            .page-nav__phone
+              +svg('phone')
+              span 088 07 08 866
+            p Polikliniek Longgeneeskunde telefonisch bereikbaar: van maandag tot en met vrijdag van 08.00 tot 16.30 uur
+          button.page-nav__title(data-collapse-target="page-nav")
             span Op deze pagina
             .page-nav__title-icon
               +svg('chevron-down')
@@ -45,7 +53,7 @@ block content
                 +svg('chevron-right')
                 span Snel naar
     .page-content
-      .page-header.background-theme
+      .page-header.background-theme.visible-tablet
         img(src="images/sprites/png/speciality.png" alt="speciality")
 
       .page-article.specialists
@@ -55,6 +63,8 @@ block content
             h1 Longgeneeskunde
       
           p Bij de polikliniek Longgeneeskunde van Sionsberg Netwerk Ziekenhuis kunt u terecht voor onderzoeken en behandelingen rondom uw longen en luchtwegen. U wordt bij ons geholpen in een kleinschalige, toegankelijke omgeving, met persoonlijke aandacht en korte wachttijden.
+
+          img(src="images/sprites/png/speciality.png" alt="speciality").hidden-tablet
 
           #watdoenwij
             h3 Wat doen wij?

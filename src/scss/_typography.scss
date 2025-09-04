@@ -32,10 +32,7 @@ h1,
   line-height: 44px;
   font-weight: 400;
   margin-bottom: 20px;
-
-  @include tablet{
-    letter-spacing: -0.3px;
-  }
+  letter-spacing: -0.3px;
 
   @include desktop {
     font-size: $h1-font-size-desktop;
