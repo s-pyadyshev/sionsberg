@@ -100,7 +100,6 @@ p {
 }
 
 ul {
-  padding-left: 20px;
 
   li {
     font-size: $p-font-size;
@@ -115,6 +114,6 @@ ul {
   }
 
   li::marker {
-    font-size: 0.9em; 
+    font-size: 0.9em;
   }
 }

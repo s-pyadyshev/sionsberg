@@ -1,0 +1,25 @@
+.page-rights {
+    @include tablet {
+        padding-top: 140px !important;
+    }
+
+    @include desktop {
+        padding-top: 200px !important;
+    }
+}
+
+.page-rights .page-aside {
+    grid-column: 1 / 4;
+
+    @include tablet {
+        grid-column: 4 / 4;
+    }
+}
+
+.page-rights .page-content {
+    grid-column: 1 / 4;
+
+    @include tablet {
+        grid-column: 4 / 4;
+    }
+}

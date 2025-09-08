@@ -1,8 +1,11 @@
 mixin card-news(img, title, subtitle)
-    .card-news
+    a(href="#").card-news&attributes(attributes)
         img(src=img, alt=title)
         .card-news__inner
             p.card-news__title= title
-            p.card-news__subtitle= subtitle
+            if subtitle
+                p.card-news__subtitle= subtitle
+            else
             .card-news__btn
+                span Verder lezen
                 +svg('arrow-right-square')

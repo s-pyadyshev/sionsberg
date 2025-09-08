@@ -60,12 +60,12 @@
 
     @include tablet {
       padding-top: 0;
-      grid-template-columns: minmax(180px, 1fr) 80px auto auto;
+      grid-template-columns: 1fr 80px 100px 80px auto 80px 1fr;
       padding-inline: 0;
     }
 
     @include desktop {
-      grid-template-columns: minmax(320px, 1fr) 80px 860px 1fr;
+      grid-template-columns: 1fr 320px 80px 860px 180px 1fr;
     }
   }
 }
@@ -75,7 +75,11 @@
   grid-row-start: 1;
 
   @include tablet {
-    grid-column: 1 / 3;
+    grid-column: 1 / 5;
+  }
+
+  @include desktop {
+    grid-column: 1 / 4;
   }
 }
 
@@ -84,8 +88,12 @@
   grid-row-start: 2;
 
   @include tablet {
-    grid-column: 2 / 4;
+    grid-column: 4/7;
     grid-row-start: 1;
+  }
+
+  @include desktop {
+    grid-column: 3 / 5;
   }
 }
 
@@ -151,4 +159,173 @@
 .page-article__pagination {
   max-width: 220px;
   margin-left: auto;
+}
+
+.page-body--article .article {
+  line-height: 26px;
+}
+
+.page-body--article .article h1 {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--color-text);
+  letter-spacing: 0;
+  margin-bottom: 24px;
+
+  @include desktop {
+    font-size: 34px;
+    margin-bottom: 38px;
+  }
+}
+
+.page-body--article .article h3 {
+  font-size: 15px;
+  margin-bottom: 0;
+  padding: 12px 0 11px;
+  line-height: 1.4;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.page-body--article .page-nav__list {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page-body--article .page-nav__list:after {
+  display: none;
+}
+
+.page-body--article .page-nav__title {
+  pointer-events: none;
+}
+
+.page-body--article .page-nav__title-icon {
+  display: none;
+}
+
+.page-body--article:has(.page-aside) {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 120px;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 160px 770px 80px 360px 80px 1fr;
+    gap: 0;
+  }
+
+  .page-header {
+    background-color: transparent;
+    padding: 30px 0 40px;
+
+    @include tablet {
+      padding: 150px 80px 50px;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      padding-top: 310px;
+      margin-bottom: 210px;
+      max-width: 720px;
+    }
+  }
+
+  .page-header__image {
+    left: 0;
+    position: static;
+    max-width: 675px;
+    width: 100%;
+    height: 196px;
+    margin: 0;
+
+    @include tablet {
+      height: 260px;
+      margin: 0 auto;
+    }
+
+    @include desktop {
+      position: absolute;
+      max-width: 100%;
+      height: 320px;
+    }
+  }
+
+  .page-content {
+    @include desktop {
+      grid-column: 3 / 5;
+    }
+  }
+
+  .page-article {
+    padding: 0 28px;
+
+    @include tablet {
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    @include desktop {
+      padding-left: 0;
+      max-width: 100%;
+    }
+  }
+
+  .page-article__news {
+    white-space: nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+    gap: 28px;
+
+    @include tablet {
+      white-space: normal;
+      flex-wrap: wrap;
+    }
+
+    >* {
+      flex-shrink: 0;
+      width: 250px;
+      white-space: normal;
+
+      @include desktop {
+        width: 100%;
+      }
+    }
+  }
+
+  .page-aside {
+    padding-inline: 58px 0;
+    margin: 0 -28px;
+
+    @include tablet {
+      padding: 0;
+      margin: 0;
+    }
+
+    @include desktop {
+      padding-inline: 0;
+      grid-column: 5 / 6;
+    }
+  }
+
+  .page-nav__body {
+    @include tablet {
+      max-width: 550px;
+      margin: 0 auto;
+    }
+  }
+
+  .page-nav h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 28px;
+    margin-top: 6px;
+  }
 }

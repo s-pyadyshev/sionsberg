@@ -8,7 +8,7 @@
 
 .page-slider__inner{
     display: grid;
-    grid-template-columns: 1fr 30px 945px 216px 30px 1fr;
+    grid-template-columns: 1fr 30px auto 30px 1fr;
     position: relative;
     overflow: hidden;
 
@@ -24,17 +24,9 @@
 .slider-specialists{
     grid-column: 3 / 4;
     overflow: hidden;
-    width: calc(100% - 752px);
-    margin-left: 27px;
+    width: calc(100% + 6px);
+    margin-left: 24px;
     padding: 48px 0px 60px 0px;
-
-    @media (min-width: 393px){
-        width: calc(100% - 652px);
-    }
-
-    @media (min-width: 650px){
-        width: calc(100% - 417px);
-    }
 
     @include tablet {
         width: calc(100% - 533px);
@@ -66,15 +58,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    width: calc(100% - 725px);
-
-    @media (min-width: 393px){
-        width: calc(100% - 625px);
-    }
-
-    @media (min-width: 650px){
-        width: calc(100% - 390px);
-    }
+    width: 100%;
 
     @include tablet {
         width: calc(100% - 533px);
@@ -112,10 +96,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
-    //margin-top: -3px;
+    width: calc(100% - 30px);
 
     @include tablet {
         margin-bottom: 27px;
+        width: 100%;
     }
     
     h3 {
@@ -187,6 +172,10 @@
 
 .swiper-wrapper {
     height: 240px;
+
+    @media (min-width: 393px) {
+        
+    }
 }
 
 .swiper-slide {

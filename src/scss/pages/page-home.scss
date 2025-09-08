@@ -1,4 +1,4 @@
-.homepage__hero {
+.hero {
   position: relative;
   width: 100%;
   height: fit-content;
@@ -77,7 +77,7 @@
   width: 240px;
   color: var(--color-theme-black-inverse);
   line-height: 32px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   @include tablet {
     margin-bottom: 28px;
@@ -86,7 +86,7 @@
   @include desktop {
     width: 311px;
     line-height: 44px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
 }
 
@@ -221,12 +221,11 @@
 
   @include tablet {
     width: 420px;
-    margin-top: 11px;
+    margin-top: 12px;
   }
 
   @include desktop {
     width: 390px;
-    margin-top: 18px;
   }
 }
 
@@ -552,7 +551,7 @@
 }
 
 .nav__item-title {
-  padding-left: 27px;
+  padding-left: 40px;
   width: 190px;
   height: 100%;
   display: flex;

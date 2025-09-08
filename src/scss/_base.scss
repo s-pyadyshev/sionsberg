@@ -15,7 +15,7 @@
   --color-brand-1-hover: #7A9A0D;
   --color-brand-1-active: #00931C;
   --color-brand-2: #71B6CD;
-  --color-brand-2-rgb: 34, 102, 221;
+  --color-brand-2-rgb: rgba(113, 182, 205, 0.1);
   --color-brand-2-active: #4289A1;
   --color-brand-3: #F7A212;
   --color-brand-3-active: #C17C07;
@@ -31,6 +31,7 @@
   --color-theme: var(--color-theme-black);
   --color-theme-light: var(--color-theme-black);
   --color-theme-active: vvar(--color-theme-black);
+  --color-theme-black-inverse: var(--color-theme-black);
 
   --box-shadow-default: rgba(0, 0, 0, 0.04);
 
@@ -57,7 +58,7 @@ html {
 
   &.brand-2-theme {
     --color-theme: var(--color-brand-2);
-    --color-theme-light: rgba(113, 182, 205, 0.1);
+    --color-theme-light: var(--color-brand-2-rgb);
     --color-theme-active: var(--color-brand-2-active);
   }
 

@@ -7,18 +7,21 @@ append vars
   - html.classList.push('brand-2-theme')
 
 block content
-  .page-body.page-body--inverse
+  .page-body.page-body--inverse.page-body--article
     aside.page-aside
-      .page-nav
+      .page-nav.page-nav--no-style
         .page-nav__body
           button.page-nav__title(data-collapse-target="page-nav")
-            span Gerelateerde artikelen
+          h3 Gerelateerde artikelen
+          .page-article__news
+            +card-news("images/sprites/png/recomm-1.png", "Verstopt, doof en moe?").card-news--compact
+            +card-news("images/sprites/png/news-2.png", "Blijvend hoesten, wanneer naar de arts?").card-news--compact
     .page-content
       .page-header.background-theme
         img.page-header__image(src="images/article.jpg" alt="article." width="720" height="320")
       .page-article
         article.article
-          h1 Verwijzen naar SionsbergBlijvend hoesten: wanneer naar de arts?
+          h1 Blijvend hoesten: wanneer naar de arts?
           b Iedereen hoest wel eens. Meestal is het onschuldig en gaat het vanzelf weer over, bijvoorbeeld bij een verkoudheid of na een griepje. Maar soms blijft de hoest aanhouden en vraag je je af of het tijd is om naar de huisarts of specialist te gaan.
 
           h3 Wanneer is hoesten normaal?

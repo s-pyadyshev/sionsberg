@@ -1,23 +1,174 @@
-table,
-th,
-td {
-    border: 1px solid var(--color-theme);
+.wrapper-freeze {
+  display: flex;
+  width: calc(100% + 116px);
+  margin-left: -58px;
+  flex-direction: column;
 
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: flex;
+    width: 100%;
+    margin-left: 0px;
+  }
 }
 
-.table {
-    table-layout: fixed;
-    font-size: 13px;
-    border-collapse: collapse;
+.wrapper-freeze .sticky-col {
+  min-width: 170px !important;
+  width: 170px !important;
+  position: sticky;
+  left: 0;
+  background-color: var(--color-theme-light);
+  border: 1px solid var(--color-theme);
+  z-index: 10;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.08);
 }
 
-td {
-    padding: 7px 18px;
+.wrapper-freeze .scroll-area {
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: 1;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-left: 0;
+
+  @include desktop {
+    overflow-x: none;
+    overflow-y: none;
+  }
 }
 
-th {
-    font-weight: 300;
+.scroll-area::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper-freeze .scroll-area table {
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 200%;
+  scroll-snap-align: start;
+
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.wrapper-freeze .scroll-area th,
+.wrapper-freeze .scroll-area td {
+  padding: 7px 18px;
+  border: 1px solid var(--color-theme);
+  white-space: nowrap;
+  text-align: left;
+
+  font-size: 13px;
+  font-weight: 300;
+  text-wrap: wrap;
+
+  width: 50%;
+  min-width: 50%;
+
+  scroll-snap-align: start;
+
+  @include desktop {
+    width: 100%;
+    min-width: 100%;
+    line-height: 24px;
+
     text-align: left;
-    padding: 7px 18px;
-    background-color: var(--color-theme-light);
+    vertical-align: top;
+    height: fit-content;
+  }
+}
+
+.wrapper-freeze .scroll-area th {
+  font-weight: 400;
+  background-color: #E3F0F5;
+}
+
+.wrapper-freeze .scroll-area td {
+  @include desktop {
+    text-wrap: nowrap;
+  }
+}
+
+.wrapper-freeze .scroll-area th.child-col {
+  padding: 7px;
+
+  @include desktop {
+    text-wrap: nowrap;
+  }
+}
+
+.wrapper-freeze .scroll-area td.sticky-col {
+  font-weight: 400;
+  box-shadow: 5px 0px 5px rgba(19, 19, 19, 0.1);
+
+  @include desktop {
+    text-wrap: wrap;
+    width: 100px !important;
+  }
+}
+
+.wrapper-freeze .scroll-area th.sticky-col {
+  box-shadow: 5px 0px 5px rgba(19, 19, 19, 0.1);
+  background-color: #E3F0F5;
+
+  @include desktop {
+    width: 120px !important;
+  }
+}
+
+.wrapper-freeze .scroll-area th:last-child {
+  @include desktop {
+    width: 100px !important;
+  }
+}
+
+.wrapper-freeze thead {
+  background-color: var(--color-theme-light);
+}
+
+.wrapper-freeze tbody tr:nth-child(even) td:not(.sticky-col) {
+  background-color: var(--color-theme-light);
+}
+
+.table-info {
+  display: flex;
+  margin-bottom: 14px;
+  margin-top: 58px;
+
+  div:first-child {
+    width: 170px;
+    flex-shrink: 0;
+  }
+
+  div:last-child {
+    width: 60%;
+  }
+}
+
+.table-info div:last-child {
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid var(--color-brand-2);
+  padding: 0px 26px 0px 11px;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    width: 80%;
+  }
+
+  svg {
+    width: 28px;
+    height: 28px;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: var(--color-brand-2);
+  }
 }

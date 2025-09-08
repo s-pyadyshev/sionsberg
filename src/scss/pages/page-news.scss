@@ -1,56 +1,52 @@
-.page__news.page-body {
+.page-news.page-body {
   padding-bottom: 0px;
 }
 
-.page__news {
+.page-news {
   grid-template-columns: 1fr;
-  background: linear-gradient(
-    180deg,
-    rgba(113, 182, 205, 0) 10.9%,
-    rgba(113, 182, 205, 0.1) 61.62%,
-    rgba(113, 182, 205, 0.14) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(113, 182, 205, 0) 10.9%,
+      rgba(113, 182, 205, 0.1) 61.62%,
+      rgba(113, 182, 205, 0.14) 100%);
+  padding-bottom: 80px !important;
 
   @include tablet {
-    //grid-template-columns: $container-padding-tablet auto auto $container-padding-tablet !important;
-    grid-template-columns: 0px 1fr 99px 180px !important;
+    grid-template-columns: 0px 1fr 100px 180px !important;
   }
 
   @include desktop {
-    grid-template-columns: 1fr 860px 80px minmax(320px, 1fr) !important;
+    grid-template-columns: 1fr 40px 60px 60px minmax(auto, 940px) 60px 50px 190px 40px 1fr !important;
   }
 }
 
-.page__news .page-content {
+.page-news .page-content {
   gap: 0px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 81px;
 
   padding-left: 26px;
   padding-right: 12px;
 
   @include tablet {
     margin-top: 0px;
-    margin-bottom: 87px;
     padding-left: 0px;
     padding-right: 0px;
   }
 
   @include desktop {
+    grid-column: 5/8 !important;
     margin-top: 120px;
-    margin-bottom: 83px;
   }
 }
 
-.page__news .page-header {
+.page-news .page-header {
   margin-bottom: 0px;
   padding: 0px;
   width: 100%;
 
-  h1{
-      margin-top: 24px;
-    }
+  h1 {
+    margin-top: 24px;
+  }
 
   @include tablet {
     padding: 150px 186px 90px 80px;
@@ -58,7 +54,7 @@
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 00px;
 
-    h1{
+    h1 {
       margin-bottom: 24px;
       margin-top: 0px;
     }
@@ -70,11 +66,10 @@
 
   @include desktop {
     margin-bottom: 0px;
-    padding: 65px 60px 287px 160px;
-    width: fit-content;
+    padding: 65px 60px 287px 100px;
     border-bottom-left-radius: 50px;
 
-    h1{
+    h1 {
       margin-bottom: 20px;
     }
 
@@ -84,11 +79,11 @@
   }
 }
 
-.page__news .page-header p {
+.page-news .page-header p {
   color: var(--color-theme-black-inverse);
 }
 
-.page__news .page-header h1 {
+.page-news .page-header h1 {
   line-height: 32px;
 
   @include desktop {
@@ -96,7 +91,7 @@
   }
 }
 
-.page__news .page-article {
+.page-news .page-article {
   margin-top: 42px;
   padding-left: 0px;
   padding-right: 0px;
@@ -109,19 +104,18 @@
   }
 
   @include desktop {
-    margin-top: -220px;
-    padding-left: 130px;
+    margin-top: -234px;
+    padding-left: 100px;
     padding-right: 26px;
   }
 }
 
-.page__news .page-article .page-article__pagination {
+.page-news .page-article .page-article__pagination {
   margin-right: auto;
   margin-left: auto;
   max-width: fit-content;
 
   @include tablet {
-    margin-right: 0px;
     margin-left: auto;
   }
 
@@ -130,11 +124,15 @@
   }
 }
 
-.page__news .page-aside {
+.page-news .page-aside {
   display: none;
 
   @include tablet {
     display: block;
+  }
+
+  @include desktop {
+    grid-column: 6 / 9 !important;
   }
 }
 
@@ -187,7 +185,7 @@
   color: var(--color-brand-2-active);
 }
 
-.page__news .page-nav {
+.page-news .page-nav {
   background-color: transparent;
   border-left: 0px;
   box-shadow: none;
@@ -197,13 +195,13 @@
   top: 120px;
 
   @include desktop {
-    margin-left: 40px;
-    margin-right: 10px;
+    margin-left: 0;
+    margin-right: 0;
     top: 180px;
   }
 }
 
-.page__news .page-nav__title {
+.page-news .page-nav__title {
   background-color: transparent;
   padding-left: 20px;
   padding-right: 20px;
@@ -221,11 +219,11 @@
   }
 }
 
-.page__news .page-nav__title span {
+.page-news .page-nav__title span {
   padding: 0px;
 }
 
-.page__news .page-nav__list {
+.page-news .page-nav__list {
   background-color: transparent;
   padding-left: 20px;
   padding-right: 10px;
@@ -235,12 +233,12 @@
   gap: 0px;
 
   @include desktop {
-    padding-right: 20px;
-    height: 330px;
+    gap: 20px;
+    height: 100%;
   }
 }
 
-.page__news .page-nav__item {
+.page-news .page-nav__item {
   background-color: var(--color-white);
   border-radius: 15px;
   padding: 14px 27px 14px 26px;
@@ -251,31 +249,36 @@
   }
 }
 
-.page__news .page-nav__item:hover {
+.page-news .page-nav__item:hover {
   cursor: pointer;
   background-color: var(--color-brand-2);
   color: var(--color-white);
 }
 
-.page__news .page-nav__item:hover .page-nav__link > span {
+.page-news .page-nav__item:hover .page-nav__link>span {
   color: var(--color-white);
 }
 
-.page__news .page-nav__link > span {
+.page-news .page-nav__link>span {
   border-bottom: 0px;
 
   font-size: 14px;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 26px;
 
-  @include desktop{
-    font-size: 20px;
-  font-weight: 400px;
-  line-height: 23px;
+  @include desktop {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
   }
 }
 
-.page__news .page-nav__link:hover > span,
-.page__news .page-nav__link:focus > span {
+.page-news .page-nav__link:hover>span,
+.page-news .page-nav__link:focus>span {
   border-bottom: 0px;
+}
+
+.page-news .page-nav__body,
+.page-news .page-nav__list {
+  padding: 0;
 }

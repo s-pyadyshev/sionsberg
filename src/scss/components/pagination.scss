@@ -115,6 +115,7 @@ $pagination-gap: 20px;
   &:hover,
   &:active {
     background-color: var(--color-theme);
+    color: var(--color-white);
     cursor: pointer;
 
     a {

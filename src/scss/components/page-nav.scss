@@ -1,7 +1,7 @@
 .page-nav {
   position: relative;
   z-index: 100;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
   border-radius: 20px;
   margin: 0 auto;
   font-size: 15px;
@@ -14,12 +14,19 @@
     border-bottom-right-radius: 20px;
     border-right: 20px solid var(--color-theme);
     background-color: var(--background-default);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   }
 
   @include desktop {
     top: 180px;
     font-size: 16px;
   }
+}
+
+.page-nav.page-nav--no-style {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .page-nav__body {
@@ -38,6 +45,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  font-weight: 400;
   text-decoration: none;
   color: var(--color-text-black);
 
@@ -93,7 +101,7 @@
     @include tablet {
       padding-left: 56px;
       padding-top: 30px;
-      padding-bottom: 20px;
+      padding-bottom: 16px;
     }
 
     @include desktop {
@@ -152,7 +160,7 @@
   border-bottom-left-radius: 15px;
 
   @include tablet {
-    gap: 27px;
+    gap: 18px;
     padding-left: 56px;
     padding-bottom: 30px;
     max-height: 1000px;
@@ -187,4 +195,53 @@
 .page-nav__list.active {
   padding-top: 8px;
   padding-bottom: 26px;
+}
+
+.page-nav.page-nav--other {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+
+  .page-nav__list {
+    padding: 0;
+    padding-right: 58px;
+    gap: 27px;
+    background-color: transparent;
+
+    @include tablet {
+      padding-right: 0;
+    }
+  }
+
+  .page-nav__title {
+    margin-bottom: 10px;
+    background-color: transparent;
+    pointer-events: none;
+  }
+
+  .page-nav__title>span {
+    padding: 0;
+    color: var(--color-text);
+  }
+}
+
+.page-nav.page-nav--other .page-nav__link {
+  padding: 16px 26px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: var(--color-gray);
+
+  &:focus,
+  &:hover,
+  &:active {
+    transform: none;
+
+    >span {
+      border-bottom: 0;
+    }
+  }
+
+  >span {
+    border-bottom: 0;
+  }
 }

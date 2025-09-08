@@ -11,6 +11,10 @@
 
   .container {
     position: relative;
+
+    @include desktop {
+      padding-right: 145px;
+    }
   }
 }
 
@@ -73,8 +77,9 @@
   justify-content: center;
   align-items: center;
   color: var(--color-text);
-  background-color: var(--background-default);
-  padding: 0px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 10px 16px;
 
   font-weight: 400;
   font-size: 16px;
@@ -129,9 +134,7 @@
     width: fit-content;
     height: 25px;
     border-radius: 0px;
-    margin-left: 55px;
-
-    font-size: 16px;
+    margin-left: 25px;
 
     background-color: transparent;
 
@@ -433,8 +436,8 @@
 }
 
 .header__item-icon {
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   margin-left: 22px;
   transition: transform 0.3s ease;
 
@@ -444,6 +447,7 @@
 
   @include desktop {
     margin-top: 0;
+    margin-left: 26px;
   }
 }
 
@@ -708,7 +712,7 @@
   }
 
   @include desktop {
-    margin-left: 37px;
+    margin-left: 20px;
   }
 }
 

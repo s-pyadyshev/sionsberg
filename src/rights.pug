@@ -7,9 +7,9 @@ append vars
   - html.classList.push('brand-2-theme')
 
 block content
-  .page-body.page-body--inverse
+  .page-rights.page-body.page-body--inverse.page-body--article
     aside.page-aside
-      .page-nav
+      .page-nav.page-nav--other
         .page-nav__body
           button.page-nav__title(data-collapse-target="page-nav")
             span Andere onderwerpen
@@ -17,16 +17,13 @@ block content
               +svg('chevron-down')
           ul.page-nav__list(data-collapse-content="page-nav")
             li.page-nav__item 
-              a(href="#specialismen").page-nav__link
-                +svg('chevron-right')
+              a(href="/").page-nav__link
                 span Privacy en toestemming
             li.page-nav__item 
-              a(href="#aanvraagformulier").page-nav__link
-                +svg('chevron-right')
+              a(href="/").page-nav__link
                 span Klachten en feedback
             li.page-nav__item 
-              a(href="#downloads").page-nav__link
-                +svg('chevron-right')
+              a(href="/").page-nav__link
                 span Veelgestelde vragen
     .page-content
       .page-article
@@ -59,167 +56,177 @@ block content
           h3 Hebt u vragen?
           p Als iets niet duidelijk is of wilt u meer weten, neem dan gerust contact op via receptie of specifieke polikliniek. We helpen u graag verder.
 
-          table.table.table-bordered.table-striped
-            thead
-              tr
-                th(rowspan="2") Specialisme
-                th(rowspan="2") Omschrijving
-                th(colspan="2") Wachttijd in dagen
-                th(rowspan="2") Wachttijd in weken
-              tr
-                th Polikliniek
-                th Behandeling
-            tbody
-              tr
-                td(rowspan="5") Chirurgie
-                td Nieuwe patient chirurgie
-                td 3
-                td 
-                td 1
-              tr
-                td Kleine verrichting chirurgie
-                td 
-                td 4
-                td 1
-              tr
-                td Kleine verrichting CTS chirurgie
-                td 
-                td 5
-                td 1
-              tr
-                td Proctoscopie chirurgie
-                td 
-                td 9
-                td 2
-              tr
-                td ACNES
-                td 
-                td 21
-                td 3
-              tr
-                td Dermatologie
-                td Nieuwe patient dermatologie
-                td 29
-                td 
-                td 5
-              tr
-                td Diabetes
-                td Nieuwe patient diabeteszorg
-                td 5
-                td 
-                td 1
-              tr
-                td(rowspan="2") Gynaecologie
-                td Nieuwe patient gynaecologie
-                td 43
-                td 
-                td 7
-              tr
-                td Incontinentie / prolaps
-                td 
-                td 51
-                td 8
-              tr
-                td Interne geneeskunde
-                td Nieuwe patient interne geneeskunde
-                td 46
-                td 
-                td 7
-              tr
-                td(rowspan="2") KNO
-                td Nieuwe patient KNO
-                td 31
-                td 
-                td 5
-              tr
-                td Audiometrie / gehoortest
-                td 31
-                td 
-                td 5
-              tr
-                td Long-geneeskunde
-                td Nieuwe patient longgeneeskunde
-                td 12
-                td 
-                td 4
-              tr
-                td(rowspan="2") Neurologie
-                td Nieuwe patient neurologie
-                td 56
-                td 
-                td 8
-              tr
-                td EMG / CTS
-                td 25
-                td 
-                td 4
-              tr
-                td Orthopedie
-                td Nieuwe patient orthopedie
-                td 28
-                td 
-                td 4
-              tr
-                td(rowspan="2") Urologie
-                td Nieuwe patient urologie
-                td 16
-                td 
-                td 3
-              tr
-                td Vasectomie urologie
-                td 
-                td 63
-                td 9
+          
+          .wrapper-freeze
+            .table-info.hidden-tablet
+              div
+              div
+                p Beweeg de tabel vanaf hier met uw vinger naar rechts en links
+                +svg('scroll')
+            .scroll-area
+              table.table.table-bordered.table-striped
+                thead
+                  tr
+                    th.sticky-col(rowspan="2") Specialisme
+                    th(rowspan="2") Omschrijving
+                    th(colspan="2") Wachttijd in dagen
+                    th(rowspan="2") Wachttijd in weken
+                  tr
+                    th.child-col Polikliniek
+                    th.child-col Behandeling
+                tbody
+                  tr
+                    td.sticky-col(rowspan="5") Chirurgie
+                    td Nieuwe patient chirurgie
+                    td.child-col 3
+                    td.child-col 
+                    td 1
+                  tr
+                    td Kleine verrichting chirurgie
+                    td.child-col 
+                    td.child-col 4
+                    td 1
+                  tr
+                    td Kleine verrichting CTS chirurgie
+                    td.child-col 
+                    td.child-col 5
+                    td 1
+                  tr
+                    td Proctoscopie chirurgie
+                    td.child-col 
+                    td.child-col 9
+                    td 2
+                  tr
+                    td ACNES
+                    td.child-col 
+                    td.child-col 21
+                    td 3
+                  tr
+                    td.sticky-col Dermatologie
+                    td Nieuwe patient dermatologie
+                    td.child-col 29
+                    td.child-col
+                    td 5
+                  tr
+                    td.sticky-col Diabetes
+                    td Nieuwe patient diabeteszorg
+                    td.child-col 5
+                    td.child-col 
+                    td 1
+                  tr
+                    td.sticky-col(rowspan="2") Gynaecologie
+                    td Nieuwe patient gynaecologie
+                    td.child-col 43
+                    td.child-col 
+                    td 7
+                  tr
+                    td Incontinentie / prolaps
+                    td.child-col 
+                    td.child-col 51
+                    td 8
+                  tr
+                    td.sticky-col Interne geneeskunde
+                    td Nieuwe patient interne geneeskunde
+                    td.child-col 46
+                    td.child-col 
+                    td 7
+                  tr
+                    td.sticky-col(rowspan="2") KNO
+                    td Nieuwe patient KNO
+                    td.child-col 31
+                    td.child-col 
+                    td 5
+                  tr
+                    td Audiometrie / gehoortest
+                    td.child-col 31
+                    td.child-col 
+                    td 5
+                  tr
+                    td.sticky-col Long-geneeskunde
+                    td Nieuwe patient longgeneeskunde
+                    td.child-col 12
+                    td.child-col 
+                    td 4
+                  tr
+                    td.sticky-col(rowspan="2") Neurologie
+                    td Nieuwe patient neurologie
+                    td.child-col 56
+                    td.child-col 
+                    td 8
+                  tr
+                    td EMG / CTS
+                    td.child-col 25
+                    td.child-col 
+                    td 4
+                  tr
+                    td.sticky-col Orthopedie
+                    td Nieuwe patient orthopedie
+                    td.child-col 28
+                    td.child-col 
+                    td 4
+                  tr
+                    td.sticky-col(rowspan="2") Urologie
+                    td Nieuwe patient urologie
+                    td.child-col 16
+                    td.child-col 
+                    td 3
+                  tr
+                    td Vasectomie urologie
+                    td.child-col 
+                    td.child-col 63
+                    td 9
 
-          h3 Veelgestelde vragen
-          details.accordion
-            summary.accordion-header
-              h3 Hoe wijzig ik mijn afspraak of zeg ik deze af?
-              +svg('chevron-down').accordion-icon
-            .accordion-content
-              p Neem uiterlijk 24 uur vooraf contact op via telefoon of e-mail om uw afspraak te wijzigen of af te zeggen. Zo voorkomt u wachttijdgebrek voor anderen en behoudt u uw plek.
-          details.accordion
-            summary.accordion-header
-              h3 Hoe kan ik mijn medische dossier inzien of opvragen?
-              +svg('chevron-down').accordion-icon
-            .accordion-content
-              p Neem uiterl
-          details.accordion
-            summary.accordion-header
-              h3 Wat zijn de wachttijden per specialisme?
-              +svg('chevron-down').accordion-icon
-            .accordion-content
-              p Neem uiterl
-          details.accordion
-            summary.accordion-header
-              h3 Hoe dien ik een klacht of compliment in?
-              +svg('chevron-down').accordion-icon
-            .accordion-content
-              p Neem uiterl
-          details.accordion
-            summary.accordion-header
-              h3 Wat kost mijn behandeling en wat wordt vergoed?
-              +svg('chevron-down').accordion-icon
-            .accordion-content
-              p Neem uiterl
-          details.accordion
-            summary.accordion-header
-              h3 Wat betekent patiëntveiligheid zoals ID-controle?
-              +svg('chevron-down').accordion-icon
-            .accordion-content
-              p Neem uiterl
-          h3 Compliment, tip of klacht
-          form(action="", method="post")
-            .control 
-              input.input(type="text", name="name" placeholder="Uw voor- en achternaam*" required)
-            .control 
-              input.input(type="email", name="name" placeholder="E-mailadres*" required)
-            .control 
-              input.input(type="tel", name="name" placeholder="Telefoonnummer*" required)
-            .control 
-              textarea.textarea(name="message" placeholder="Uw ervaring...") 
-            .control
-              +checkbox('Ik geef indien nodig toestemming van inzage dossier door de klachtenfunctionaris en de klachtencommissie', false, name="permission")
+          .article-accordions
+            h3 Veelgestelde vragen
+            details.accordion
+              summary.accordion-header
+                h3 Hoe wijzig ik mijn afspraak of zeg ik deze af?
+                +svg('chevron-down').accordion-icon
+              .accordion-content
+                p Neem uiterlijk 24 uur vooraf contact op via telefoon of e-mail om uw afspraak te wijzigen of af te zeggen. Zo voorkomt u wachttijdgebrek voor anderen en behoudt u uw plek.
+            details.accordion
+              summary.accordion-header
+                h3 Hoe kan ik mijn medische dossier inzien of opvragen?
+                +svg('chevron-down').accordion-icon
+              .accordion-content
+                p Neem uiterl
+            details.accordion
+              summary.accordion-header
+                h3 Wat zijn de wachttijden per specialisme?
+                +svg('chevron-down').accordion-icon
+              .accordion-content
+                p Neem uiterl
+            details.accordion
+              summary.accordion-header
+                h3 Hoe dien ik een klacht of compliment in?
+                +svg('chevron-down').accordion-icon
+              .accordion-content
+                p Neem uiterl
+            details.accordion
+              summary.accordion-header
+                h3 Wat kost mijn behandeling en wat wordt vergoed?
+                +svg('chevron-down').accordion-icon
+              .accordion-content
+                p Neem uiterl
+            details.accordion
+              summary.accordion-header
+                h3 Wat betekent patiëntveiligheid zoals ID-controle?
+                +svg('chevron-down').accordion-icon
+              .accordion-content
+                p Neem uiterl
+          .article-form
+            h3 Compliment, tip of klacht
+            form(action="", method="post")
+              .control 
+                input.input(type="text", name="name" placeholder="Uw voor- en achternaam*" required)
+              .control 
+                input.input(type="email", name="name" placeholder="E-mailadres*" required)
+              .control 
+                input.input(type="tel", name="name" placeholder="Telefoonnummer*" required)
+              .control 
+                textarea.textarea(name="message" placeholder="Uw ervaring..." rows="5") 
+              .control
+                +checkbox('Ik geef indien nodig toestemming van inzage dossier door de klachtenfunctionaris en de klachtencommissie', false, name="permission")
 
-            .control 
-              button(type="submit").button Versturen
+              .control 
+                button(type="submit").button Versturen
