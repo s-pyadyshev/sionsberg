@@ -68,10 +68,6 @@
   }
 }
 
-.hero__text a svg {
-  color: var(--color-brand-1);
-}
-
 .hero__text-title h1 {
   word-break: normal;
   width: 240px;
@@ -92,7 +88,7 @@
 
 .hero__text-title h1 span {
   color: var(--color-brand-1);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .hero__text-title {
@@ -584,7 +580,7 @@
   border: 0px;
   border-bottom: 1px solid var(--color-brand-1);
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
   color: var(--color-theme-black);
   transition: width 0.3s ease;
 }

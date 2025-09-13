@@ -2,6 +2,7 @@ import { throttle } from '../helpers.js';
 
 export const menu = (() => {
   const init = () => {
+    const body = document.body;
     const menuToggles = document.querySelectorAll('.header__menu-toggle');
     const headerInner = document.querySelector('.header__inner');
     const headerMenu = document.querySelector('.header__menu');
@@ -12,19 +13,24 @@ export const menu = (() => {
     menuToggles.forEach((btn) => {
       btn.addEventListener('click', () => {
         const target = btn.dataset.collapseTarget;
-        const content = document.querySelector(`.header__nav-content[data-collapse-content="${target}"]`);
+        const content = document.querySelector(
+          `.header__nav-content[data-collapse-content="${target}"]`
+        );
 
         if (activeButton === btn) {
           btn.classList.remove('active');
           headerInner.classList.remove('active');
           headerMenu.classList.remove('active');
-          allContents.forEach(c => c.classList.remove('active'));
+          allContents.forEach((c) => c.classList.remove('active'));
           activeButton = null;
+          body.classList.remove('menu-active');
           return;
+        } else {
+          body.classList.add('menu-active');
         }
 
-        menuToggles.forEach(b => b.classList.remove('active'));
-        allContents.forEach(c => c.classList.remove('active'));
+        menuToggles.forEach((b) => b.classList.remove('active'));
+        allContents.forEach((c) => c.classList.remove('active'));
 
         btn.classList.add('active');
         headerInner.classList.add('active');
@@ -40,8 +46,8 @@ export const menu = (() => {
     const onResize = throttle(() => {
       headerInner.classList.remove('active');
       headerMenu.classList.remove('active');
-      menuToggles.forEach(b => b.classList.remove('active'));
-      allContents.forEach(c => c.classList.remove('active'));
+      menuToggles.forEach((b) => b.classList.remove('active'));
+      allContents.forEach((c) => c.classList.remove('active'));
       activeButton = null;
     }, 200);
 
@@ -50,4 +56,3 @@ export const menu = (() => {
 
   return { init };
 })();
-

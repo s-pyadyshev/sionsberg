@@ -34,10 +34,6 @@
 
   .recommend__card-title {
     background-color: var(--color-brand-2);
-
-    svg {
-      color: var(--color-brand-2-active);
-    }
   }
 }
 
@@ -57,10 +53,6 @@
 
   .recommend__card-title {
     background-color: var(--color-brand-1);
-
-    svg {
-      color: var(--color-brand-1-hover);
-    }
   }
 }
 
@@ -79,6 +71,8 @@
   }
 
   @include desktop {
+    position: sticky;
+    top: 200px;
     grid-column: 8/9;
     grid-row: 1/3;
   }
@@ -132,7 +126,6 @@
     p:nth-child(2) {
       font-size: 14px;
       line-height: 22px;
-      font-weight: 400;
     }
 
     svg {
@@ -183,7 +176,7 @@
   }
 
   p:nth-child(2) {
-    max-height: 0px;
+    font-weight: 300;
     opacity: 0;
     transition: all 0.5s;
 
@@ -220,12 +213,8 @@
     }
 
     p:nth-child(2) {
-      max-height: 0px;
+      max-height: 65px;
       opacity: 1;
-
-      @include tablet {
-        max-height: 65px;
-      }
     }
 
     svg {
@@ -235,6 +224,22 @@
       }
     }
   }
+}
+
+.recommend__card:nth-of-type(1) .recommend__card-title svg {
+  color: #64A5BA;
+}
+
+.recommend__card:nth-of-type(1) .recommend__card-title svg:hover {
+  color: #5A91A4;
+}
+
+.recommend__card:nth-of-type(2) .recommend__card-title svg {
+  color: #87AB0D;
+}
+
+.recommend__card:nth-of-type(2) .recommend__card-title svg:hover {
+  color: #7A9A0D;
 }
 
 .recommend__icon {
@@ -250,7 +255,7 @@
   padding: 26px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.089);
 
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 
   p {
     color: var(--color-theme-black);
@@ -381,6 +386,7 @@
   svg {
     width: 36px;
     height: 30px;
+    fill: none;
     color: var(--color-brand-4);
     margin-top: 2px;
   }
@@ -466,8 +472,7 @@
   content: "";
   width: 100%;
   height: 100%;
-
-  z-index: 2;
+  z-index: 1;
 
   position: absolute;
   background-color: var(--color-gray-light);
@@ -475,8 +480,10 @@
   left: 0;
   border-radius: 20px;
   transform: rotate(5deg);
+  border: 1px solid transparent;
 
-  transition: all 0.3s ease;
+  transition-property: transform;
+  transition-duration: 0.5s;
 
   @include desktop {
     width: 100%;
@@ -487,11 +494,18 @@
 .recommend__card-icon:hover {
   .recommend__back {
     transform: rotate(0deg);
+    border: 1px solid var(--color-brand-4);
+    background-color: transparent;
+    z-index: 10;
   }
 
   .recommend__icon {
-    background-color: var(--color-gray-light-inverse);
+    background-color: var(--color-white);
     cursor: pointer;
+  }
+
+  svg {
+    fill: var(--color-brand-4);
   }
 }
 
@@ -523,15 +537,9 @@
   }
 
   a {
-    display: flex;
-    align-self: center;
 
     @include tablet {
       margin-left: auto;
-    }
-
-    svg {
-      color: var(--color-brand-1);
     }
   }
 

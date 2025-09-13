@@ -18,7 +18,7 @@ a.button {
   }
 }
 
-.button--brand-1 {
+.button.button--brand-1 {
   background-color: var(--color-brand-1);
 
   &:focus,
@@ -28,7 +28,7 @@ a.button {
   }
 }
 
-.button--brand-2 {
+.button.button--brand-2 {
   background-color: var(--color-brand-2);
   border-color: var(--color-brand-2);
 
@@ -39,7 +39,7 @@ a.button {
   }
 }
 
-.button--brand-3 {
+.button.button--brand-3 {
   background-color: var(--color-brand-3);
   border-color: var(--color-brand-3);
 
@@ -50,7 +50,7 @@ a.button {
   }
 }
 
-.button--brand-4 {
+.button.button--brand-4 {
   background-color: var(--color-brand-4);
   border-color: var(--color-brand-4);
 

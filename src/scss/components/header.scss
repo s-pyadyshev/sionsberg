@@ -69,6 +69,15 @@
   pointer-events: none;
 }
 
+.header__menu-toggle>span {
+  display: inline-block;
+  padding-right: 11px;
+
+  @include desktop {
+    padding-right: 13px;
+  }
+}
+
 .header__menu-toggle {
   width: 100px;
   height: 40px;
@@ -90,7 +99,7 @@
   &:hover,
   &:active {
     @include desktop {
-      background: linear-gradient(90deg, var(--color-gray) 0%, var(--color-gray) 70%, transparent 70%, transparent 100%);
+      background: linear-gradient(90deg, var(--color-gray) 0%, var(--color-gray) 65%, transparent 65%, transparent 100%);
     }
   }
 
@@ -138,7 +147,7 @@
 
   @include desktop {
     width: fit-content;
-    height: 32px;
+    height: 39px;
     margin-left: 25px;
     border-radius: 20px;
     background-color: transparent;
@@ -154,6 +163,38 @@
 
     &:nth-of-type(1) {
       margin-left: auto;
+
+      .header__item-icon:hover {
+        background-color: var(--color-brand-3);
+        color: var(--color-white);
+      }
+    }
+
+    &:nth-of-type(2) {
+      margin-left: auto;
+
+      .header__item-icon:hover {
+        background-color: var(--color-brand-2);
+        color: var(--color-white);
+      }
+    }
+
+    &:nth-of-type(3) {
+      margin-left: auto;
+
+      .header__item-icon:hover {
+        background-color: var(--color-brand-4);
+        color: var(--color-white);
+      }
+    }
+
+    &:nth-of-type(4) {
+      margin-left: auto;
+
+      .header__item-icon:hover {
+        background-color: var(--color-brand-1);
+        color: var(--color-white);
+      }
     }
 
     &:nth-of-type(1).active svg {
@@ -244,6 +285,15 @@
   transform: translateY(-150px);
   background-color: var(--background-default);
   border-radius: 0px 0px 20px 20px;
+  overflow: auto;
+  height: 100dvh;
+  width: calc(100% - 60px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  left: 0;
+  right: 0;
 
   @include tablet {
     border-radius: 0px 0px 50px 50px;
@@ -252,7 +302,8 @@
     padding-right: 60px;
     padding-bottom: 50px;
     padding-top: 18px;
-
+    height: auto;
+    width: auto;
     margin-left: $container-padding-tablet;
     margin-right: $container-padding-tablet;
 
@@ -262,6 +313,7 @@
   @include desktop {
     margin-left: $container-padding-desktop;
     margin-right: 145px;
+    padding-bottom: 0;
 
     top: 110px;
   }
@@ -382,7 +434,7 @@
   font-size: 16px;
   position: relative;
 
-  span {
+  span:first-child {
     display: none;
   }
 
@@ -398,7 +450,7 @@
     flex-direction: column;
     font-size: 14px;
 
-    span {
+    span:first-child {
       display: block;
       height: 25px;
       margin-top: 8px;
@@ -411,7 +463,7 @@
   }
 
   @include desktop {
-    span {
+    span:first-child {
       display: none;
     }
   }
@@ -441,9 +493,13 @@
 }
 
 .header__item-icon {
-  width: 17px;
-  height: 17px;
-  margin-left: 22px;
+  display: flex;
+  align-items: center;
+  width: 39px;
+  height: 39px;
+  padding-left: 11px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   transition: transform 0.3s ease;
 
   @include tablet {
@@ -452,8 +508,17 @@
 
   @include desktop {
     margin-top: 0;
-    margin-left: 26px;
+    padding-left: 10px;
   }
+
+  &:hover svg {
+    color: var(--color-white) !important;
+  }
+}
+
+.header__item-icon>svg {
+  width: 17px;
+  height: 17px;
 }
 
 .header__item-content {
@@ -464,10 +529,6 @@
   width: 100%;
   margin-top: 0px;
 
-  @include tablet {
-    margin-top: 31px;
-  }
-
   @include desktop {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -475,21 +536,22 @@
 }
 
 .header__item {
-  width: 47%;
-  height: 63px;
+  width: 100%;
   background-color: var(--color-gray);
   border-radius: 10px;
+  font-weight: 400;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px 13px;
+  padding: 16px 13px;
   margin-bottom: 11px;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 12px;
   cursor: pointer;
   transition: color 0.2s;
 
   svg {
+    height: 30px;
     width: 30px;
     flex-shrink: 0;
     margin-right: 10px;
@@ -502,12 +564,14 @@
 
   @include tablet {
     font-size: 14px;
+    padding-left: 0;
     background-color: transparent;
   }
 
   @include desktop {
+    font-weight: 400;
     font-size: 16px;
-    width: fit-content;
+    width: 100%;
   }
 }
 
@@ -554,6 +618,21 @@
       color: var(--color-brand-3);
     }
   }
+
+  .header__item-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+
+    @include tablet {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+    }
+  }
+
+  .header__item {
+    margin-bottom: 0;
+  }
 }
 
 .header__nav-toggle:nth-child(2) {
@@ -599,6 +678,12 @@
       color: var(--color-brand-2);
     }
   }
+
+  .header__item-content {
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
 
 .header__nav-content:nth-child(3) {
@@ -613,6 +698,12 @@
       color: var(--color-brand-2);
     }
   }
+
+  .header__item-content {
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
 
 .header__nav-content:nth-child(4) {
@@ -625,6 +716,12 @@
 
     .header__nav-icon svg {
       color: var(--color-brand-1);
+    }
+  }
+
+  .header__item-content {
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
@@ -693,19 +790,12 @@
 }
 
 .header__button-contact {
-  border-radius: 50px;
-  color: var(--background-default);
-  background-color: var(--color-brand-1);
   cursor: pointer;
   text-decoration: none;
-
-  font-weight: 200;
   font-size: 16px;
-
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 56px;
   margin-bottom: 28px;
 
   @include tablet {
@@ -717,13 +807,37 @@
   }
 
   @include desktop {
+    font-size: 14px;
+    font-weight: 400;
     margin-left: 20px;
+  }
+
+  >a {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    padding: 18px 20px;
+    border-radius: 50px;
+
+    @include tablet {
+      padding: 10px 20px;
+    }
   }
 }
 
-.header__button-theme input {
-  display: none;
+.header__button-theme {
+
+  &:focus,
+  &:hover,
+  &:active {
+    .theme-indicator {
+      border: 1px solid var(--color-theme-black);
+      background: linear-gradient(to right, var(--color-theme-black) 50%, var(--background-default) 50%);
+    }
+  }
 }
+
+
 
 .theme-indicator {
   width: 20px;
@@ -733,5 +847,5 @@
   background: linear-gradient(to right, var(--color-brand-2) 50%, var(--background-default) 50%);
   display: inline-block;
   cursor: pointer;
-  margin-left: 30px;
+  margin-left: 30px
 }

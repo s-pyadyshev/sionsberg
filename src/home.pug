@@ -2,6 +2,7 @@ extends pug/base
 
 prepend vars
   - title = 'Homepage'
+  - pageWrapperClass = 'homepage'
 
 block content
   section.hero
@@ -14,11 +15,11 @@ block content
             | Dichtbij, betrokken, 
             br
             span samen.
-          a(href="#").link.visible-tablet
+          a(href="#").link.link-brand-1.visible-tablet
             span Meer over ons
             +svg('chevron-right')
         p Bij ons draait alles om samenwerken. Met u, met collega’s, met andere zorgverleners. Zo zorgen we samen voor snellere, betere én betaalbare zorg. En we blijven vernieuwen – in behandelingen, in preventie en in hoe we technologie inzetten. Altijd dichtbij, altijd met aandacht. Want goede zorg begint met écht contact.
-        a(href="#").link.hidden-tablet
+        a(href="#").link.link-brand-1.hidden-tablet
             span Meer over ons
             +svg('chevron-right')
     .container
@@ -168,6 +169,6 @@ block content
       .recommend__text-wrap
         h2 Uitgelicht
         p Soms wilt u gewoon even weten hoe iets zit. In deze artikelen leggen we veelvoorkomende klachten, behandelingen en onderzoeken helder uit – voor wie graag goed geïnformeerd is.
-        a(href="#").link
+        a(href="#").link.link-brand-2
           span Meer artikelen
           +svg('chevron-right')

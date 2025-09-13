@@ -25,9 +25,10 @@ header.header
                     span
                     span
                     span
-            a(href="#").header__button-contact.visible-tablet Contact
+            .header__button-contact.visible-tablet
+                a(href="#").button.button--brand-1 Contact
             label.header__button-theme.visible-desktop
-                input(type="checkbox" id="theme-toggle")
+                input.visually-hidden(type="checkbox" id="theme-toggle")
                 span.theme-indicator
         .header__menu(data-collapse-content="menu")
             .header__menu-nav.hidden-desktop
@@ -57,34 +58,34 @@ header.header
                     .header__item-content(data-collapse-content="zorgaanbod2")
                         .header__item
                             +svg('surgery')
-                            | Chirurgie
+                            span Chirurgie
                         .header__item
                             +svg('skin-cancer')
-                            | Dermato&shy;logie
+                            span Dermato&shy;logie
                         .header__item
                             +svg('lungs')
-                            | Long&shy;geneeskunde
+                            span Long&shy;geneeskunde
                         .header__item
                             +svg('gynecology')
-                            | Gynaeco&shy;logie
+                            span Gynaeco&shy;logie
                         .header__item
                             +svg('brain')
-                            | Neurologie
+                            span Neurologie
                         .header__item
                             +svg('joints')
-                            | Orthopedie
+                            span Orthopedie
                         .header__item
                             +svg('colon')
-                            | Interne Geneeskunde
+                            span Interne Geneeskunde
                         .header__item
                             +svg('ambulance')
-                            | Spoedpoli&shy;kliniek
+                            span Spoedpoli&shy;kliniek
                         .header__item
                             +svg('ear-nose-throat')
-                            | KNO (keel, neus oor)
+                            span KNO (keel, neus oor)
                         .header__item
                             +svg('urology')
-                            | Urologie
+                            span Urologie
                 .header__nav-content(data-collapse-content="patiënten")
                     span Patiënten
                     button.header__item-toggle(data-collapse-target="patiënten2").hidden-desktop
@@ -94,16 +95,16 @@ header.header
                     .header__item-content(data-collapse-content="patiënten2")
                         .header__item
                             +svg('calendar')
-                            | Toegangstijden
+                            span Toegangstijden
                         .header__item
                             +svg('coins')
-                            | Vergoedingen & tarieven
+                            span Vergoedingen & tarieven
                         .header__item
                             +svg('clinical-f')
-                            | Mijn gegevens
+                            span Mijn gegevens
                         .header__item
                             +svg('question')
-                            | Veelgestelde vragen
+                            span Veelgestelde vragen
                 .header__nav-content(data-collapse-content="verwijzers")
                     span Verwijzers
                     button.header__item-toggle(data-collapse-target="verwijzers2").hidden-desktop
@@ -113,13 +114,13 @@ header.header
                     .header__item-content(data-collapse-content="verwijzers2")
                         .header__item
                             +svg('zorgdomein')
-                            | ZorgDomein
+                            span ZorgDomein
                         .header__item
                             +svg('health-worker')
-                            | Contact voor verwijzers
+                            span Contact voor verwijzers
                         .header__item
                             +svg('newsletter')
-                            | Nieuwsbrief
+                            span Nieuwsbrief
                 .header__nav-content(data-collapse-content="overons")
                     span Over ons
                     button.header__item-toggle(data-collapse-target="overons2").hidden-desktop
@@ -129,14 +130,15 @@ header.header
                     .header__item-content(data-collapse-content="overons2")
                         .header__item
                             +svg('hospital')
-                            | Over ons
+                            span Over ons
                         .header__item
                             +svg('health-data')
-                            | Kwaliteit en veiligheid
+                            span Kwaliteit en veiligheid
                         .header__item
                             +svg('healthcare-it')
-                            | Werken bij
+                            span Werken bij
                         .header__item
                             +svg('forum')
-                            | Comliment, tip of klacht
-                a(href="#").header__button-contact.hidden-tablet Contact
+                            span Comliment, tip of klacht
+                .header__button-contact.hidden-tablet
+                    a(href="#").button.button--brand-1 Contact

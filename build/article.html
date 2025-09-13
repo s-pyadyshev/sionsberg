@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="KEIM" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="./css/main.css?v=1757361181740">
+    <link rel="stylesheet" href="./css/main.css?v=1757773794346">
 </head>
 
 <body>
@@ -61,9 +61,11 @@
                         <div class="header__toggle-text">Menu</div>
                         <div class="header__toggle-icon"><span></span><span></span><span></span></div>
                     </button>
-                    <a class="header__button-contact visible-tablet" href="#">Contact</a>
+                    <div class="header__button-contact visible-tablet">
+                        <a class="button button--brand-1" href="#">Contact</a>
+                    </div>
                     <label class="header__button-theme visible-desktop">
-                        <input type="checkbox" id="theme-toggle"><span class="theme-indicator"></span>
+                        <input class="visually-hidden" type="checkbox" id="theme-toggle"><span class="theme-indicator"></span>
                     </label>
                 </div>
                 <div class="header__menu" data-collapse-content="menu">
@@ -110,52 +112,52 @@
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#surgery"></use>
-                                    </svg>Chirurgie
+                                    </svg><span>Chirurgie</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#skin-cancer"></use>
-                                    </svg>Dermato&shy;logie
+                                    </svg><span>Dermato&shy;logie</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#lungs"></use>
-                                    </svg>Long&shy;geneeskunde
+                                    </svg><span>Long&shy;geneeskunde</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#gynecology"></use>
-                                    </svg>Gynaeco&shy;logie
+                                    </svg><span>Gynaeco&shy;logie</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#brain"></use>
-                                    </svg>Neurologie
+                                    </svg><span>Neurologie</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#joints"></use>
-                                    </svg>Orthopedie
+                                    </svg><span>Orthopedie</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#colon"></use>
-                                    </svg>Interne Geneeskunde
+                                    </svg><span>Interne Geneeskunde</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#ambulance"></use>
-                                    </svg>Spoedpoli&shy;kliniek
+                                    </svg><span>Spoedpoli&shy;kliniek</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#ear-nose-throat"></use>
-                                    </svg>KNO (keel, neus oor)
+                                    </svg><span>KNO (keel, neus oor)</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#urology"></use>
-                                    </svg>Urologie
+                                    </svg><span>Urologie</span>
                                 </div>
                             </div>
                         </div>
@@ -171,22 +173,22 @@
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#calendar"></use>
-                                    </svg>Toegangstijden
+                                    </svg><span>Toegangstijden</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#coins"></use>
-                                    </svg>Vergoedingen & tarieven
+                                    </svg><span>Vergoedingen & tarieven</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#clinical-f"></use>
-                                    </svg>Mijn gegevens
+                                    </svg><span>Mijn gegevens</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#question"></use>
-                                    </svg>Veelgestelde vragen
+                                    </svg><span>Veelgestelde vragen</span>
                                 </div>
                             </div>
                         </div>
@@ -202,17 +204,17 @@
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#zorgdomein"></use>
-                                    </svg>ZorgDomein
+                                    </svg><span>ZorgDomein</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#health-worker"></use>
-                                    </svg>Contact voor verwijzers
+                                    </svg><span>Contact voor verwijzers</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#newsletter"></use>
-                                    </svg>Nieuwsbrief
+                                    </svg><span>Nieuwsbrief</span>
                                 </div>
                             </div>
                         </div>
@@ -228,26 +230,28 @@
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#hospital"></use>
-                                    </svg>Over ons
+                                    </svg><span>Over ons</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#health-data"></use>
-                                    </svg>Kwaliteit en veiligheid
+                                    </svg><span>Kwaliteit en veiligheid</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#healthcare-it"></use>
-                                    </svg>Werken bij
+                                    </svg><span>Werken bij</span>
                                 </div>
                                 <div class="header__item">
                                     <svg>
                                         <use xlink:href="./images/sprites.svg#forum"></use>
-                                    </svg>Comliment, tip of klacht
+                                    </svg><span>Comliment, tip of klacht</span>
                                 </div>
                             </div>
                         </div>
-                        <a class="header__button-contact hidden-tablet" href="#">Contact</a>
+                        <div class="header__button-contact hidden-tablet">
+                            <a class="button button--brand-1" href="#">Contact</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -380,7 +384,7 @@
             </div>
         </footer>
     </div>
-    <script src="./js/vendor.js?v=1757361181741"></script>
-    <script src="./js/main.js?v=1757361181741"></script>
+    <script src="./js/vendor.js?v=1757773794346"></script>
+    <script src="./js/main.js?v=1757773794346"></script>
 </body>
 </html>
