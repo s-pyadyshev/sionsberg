@@ -1,0 +1,9 @@
+.section-contact address a>b {
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}

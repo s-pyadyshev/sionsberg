@@ -58,6 +58,7 @@ export const toggle = (() => {
       menuToggles.forEach((c) => c.classList.remove('active'));
       allContents.forEach((c) => c.classList.remove('active'));
       navToggles.forEach((c) => c.classList.remove('inactive'));
+      navToggles.forEach((c) => c.classList.remove('active'));
     }
     element.classList.remove('active');
   }

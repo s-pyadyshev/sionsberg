@@ -1,25 +1,51 @@
 .page-rights {
-    @include tablet {
-        padding-top: 140px !important;
-    }
+  @include tablet {
+    padding-top: 140px !important;
+  }
 
-    @include desktop {
-        padding-top: 200px !important;
-    }
+  @include desktop {
+    padding-top: 200px !important;
+  }
+}
+
+.page-rights h3 {
+  margin-top: 10px;
+  margin-bottom: 0 !important;
+  padding: 12px 0 4px !important;
+
+  @include tablet {
+    font-size: 15px !important;
+  }
+
+  @include desktop {
+    font-size: 20px !important;
+    padding: 8px 0 0px !important;
+  }
+}
+
+.page-rights ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .page-rights .page-aside {
-    grid-column: 1 / 4;
+  grid-column: 1 / 4;
 
-    @include tablet {
-        grid-column: 4 / 4;
-    }
+  @include tablet {
+    grid-column: 4 / 4;
+  }
 }
 
 .page-rights .page-content {
-    grid-column: 1 / 4;
+  grid-column: 1 / 4;
 
-    @include tablet {
-        grid-column: 4 / 4;
-    }
+  @include tablet {
+    grid-column: 4 / 4;
+  }
+}
+
+.page-rights .page-article {
+  @include desktop {
+    padding-left: 15px !important;
+  }
 }

@@ -10,10 +10,7 @@ export const sliderSpecialists = (function () {
         prevEl: '.swiper-button-prev'
       },
       slidesPerView: 'auto',
-      spaceBetween: 20,
-      // breakpoints: {
-      //   1440: { slidesPerView: 4 }
-      // }
+      spaceBetween: 20
     });
   };
 

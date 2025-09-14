@@ -138,18 +138,18 @@
 }
 
 .visible-tablet {
-  display: none;
+  display: none !important;
 
   @include tablet {
-    display: flex;
+    display: flex !important;
   }
 }
 
 .hidden-tablet {
-  display: flex;
+  display: flex !important;
 
   @include tablet {
-    display: none;
+    display: none !important;
   }
 }
 

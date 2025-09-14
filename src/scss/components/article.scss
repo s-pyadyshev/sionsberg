@@ -19,7 +19,7 @@
   h3 {
     font-size: 20px;
     font-weight: 500;
-    line-height: 44px;
+    line-height: 26px;
     margin-top: 40px;
     margin-bottom: 12px;
 
@@ -29,6 +29,7 @@
 
     @include desktop {
       font-size: 26px;
+      margin-top: 60px;
       margin-bottom: 8px;
     }
   }
@@ -261,12 +262,18 @@
   }
 }
 
-.article-accordions {
+.page-rights .article-accordions {
   margin-top: 44px;
+
+  @include desktop {
+    margin-top: 35px;
+    margin-bottom: 40px;
+  }
 }
 
-.article-accordions h3 {
+.page-rights .article-accordions>h3 {
   font-size: 20px;
+  margin-bottom: 10px !important;
 }
 
 .article-form {
@@ -275,4 +282,18 @@
 
 .article-form h3 {
   margin-bottom: 10px !important;
+
+  @include desktop {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+.article-form .checkbox-box__label {
+  max-width: 440px;
+  margin-bottom: 12px;
+}
+
+.article-form .button {
+  padding: 10px 24px;
 }

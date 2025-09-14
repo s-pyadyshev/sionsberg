@@ -1,184 +1,153 @@
-.page-article__slider{
-    grid-column: 1 / 5;
-    grid-row-start: 2;
-    max-width: 100%;
-    height: 350px;
-    position: relative;
+.page-article__slider {
+  grid-column: 1 / 5;
+  grid-row-start: 2;
+  max-width: 100%;
+  height: 350px;
+  position: relative;
 }
 
-.page-slider__inner{
-    display: grid;
-    grid-template-columns: 1fr 30px auto 30px 1fr;
-    position: relative;
-    overflow: hidden;
+.slider-specialists {
+  grid-column: 3 / 5;
+  overflow: hidden;
+  width: 100%;
+  padding: 48px 56px 60px 56px;
 
-    @include tablet {
-        grid-template-columns: 1fr 80px 945px 216px 80px 1fr;
-    }
+  @include tablet {
+    padding-right: 10px;
+    padding-left: 80px;
+  }
 
-    @include desktop {
-        grid-template-columns: 1fr 100px 945px 216px 180px 1fr;
-    }
-}
-
-.slider-specialists{
-    grid-column: 3 / 4;
-    overflow: hidden;
-    width: calc(100% + 6px);
-    margin-left: 24px;
-    padding: 48px 0px 60px 0px;
-
-    @include tablet {
-        width: calc(100% - 533px);
-        margin-left: 0px;
-    }
-
-    @media (min-width: 950px){
-        width: calc(100% - 390px);
-    }
-
-    @media (min-width: 1050px){
-        width: calc(100% - 290px);
-    }
-
-    @media (min-width: 1150px){
-        width: calc(100% - 190px);
-    }
-
-    @include desktop {
-        margin-left: 60px;
-        width: calc(100% - 150px);
-    }
+  @include desktop {
+    padding-left: 0;
+    padding-right: 20px;
+  }
 }
 
 .swiper-back {
-    grid-column: 1 / 4;
+  grid-column: 1 / 4;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @include tablet {
+    width: calc(100% - 533px);
+    margin-left: 0px;
+  }
+
+  @media (min-width: 950px) {
+    width: calc(100% - 390px);
+  }
+
+  @media (min-width: 1050px) {
+    width: calc(100% - 290px);
+  }
+
+  @media (min-width: 1150px) {
+    width: calc(100% - 190px);
+  }
+
+  @include desktop {
+    width: calc(100% - 90px);
+  }
+
+  span {
+    display: block;
+    background-color: var(--color-gray);
+    border-radius: 0px 30px 30px 0px;
     height: 100%;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
     width: 100%;
-
-    @include tablet {
-        width: calc(100% - 533px);
-        margin-left: 0px;
-    }
-
-    @media (min-width: 950px){
-        width: calc(100% - 390px);
-    }
-
-    @media (min-width: 1050px){
-        width: calc(100% - 290px);
-    }
-
-    @media (min-width: 1150px){
-        width: calc(100% - 190px);
-    }
-
-    @include desktop {
-        width: calc(100% - 90px);
-    }
-
-    span {
-        display: block;
-        background-color: var(--color-gray);
-        border-radius: 0px 30px 30px 0px;
-        height: 100%;
-        width: 100%;
-    }
+  }
 }
 
 .swiper-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    width: calc(100% - 30px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  width: calc(100% + 20px);
+
+  @include tablet {
+    margin-bottom: 27px;
+    width: 100%;
+  }
+
+  h3 {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    width: 150px;
+
+    color: var(--color-brand-3);
 
     @include tablet {
-        margin-bottom: 27px;
-        width: 100%;
+      font-size: 20px;
+      line-height: 44px;
+      width: 100%;
     }
-    
-    h3 {
-        margin-left: 0px;
-        margin-bottom: 0px;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 30px;
-        width: 150px;
 
-        color: var(--color-brand-3);
-
-        @include tablet {
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 44px;
-            width: 100%;
-        }
-
-        @include desktop{
-            margin-left: 80px;
-            font-size: 26px;
-        }
+    @include desktop {
+      margin-left: 80px;
+      font-size: 26px;
     }
+  }
 }
 
 .swiper-navigation {
-    margin-right: 15px;
-    display: flex;
-    gap: 5px;
+  margin-right: 15px;
+  display: flex;
+  gap: 5px;
 
-    @media (min-width: 393px){
-        margin-right: 7px;
-    }
+  @media (min-width: 393px) {
+    margin-right: 7px;
+  }
 
-    @include tablet{
-        margin-right: 40px;
-    }
+  @include tablet {
+    margin-right: 35px;
+  }
 
-    @include desktop{
-        margin-right: 69px;
-        gap: 7px;
-    }
+  @include desktop {
+    margin-right: 50px;
+    gap: 7px;
+  }
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-    position: static;
-    margin: 0;
-    background: none;
-    color: var(--color-theme);
-    height: 20px;
-    width: 21px;
+  position: static;
+  margin: 0;
+  background: none;
+  color: var(--color-theme);
+  height: 20px;
+  width: 21px;
 
-    &:after {
-        display: none;
-    }
+  &:after {
+    display: none;
+  }
 
-    @include tablet{
-        margin-top: 2px;
-    }
+  @include tablet {
+    margin-top: 2px;
+  }
 
-    @include desktop{
-        height: 19px;
-        width: 30px;
-        margin-top: -3px;
-    }
+  @include desktop {
+    height: 19px;
+    width: 30px;
+    margin-top: -3px;
+  }
 }
 
 .swiper-wrapper {
-    height: 240px;
+  height: 240px;
 
-    @media (min-width: 393px) {
-        
-    }
+  @media (min-width: 393px) {}
 }
 
 .swiper-slide {
   flex: 0 0 auto;
-  width: 220px; 
+  width: 220px;
 }

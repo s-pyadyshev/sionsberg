@@ -15,6 +15,10 @@
     @include desktop {
       padding-right: 145px;
     }
+
+    @media (min-width: 1600px) {
+      padding-right: 160px;
+    }
   }
 }
 
@@ -27,30 +31,30 @@
   height: 110px;
   width: 100%;
   background-color: var(--background-default);
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0 0 20px 20px;
   padding-left: 24px;
   padding-right: 24px;
   transition: all 0.5s ease;
-  padding-top: 0px;
-  box-shadow: 0px 4px 30px 3px var(--box-shadow-default);
+  padding-top: 0;
+  box-shadow: 0 4px 30px 3px var(--box-shadow-default);
 
   &.active {
     border-radius: 0px;
-    box-shadow: 0px -20px 30px 3px var(--box-shadow-default);
+    box-shadow: 0 -20px 30px 3px var(--box-shadow-default);
   }
 
   @include tablet {
     height: 78px;
     justify-content: flex-start;
-    border-radius: 0px 0px 50px 50px;
+    border-radius: 0 0 50px 50px;
 
     padding-left: 60px;
-    padding-right: 49px;
+    padding-right: 35px;
   }
 
   @include desktop {
     height: 120px;
-    padding-right: 38px;
+    padding-right: 40px;
   }
 }
 
@@ -74,7 +78,7 @@
   padding-right: 11px;
 
   @include desktop {
-    padding-right: 13px;
+    padding-right: 17px;
   }
 }
 
@@ -163,6 +167,10 @@
 
     &:nth-of-type(1) {
       margin-left: auto;
+
+      @include desktop {
+        margin-left: 95px;
+      }
 
       .header__item-icon:hover {
         background-color: var(--color-brand-3);
@@ -809,11 +817,12 @@
   @include desktop {
     font-size: 14px;
     font-weight: 400;
-    margin-left: 20px;
+    margin-left: 5px;
   }
 
   >a {
     font-size: 16px;
+    font-weight: 300;
     width: 100%;
     text-align: center;
     padding: 18px 20px;
@@ -821,6 +830,11 @@
 
     @include tablet {
       padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    @include desktop {
+      font-weight: 500;
     }
   }
 }
@@ -831,7 +845,7 @@
   &:hover,
   &:active {
     .theme-indicator {
-      border: 1px solid var(--color-theme-black);
+      border: 2px solid var(--color-theme-black);
       background: linear-gradient(to right, var(--color-theme-black) 50%, var(--background-default) 50%);
     }
   }
@@ -840,10 +854,10 @@
 
 
 .theme-indicator {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  border: 1px solid var(--color-brand-2);
+  border: 2px solid var(--color-brand-2);
   background: linear-gradient(to right, var(--color-brand-2) 50%, var(--background-default) 50%);
   display: inline-block;
   cursor: pointer;

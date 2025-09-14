@@ -102,12 +102,12 @@ body {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  body:not(.light-theme) {
-    --color-text: var(--color-white);
-    --background-default: var(--color-theme-black);
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   body:not(.light-theme) {
+//     --color-text: var(--color-white);
+//     --background-default: var(--color-theme-black);
+//   }
+// }
 
 a,
 button {

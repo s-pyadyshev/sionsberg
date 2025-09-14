@@ -11,11 +11,11 @@
   padding-bottom: 80px !important;
 
   @include tablet {
-    grid-template-columns: 0px 1fr 100px 180px !important;
+    grid-template-columns: 1fr auto minmax(450px, 100%) 50px 80px 100px 20px 40px 1fr auto !important;
   }
 
   @include desktop {
-    grid-template-columns: 1fr 40px 60px 60px minmax(auto, 940px) 60px 50px 190px 40px 1fr !important;
+    grid-template-columns: 100px 60px 870px 50px 140px 60px 120px 40px !important
   }
 }
 
@@ -34,7 +34,7 @@
   }
 
   @include desktop {
-    grid-column: 5/8 !important;
+    grid-column: 3/6 !important;
     margin-top: 120px;
   }
 }
@@ -70,7 +70,7 @@
     border-bottom-left-radius: 50px;
 
     h1 {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     p {
@@ -81,6 +81,11 @@
 
 .page-news .page-header p {
   color: var(--color-theme-black-inverse);
+  font-weight: 300;
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .page-news .page-header h1 {
@@ -97,31 +102,24 @@
   padding-right: 0px;
 
   @include tablet {
-    padding-right: 108px;
+    padding-right: 0;
     margin-top: -51px;
     padding-left: 80px;
     max-width: 100%;
+    padding-right: 130px;
   }
 
   @include desktop {
-    margin-top: -234px;
+    margin-top: -219px;
     padding-left: 100px;
-    padding-right: 26px;
+    padding-right: 200px;
   }
 }
 
 .page-news .page-article .page-article__pagination {
-  margin-right: auto;
+  margin-right: 0;
   margin-left: auto;
   max-width: fit-content;
-
-  @include tablet {
-    margin-left: auto;
-  }
-
-  @include desktop {
-    margin-left: auto;
-  }
 }
 
 .page-news .page-aside {
@@ -129,10 +127,11 @@
 
   @include tablet {
     display: block;
+
   }
 
   @include desktop {
-    grid-column: 6 / 9 !important;
+    grid-column: 5 / 8 !important;
   }
 }
 
@@ -147,6 +146,8 @@
   gap: 48px;
 
   @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 26px;
   }
 
@@ -194,6 +195,10 @@
   font-size: 20px;
   top: 120px;
 
+  @include tablet {
+    margin-left: 0;
+  }
+
   @include desktop {
     margin-left: 0;
     margin-right: 0;
@@ -211,6 +216,7 @@
   @include tablet {
     text-align: left;
     padding-bottom: 14px;
+    padding-left: 0;
   }
 
   @include desktop {
@@ -220,17 +226,24 @@
 }
 
 .page-news .page-nav__title span {
-  padding: 0px;
+  padding: 0;
 }
 
 .page-news .page-nav__list {
   background-color: transparent;
   padding-left: 20px;
   padding-right: 10px;
-  height: 266px;
   justify-content: space-between;
   display: flex;
-  gap: 0px;
+  gap: 0;
+
+  @include tablet {
+    gap: 10px;
+    height: calc(100% + 40px);
+    width: calc(100% + 40px);
+    padding: 20px 20px 0 20px;
+    margin: -20px;
+  }
 
   @include desktop {
     gap: 20px;
@@ -242,11 +255,11 @@
   background-color: var(--color-white);
   border-radius: 15px;
   padding: 14px 27px 14px 26px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.089);
   transition: all 0.2s;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
 
   @include desktop {
-    padding: 17px 50px;
+    padding: 19px 50px 18px;
   }
 }
 

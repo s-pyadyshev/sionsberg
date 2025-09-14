@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100%;
   padding-top: 0;
 
   &:before {
@@ -44,6 +43,46 @@
       background: linear-gradient(180deg, rgba(247, 115, 108, 0.06) 10.9%, rgba(247, 115, 108, 0.04) 61.62%, rgba(247, 115, 108, 0) 100%);
     }
   }
+
+  &:after {
+    display: none;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1060px;
+    pointer-events: none;
+    height: 1500px;
+
+    @include tablet {
+      height: 676px;
+    }
+
+    @include desktop {
+      height: 1060px;
+    }
+
+    .brand-1-theme & {
+      display: block;
+      background: linear-gradient(180deg, rgba(151, 191, 13, 0) 10.9%, rgba(151, 191, 13, 0.04) 61.62%, rgba(151, 191, 13, 0.06) 100%);
+    }
+
+    .brand-2-theme & {
+      display: block;
+      background: linear-gradient(180deg, rgba(113, 182, 205, 0) 10.9%, rgba(113, 182, 205, 0.06) 61.62%, rgba(113, 182, 205, 0.08) 100%);
+    }
+
+    .brand-3-theme & {
+      display: block;
+      background: linear-gradient(180deg, rgba(247, 162, 18, 0) 10.9%, rgba(247, 162, 18, 0.04) 61.62%, rgba(247, 162, 18, 0.06) 100%);
+    }
+
+    .brand-4-theme & {
+      display: block;
+      background: linear-gradient(180deg, rgba(247, 115, 108, 0) 10.9%, rgba(247, 115, 108, 0.04) 61.62%, rgba(247, 115, 108, 0.06) 100%);
+    }
+  }
 }
 
 .page-body {
@@ -65,6 +104,7 @@
     }
 
     @include desktop {
+      padding-bottom: 160px;
       grid-template-columns: 1fr 320px 80px 860px 180px 1fr;
     }
   }
@@ -110,13 +150,13 @@
 
     .page-aside {
       @include tablet {
-        grid-column: 3/5
+        grid-column: 5 / 8;
       }
     }
 
     .page-content {
       @include tablet {
-        grid-column: 2/4;
+        grid-column: 1 / 6;
       }
     }
   }
@@ -188,6 +228,10 @@
   @include tablet {
     font-size: 20px;
   }
+
+  @include desktop {
+    margin: 15px 0 4px;
+  }
 }
 
 .page-body--article .page-nav__list {
@@ -232,7 +276,7 @@
 
     @include desktop {
       padding-top: 310px;
-      margin-bottom: 210px;
+      margin-bottom: 230px;
       max-width: 720px;
     }
   }
@@ -272,27 +316,26 @@
     }
 
     @include desktop {
-      padding-left: 0;
+      padding: 0 80px;
       max-width: 100%;
     }
   }
 
   .page-article__news {
-    white-space: nowrap;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 28px;
+    align-content: center;
 
-    @include tablet {
-      white-space: normal;
-      flex-wrap: wrap;
+    @include desktop {
+      gap: 44px;
+      display: flex;
+      flex-direction: column;
     }
 
     >* {
       flex-shrink: 0;
-      width: 250px;
-      white-space: normal;
+      width: 336px;
 
       @include desktop {
         width: 100%;
@@ -350,5 +393,24 @@
 
   @include desktop {
     height: 1060px;
+  }
+}
+
+.homepage::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1560px;
+  background: linear-gradient(180deg, rgba(113, 182, 205, 0) 10.9%, rgba(113, 182, 205, 0.08) 61.62%, rgba(113, 182, 205, 0.12) 100%);
+
+  @include tablet {
+    height: 640px;
+  }
+
+  @include desktop {
+    height: 860px;
   }
 }

@@ -54,7 +54,7 @@
     left: 0;
     width: 100%;
     background-color: var(--background-default);
-    box-shadow: 0 20px 17px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 13px 10px 5px var(--box-shadow-default);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
@@ -81,10 +81,6 @@
 
 .contact__bottom p {
   margin-bottom: 25px;
-}
-
-.contact__bottom a {
-  text-decoration: underline;
 }
 
 .contact .contact__form h3 {

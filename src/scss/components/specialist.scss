@@ -53,6 +53,11 @@
   border-radius: 15px;
   object-fit: cover;
 
+  @media (min-width: 400px) {
+    width: 200px;
+    height: 200px;
+  }
+
   @include tablet {
     position: static;
     padding-right: 30px;
@@ -120,6 +125,7 @@
     gap: 80px;
     margin-left: 100px;
     margin-right: 100px;
+    margin-bottom: 160px;
   }
 
   blockquote {
@@ -131,7 +137,7 @@
 .specilist__quote {
   padding: 34px 39px 29px 39px;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 25px;
   text-align: center;
   border-radius: 20px;
