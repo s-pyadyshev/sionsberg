@@ -48,8 +48,8 @@ header.header
                     span Over ons
                     .header__nav-icon
                         +svg('chevron-down')
-            .header__menu-content
-                .header__nav-content(data-collapse-content="zorgaanbod")
+            ul.header__menu-content
+                li.header__nav-content.menu-item.menu-item-has-children(data-collapse-content="zorgaanbod")
                     span Zorgaanbod
                     button.header__item-toggle(data-collapse-target="zorgaanbod2").hidden-desktop
                         span Specialismen
@@ -86,7 +86,7 @@ header.header
                         .header__item
                             +svg('urology')
                             span Urologie
-                .header__nav-content(data-collapse-content="patiënten")
+                li.header__nav-content.menu-item.menu-item-has-children(data-collapse-content="patiënten")
                     span Patiënten
                     button.header__item-toggle(data-collapse-target="patiënten2").hidden-desktop
                         span Onderwerpen
@@ -105,7 +105,7 @@ header.header
                         .header__item
                             +svg('question')
                             span Veelgestelde vragen
-                .header__nav-content(data-collapse-content="verwijzers")
+                li.header__nav-content.menu-item.menu-item-has-children(data-collapse-content="verwijzers")
                     span Verwijzers
                     button.header__item-toggle(data-collapse-target="verwijzers2").hidden-desktop
                         span Verwijzers
@@ -121,7 +121,7 @@ header.header
                         .header__item
                             +svg('newsletter')
                             span Nieuwsbrief
-                .header__nav-content(data-collapse-content="overons")
+                li.header__nav-content.menu-item.menu-item-has-children(data-collapse-content="overons")
                     span Over ons
                     button.header__item-toggle(data-collapse-target="overons2").hidden-desktop
                         span Over ons

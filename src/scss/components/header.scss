@@ -460,7 +460,8 @@
     display: none;
   }
 
-  &.active {
+  &.active,
+  &.current-menu-item {
     margin-top: -5px;
     margin-bottom: 23px;
     display: flex;

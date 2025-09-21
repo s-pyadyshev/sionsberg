@@ -856,6 +856,8 @@ label:has(+ input:disabled)) {
   --color-theme-black-inverse: var(--color-theme-black);
   --box-shadow-default: rgba(0, 0, 0, 0.04);
   --font-primary: ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", roboto, oxygen-sans, cantarell, "Helvetica Neue", sans-serif;
+  --card-title-height: 95px;
+  --card-title-height-hover: 180px;
 }
 
 html {
@@ -2691,7 +2693,8 @@ a.button:active {
   display: none;
 }
 
-.header__nav-content.active {
+.header__nav-content.active,
+.header__nav-content.current-menu-item {
   margin-top: -5px;
   margin-bottom: 23px;
   display: flex;
@@ -4477,7 +4480,8 @@ a.button:active {
 }
 
 .section-specialties {
-  margin-left: 0px;
+  position: relative;
+  margin-left: 0;
 }
 
 .specialties {
@@ -4489,7 +4493,8 @@ a.button:active {
   align-items: center;
   padding: 60px 28px 30px 28px;
   border-radius: 20px;
-  box-shadow: 0px -25px 30px rgba(50, 107, 123, 0.08);
+  border-top-right-radius: 0;
+  box-shadow: 0px -25px 30px 6px rgba(50, 107, 123, 0.0784313725);
 }
 
 .specialties .link.hidden-tablet {
@@ -4817,6 +4822,78 @@ a.toggle__item-wrapper {
   width: 100%;
 }
 
+@keyframes cardBounceInUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(-16px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes cardBounceInDown {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardTitleBounceInUp {
+  0% {
+    height: var(--card-title-height);
+  }
+
+  20% {
+    height: var(--card-title-height-hover);
+  }
+
+  60% {
+    height: calc(var(--card-title-height-hover) - 10px);
+  }
+
+  100% {
+    height: var(--card-title-height-hover);
+  }
+}
+
+@keyframes cardTitleBounceInDown {
+  0% {
+    height: var(--card-title-height-hover);
+  }
+
+  20% {
+    height: var(--card-title-height);
+  }
+
+  60% {
+    height: calc(var(--card-title-height) - 10px);
+  }
+
+  100% {
+    height: var(--card-title-height);
+  }
+}
+
 .recommend {
   display: grid;
   grid-template-columns: 30px 1fr 30px 30px 30px;
@@ -4860,7 +4937,9 @@ a.toggle__item-wrapper {
   width: 100%;
   height: 272px;
   position: relative;
-  transition: all 0.3s ease;
+  animation-name: cardBounceInDown;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
 }
 
 .recommend__card img {
@@ -4875,10 +4954,10 @@ a.toggle__item-wrapper {
 
 .recommend__card-title {
   position: absolute;
-  bottom: -66px;
+  bottom: -67px;
   left: 0;
   z-index: 10;
-  height: 95px;
+  height: var(--card-title-height);
   width: calc(100% - 28px);
   padding: 20px 18px 20px 20px;
   border-radius: 0px 20px 20px 20px;
@@ -4886,7 +4965,9 @@ a.toggle__item-wrapper {
   flex-direction: row;
   align-content: flex-start;
   justify-content: space-between;
-  transition: all 0.3s ease;
+  animation-name: cardTitleBounceInDown;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
 }
 
 .recommend__card-title div {
@@ -4905,7 +4986,7 @@ a.toggle__item-wrapper {
 .recommend__card-title p:nth-child(2) {
   font-weight: 300;
   opacity: 0;
-  transition: all 0.5s;
+  transition: max-height 0.5s;
   margin-top: 10px;
   margin-bottom: 40px;
   font-size: 14px;
@@ -4922,12 +5003,13 @@ a.toggle__item-wrapper {
 }
 
 .recommend__card:hover {
-  transform: translateY(0);
   cursor: pointer;
+  animation-name: cardBounceInUp;
 }
 
 .recommend__card:hover .recommend__card-title {
-  height: 180px;
+  height: var(--card-title-height-hover);
+  animation-name: cardTitleBounceInUp;
 }
 
 .recommend__card:hover .recommend__card-title p:nth-child(2) {
@@ -4948,7 +5030,7 @@ a.toggle__item-wrapper {
 }
 
 .recommend__card:nth-of-type(2) .recommend__card-title svg:hover {
-  color: #7A9A0D;
+  color: var(--color-brand-1-hover);
 }
 
 .recommend__icon {
@@ -7455,13 +7537,15 @@ address p {
   }
 
   .section-specialties {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .specialties {
+    box-shadow: -3px -20px 30px 6px rgba(50, 107, 123, 0.0392156863);
     padding: 53px 40px 52px 77px;
-    box-shadow: -25px -10px 30px rgba(50, 107, 123, 0.08);
     margin-left: 52px;
+    margin-right: -80px;
+    padding-right: 120px;
   }
 
   .specialties-list {
@@ -7534,7 +7618,7 @@ address p {
 
   .quote {
     margin-left: 0px;
-    margin-right: 90px;
+    margin-right: 100px;
     flex-direction: row;
     border-radius: 0px 20px 20px 0px;
   }
@@ -7589,7 +7673,7 @@ address p {
   }
 
   .recommend {
-    grid-template-columns: 1fr 80px 312px 30px 260px 52px 105px 1fr;
+    grid-template-columns: minmax(0, 1fr) 80px 312px 30px 260px 52px 105px minmax(0, 1fr);
     grid-template-rows: 192px 78px 1fr 80px auto;
   }
 
@@ -7609,8 +7693,8 @@ address p {
   }
 
   .recommend__card-title {
+    --card-title-height: 80px;
     width: 260px;
-    height: 80px;
     bottom: 0;
     border-radius: 0px 20px 0px 20px;
     padding: 17px 18px 20px 32px;
@@ -7631,14 +7715,6 @@ address p {
 
   .recommend__card-title p {
     font-size: 17px;
-  }
-
-  .recommend__card:hover {
-    transform: translateY(-20px);
-  }
-
-  .recommend__card:hover .recommend__card-title {
-    height: 180px;
   }
 
   .recommend__card:hover .recommend__card-title svg {
@@ -9664,12 +9740,14 @@ address p {
   }
 
   .section-specialties {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .specialties {
-    margin-left: 0px;
-    padding: 45px 0px 30px 60px;
+    margin-left: 0;
+    margin-right: -160px;
+    padding: 45px 160px 30px 60px;
+    box-shadow: -20px -20px 30px 6px rgba(50, 107, 123, 0.0392156863);
   }
 
   .specialties-list {
@@ -9792,8 +9870,8 @@ address p {
   }
 
   .recommend__card-title {
+    --card-title-height: 95px;
     width: 300px;
-    height: 95px;
     padding: 20px 18px 20px 40px;
   }
 
