@@ -1510,6 +1510,28 @@ ul li::marker {
   }
 }
 
+@keyframes bounceInDown {
+  0% {
+    transform: translateY(-150px);
+  }
+
+  20% {
+    transform: translateY(0px);
+  }
+
+  60% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .accordion {
   overflow: hidden;
 }
@@ -2458,7 +2480,7 @@ a.button:active {
   border-radius: 0 0 20px 20px;
   padding-left: 24px;
   padding-right: 24px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   padding-top: 0;
   box-shadow: 0 4px 30px 3px var(--box-shadow-default);
 }
@@ -2581,10 +2603,19 @@ a.button:active {
   padding-right: 30px;
   left: 0;
   right: 0;
+  max-height: 1000px;
 }
 
 .header__menu.active {
   box-shadow: 0px 4px 30px 3px var(--box-shadow-default);
+}
+
+.header__menu[data-collapse-content] {
+  transition: max-height 0.3s ease;
+}
+
+.header__menu[data-collapse-content].active {
+  transition: max-height 0.3s ease;
 }
 
 .header__nav {
@@ -2602,7 +2633,7 @@ a.button:active {
   border-radius: 50px;
   padding: 0px;
   background-color: var(--color-gray);
-  transition: all 0.5s;
+  transition: all 0.3s;
   opacity: 1;
   margin-bottom: 28px;
 }
@@ -2645,7 +2676,7 @@ a.button:active {
 .header__nav-icon svg {
   width: 25px;
   color: var(--background-default);
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .header__nav-content {
@@ -9031,7 +9062,7 @@ address p {
   .header__menu-toggle:focus,
   .header__menu-toggle:hover,
   .header__menu-toggle:active {
-    background: linear-gradient(90deg, var(--color-gray) 0%, var(--color-gray) 65%, transparent 65%, transparent 100%);
+    background: linear-gradient(90deg, var(--color-gray) 0%, var(--color-gray) 67%, transparent 67%, transparent 100%);
   }
 
   .header__menu-toggle {
@@ -9111,9 +9142,15 @@ address p {
 
   .header__menu {
     margin-left: 100px;
-    margin-right: 145px;
+    margin-right: 160px;
     padding-bottom: 0;
     top: 110px;
+  }
+
+  .header__menu.active {
+    animation: bounceInDown;
+    animation-fill-mode: both;
+    animation-duration: 1s;
   }
 
   .header__nav-content span:first-child {
