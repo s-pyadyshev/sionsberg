@@ -51,6 +51,11 @@ html {
 
   @include laptop {
     font-size: $font-size-desktop;
+    scroll-padding-top: 108px;
+  }
+
+  @include desktop {
+    scroll-padding-top: 140px;
   }
 
   &.brand-1-theme {

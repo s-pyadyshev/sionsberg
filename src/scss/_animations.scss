@@ -227,22 +227,22 @@
 
 @keyframes bounceInDown {
   0% {
-    transform: translateY(-150px);
+    transform: translateY(-78px);
   }
 
   20% {
-    transform: translateY(0px);
+    transform: translateY(-8px);
   }
 
   60% {
-    transform: translateY(8px);
+    transform: translateY(0);
   }
 
   100% {
-    transform: translateY(4px);
+    transform: translateY(-4px);
   }
 
   100% {
-    transform: translateY(0px);
+    transform: translateY(-8px);
   }
 }

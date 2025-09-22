@@ -267,12 +267,13 @@
   width: 100%;
 
   @include tablet {
-    margin-left: 58px;
+    padding-left: 58px;
     width: fit-content;
+    margin-top: 4px;
   }
 
   @include desktop {
-    margin-left: 0px;
+    padding-left: 0;
     width: 100%;
   }
 }
@@ -315,26 +316,27 @@
     width: auto;
     margin-left: $container-padding-tablet;
     margin-right: $container-padding-tablet;
-
     top: 78px;
   }
 
   @include desktop {
     margin-left: $container-padding-desktop;
-    margin-right: 160px;
+    margin-right: 145px;
     padding-bottom: 0;
 
     top: 110px;
   }
 
+  @media (min-width: 1600px) {
+    margin-right: 160px;
+  }
+
   &.active {
     box-shadow: 0px 4px 30px 3px var(--box-shadow-default);
-
-    @include desktop {
-      animation: bounceInDown;
-      animation-fill-mode: both;
-      animation-duration: 1s;
-    }
+    animation: bounceInDown;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    padding-top: 16px;
   }
 }
 
@@ -476,7 +478,7 @@
     span:first-child {
       display: block;
       height: 25px;
-      margin-top: 8px;
+      margin-top: 0;
       margin-bottom: 30px;
     }
 
@@ -526,16 +528,21 @@
   transition: transform 0.3s ease;
 
   @include tablet {
-    margin-top: -10px;
+    height: 20px;
+    margin-top: -40px;
   }
 
   @include desktop {
+    width: 39px;
+    height: 39px;
     margin-top: 0;
     padding-left: 10px;
   }
 
   &:hover svg {
-    color: var(--color-white) !important;
+    @include desktop {
+      color: var(--color-white) !important;
+    }
   }
 }
 
@@ -648,8 +655,12 @@
     gap: 10px;
 
     @include tablet {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 0;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 
