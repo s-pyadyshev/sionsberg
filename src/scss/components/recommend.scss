@@ -337,6 +337,7 @@
     padding: 50px;
 
     p {
+      max-width: 75%;
       margin-top: 27px;
       margin-bottom: 0px;
     }
@@ -346,6 +347,7 @@
     padding: 40px;
 
     p {
+      max-width: 100%;
       margin-top: 34px;
       margin-bottom: 16px;
     }
@@ -366,7 +368,9 @@
     width: 50px;
     height: 40px;
     color: var(--color-brand-4);
+    fill: transparent;
     display: none;
+    transition: all 0.3s ease;
   }
 
   span {
@@ -625,6 +629,7 @@
     @include tablet {
       order: 1;
       margin-top: 16px;
+      max-width: 90%;
     }
 
     @include desktop {

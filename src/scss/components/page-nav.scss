@@ -69,7 +69,8 @@
 .page-nav__link svg {
   width: 8px;
   height: 13px;
-  color: var(--color-theme)
+  color: var(--color-theme);
+  padding-top: 1px;
 }
 
 .page-nav__title {

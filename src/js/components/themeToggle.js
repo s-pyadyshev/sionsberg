@@ -7,16 +7,16 @@ export const themeToggle = (function () {
 
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
-      htmlElement.classList.add('dark-theme');
+      htmlElement.classList.add('contrast-theme');
       themeToggleCheckbox.checked = true;
     }
 
     themeToggleCheckbox.addEventListener('change', function () {
       if (this.checked) {
-        htmlElement.classList.add('dark-theme');
+        htmlElement.classList.add('contrast-theme');
         localStorage.setItem('theme', 'dark');
       } else {
-        htmlElement.classList.remove('dark-theme');
+        htmlElement.classList.remove('contrast-theme');
         localStorage.setItem('theme', 'light');
       }
     });

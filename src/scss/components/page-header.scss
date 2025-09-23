@@ -52,7 +52,13 @@
   }
 
   p {
-    max-width: 720px;
+    @include tablet {
+      max-width: 413px;
+    }
+
+    @include desktop {
+      max-width: 720px;
+    }
   }
 }
 

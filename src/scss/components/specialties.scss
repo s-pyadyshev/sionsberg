@@ -4,10 +4,12 @@
 
   @include tablet {
     margin-left: 0;
+    padding-right: 100px;
   }
 
   @include desktop {
     margin-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -38,7 +40,7 @@
   @include tablet {
     box-shadow: -3px -20px 30px 6px #326B7B0A;
     padding: 53px 40px 52px 77px;
-    margin-left: 52px;
+    margin-left: 40px;
     padding-right: 120px;
     margin-right: calc(-50vw + 50%);
     width: calc(50vw + 50%);
@@ -46,7 +48,6 @@
 
   @include desktop {
     margin-left: 0;
-    margin-right: -160px;
     padding: 45px 160px 30px 60px;
     box-shadow: -20px -20px 30px 6px #326B7B0A;
   }
@@ -97,7 +98,7 @@
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
-  border: 1px solid $color-brand-3;
+  border: 1px solid var(--color-brand-3);
   border-radius: 10px;
   width: inherit;
   text-decoration: none;
@@ -144,8 +145,8 @@
   width: 41px;
   height: calc(100% + 2px);
   padding: 10px;
-  background-color: $color-brand-3;
-  color: $color-white;
+  background-color: var(--color-brand-3);
+  color: var(--color-white);
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   transition: all 0.4s ease-in-out;

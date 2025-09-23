@@ -73,7 +73,7 @@
   pointer-events: none;
 }
 
-.header__menu-toggle>span {
+.header__menu-toggle>a {
   display: inline-block;
   padding-right: 11px;
 
@@ -155,6 +155,7 @@
     margin-left: 25px;
     border-radius: 20px;
     background-color: transparent;
+    gap: 20px;
 
     &.active {
       background-color: transparent;
@@ -342,10 +343,12 @@
 
 .header__menu[data-collapse-content] {
   transition: max-height 0.3s ease;
+  pointer-events: none;
 }
 
 .header__menu[data-collapse-content].active {
   transition: max-height 0.3s ease;
+  pointer-events: all;
 }
 
 .header__nav {
@@ -381,6 +384,7 @@
 
     @include tablet {
       font-size: 14px;
+      color: #B1B3B4;
     }
   }
 
@@ -458,8 +462,9 @@
   font-size: 16px;
   position: relative;
 
-  span:first-child {
+  >a:first-child {
     display: none;
+    text-decoration: none;
   }
 
   &.active,
@@ -475,7 +480,7 @@
     flex-direction: column;
     font-size: 14px;
 
-    span:first-child {
+    >a:first-child {
       display: block;
       height: 25px;
       margin-top: 0;
@@ -488,7 +493,7 @@
   }
 
   @include desktop {
-    span:first-child {
+    >a:first-child {
       display: none;
     }
   }
@@ -529,13 +534,12 @@
 
   @include tablet {
     height: 20px;
-    margin-top: -40px;
+    margin-top: 0;
   }
 
   @include desktop {
     width: 39px;
     height: 39px;
-    margin-top: 0;
     padding-left: 10px;
   }
 
