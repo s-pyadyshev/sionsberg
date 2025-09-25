@@ -28,11 +28,17 @@
   margin-bottom: 0;
 }
 
+.page-rights.page-body--article:has(.page-aside) {
+  @include desktop {
+    grid-template-columns: 160px 760px 120px 340px 60px;
+  }
+}
+
 .page-rights .page-aside {
   grid-column: 1 / 4;
 
   @include tablet {
-    grid-column: 4 / 4;
+    grid-column: 4 / 5 !important;
   }
 }
 
@@ -40,12 +46,17 @@
   grid-column: 1 / 4;
 
   @include tablet {
-    grid-column: 4 / 4;
+    grid-column: 2 / 3 !important;
   }
 }
 
-.page-rights .page-article {
+.page-rights.page-body--article:has(.page-aside) .page-article {
   @include desktop {
-    padding-left: 15px !important;
+    padding-right: 0;
+    padding-left: 0;
   }
+}
+
+.page-rights.page-body--article:has(.page-aside) .page-content {
+  grid-column: 2 / 3;
 }

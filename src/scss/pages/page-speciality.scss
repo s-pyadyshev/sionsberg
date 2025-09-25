@@ -223,9 +223,9 @@
 .page-speciality .page-nav {
   border-left: none;
   box-shadow: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 
   @include tablet {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border-left: 20px solid var(--color-theme);
   }
 }

@@ -256,3 +256,9 @@
     border-radius: 16px;
   }
 }
+
+.page-nav.page-nav--other .page-nav__title {
+  @include desktop {
+    font-size: 22px;
+  }
+}

@@ -457,6 +457,7 @@
   svg {
     width: 36px;
     height: 30px;
+    flex-shrink: 0;
     fill: none;
     color: var(--color-brand-4);
     margin-top: 2px;
