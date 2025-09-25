@@ -6,18 +6,18 @@ export const headerToggle = (() => {
 
     setupResponsiveBehaviour(menuInners);
 
-    window.addEventListener(
-      'resize',
-      throttle(() => {
-        const isTabletNow = window.matchMedia('(min-width: 768px)').matches;
-        const isDesktopNow = window.matchMedia('(min-width: 1440px)').matches;
-        if (!isTabletNow) {
-          setupResponsiveBehaviour(menuInners);
-        } else if (isDesktopNow) {
-          setupResponsiveBehaviour(menuInners);
-        }
-      }, 200)
-    );
+    // window.addEventListener(
+    //   'resize',
+    //   throttle(() => {
+    //     const isTabletNow = window.matchMedia('(min-width: 768px)').matches;
+    //     const isDesktopNow = window.matchMedia('(min-width: 1440px)').matches;
+    //     if (!isTabletNow) {
+    //       setupResponsiveBehaviour(menuInners);
+    //     } else if (isDesktopNow) {
+    //       setupResponsiveBehaviour(menuInners);
+    //     }
+    //   }, 200)
+    // );
 
     menuInners.forEach((menuInner) => {
       const buttons = menuInner.querySelectorAll('.header__nav-toggle');
