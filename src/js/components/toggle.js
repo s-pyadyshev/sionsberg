@@ -29,14 +29,14 @@ export const toggle = (() => {
       });
     });
 
-    const onResize = throttle(() => {
-      document.querySelectorAll('[data-collapse-content].active').forEach(hideElement);
-      document
-        .querySelectorAll('[data-collapse-target].active')
-        .forEach((btn) => btn.classList.remove('active'));
-    }, 200);
+    // const onResize = throttle(() => {
+    //   document.querySelectorAll('[data-collapse-content].active').forEach(hideElement);
+    //   document
+    //     .querySelectorAll('[data-collapse-target].active')
+    //     .forEach((btn) => btn.classList.remove('active'));
+    // }, 200);
 
-    window.addEventListener('resize', onResize);
+    // window.addEventListener('resize', onResize);
   };
 
   function showElement(element, delay = 0) {
