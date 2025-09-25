@@ -43,15 +43,15 @@ export const menu = (() => {
       });
     });
 
-    const onResize = throttle(() => {
-      headerInner.classList.remove('active');
-      headerMenu.classList.remove('active');
-      menuToggles.forEach((b) => b.classList.remove('active'));
-      allContents.forEach((c) => c.classList.remove('active'));
-      activeButton = null;
-    }, 200);
+    // const onResize = throttle(() => {
+    //   headerInner.classList.remove('active');
+    //   headerMenu.classList.remove('active');
+    //   menuToggles.forEach((b) => b.classList.remove('active'));
+    //   allContents.forEach((c) => c.classList.remove('active'));
+    //   activeButton = null;
+    // }, 200);
 
-    window.addEventListener('resize', onResize);
+    // window.addEventListener('resize', onResize);
   };
 
   return { init };
