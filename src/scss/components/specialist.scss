@@ -11,7 +11,7 @@
   margin-top: 251px;
 
   @include tablet {
-    padding: 46px 0 63px 53px;
+    padding: 46px 25px 63px 53px;
     border-radius: 20px;
     margin-top: 163px;
     display: flex;
@@ -52,6 +52,7 @@
   height: 168px;
   border-radius: 15px;
   object-fit: cover;
+  flex-shrink: 0;
 
   @media (min-width: 400px) {
     width: 200px;
@@ -60,7 +61,6 @@
 
   @include tablet {
     position: static;
-    padding-right: 30px;
     margin-top: -20px;
     width: 182px;
     height: 156px;
@@ -90,15 +90,20 @@
 
   @include tablet {
     flex-direction: row;
+    justify-content: space-between;
     margin-top: 0;
+    width: 100%;
   }
-
 }
 
 .specialist__card_info-wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include tablet {
+    gap: 10px;
+  }
 
   @include desktop {
     padding: 56px 56px 72px 62px;
@@ -145,7 +150,7 @@
   height: 100%;
 
   @include tablet {
-    max-width: 236px;
+    max-width: 320px;
     padding: 34px 27px;
     font-size: 17px;
     font-weight: 400;
@@ -155,7 +160,6 @@
   }
 
   @include desktop {
-    max-width: 320px;
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -231,8 +235,12 @@
   display: flex;
   flex-direction: column;
 
-  @include desktop {
+  @include tablet {
     flex-direction: row;
+    gap: 24px;
+  }
+
+  @include desktop {
     gap: 52px;
   }
 

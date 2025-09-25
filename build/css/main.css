@@ -3449,6 +3449,7 @@ a.button:active {
   border-radius: 15px;
   -o-object-fit: cover;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .specilist__card-info {
@@ -5247,6 +5248,7 @@ a.toggle__item-wrapper {
   width: calc(100% + 116px);
   margin-left: -58px;
   flex-direction: column;
+  border-right: 1px solid var(--color-theme);
 }
 
 .wrapper-freeze .sticky-col {
@@ -5268,6 +5270,7 @@ a.toggle__item-wrapper {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scroll-padding-left: 0;
+  border-left: 1px solid var(--color-theme);
 }
 
 .scroll-area::-webkit-scrollbar {
@@ -5286,6 +5289,7 @@ a.toggle__item-wrapper {
 .wrapper-freeze .scroll-area td {
   padding: 7px 18px;
   border: 1px solid var(--color-theme);
+  border-left: 0;
   white-space: nowrap;
   text-align: left;
   background-color: var(--color-white);
@@ -5356,6 +5360,18 @@ a.toggle__item-wrapper {
   padding: 7px;
   border-radius: 5px;
   background-color: var(--color-brand-2);
+}
+
+.wrapper-freeze .scroll-area th.sticky-col.has-shadow:after,
+.wrapper-freeze .scroll-area td.sticky-col.has-shadow:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  pointer-events: none;
+  box-shadow: 15px 0px 20px 0px rgba(51, 51, 51, 0.1019607843);
 }
 
 .card-news {
@@ -5712,7 +5728,7 @@ address p {
   backdrop-filter: blur(15px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.123);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero__nav-search:hover,
@@ -5774,7 +5790,7 @@ address p {
   backdrop-filter: blur(15px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero__nav-calendar:hover {
@@ -5832,7 +5848,7 @@ address p {
   backdrop-filter: blur(15px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero__nav-phone:hover {
@@ -5888,7 +5904,7 @@ address p {
   flex-direction: column;
   align-items: flex-start;
   border-radius: 15px;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
 }
 
 .nav__item-title span {
@@ -5912,7 +5928,7 @@ address p {
   font-size: 16px;
   line-height: 30px;
   color: var(--color-theme-black);
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
 }
 
 .nav__title-search input:focus {
@@ -5928,7 +5944,7 @@ address p {
   background-color: transparent;
   margin-left: 5px;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav__title-search button svg {
@@ -5939,7 +5955,7 @@ address p {
   width: 20px;
   background-color: var(--color-brand-1);
   border-radius: 0px 20px 20px 0px;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
   display: none;
   justify-content: center;
 }
@@ -7264,7 +7280,7 @@ address p {
   }
 
   .specilist__card {
-    padding: 46px 0 63px 53px;
+    padding: 46px 25px 63px 53px;
     border-radius: 20px;
     margin-top: 163px;
     display: flex;
@@ -7273,7 +7289,6 @@ address p {
 
   .specialist__img {
     position: static;
-    padding-right: 30px;
     margin-top: -20px;
     width: 182px;
     height: 156px;
@@ -7283,7 +7298,13 @@ address p {
 
   .specilist__card-info {
     flex-direction: row;
+    justify-content: space-between;
     margin-top: 0;
+    width: 100%;
+  }
+
+  .specialist__card_info-wrapper {
+    gap: 10px;
   }
 
   .specilist__info {
@@ -7294,7 +7315,7 @@ address p {
   }
 
   .specilist__quote {
-    max-width: 236px;
+    max-width: 320px;
     padding: 34px 27px;
     font-size: 17px;
     font-weight: 400;
@@ -7310,6 +7331,11 @@ address p {
 
   .specilist__link a {
     font-weight: 400;
+  }
+
+  .specialist__details-item {
+    flex-direction: row;
+    gap: 24px;
   }
 
   .specialist__details-item h4 {
@@ -9382,7 +9408,6 @@ address p {
   }
 
   .specilist__quote {
-    max-width: 320px;
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -9395,7 +9420,6 @@ address p {
   }
 
   .specialist__details-item {
-    flex-direction: row;
     gap: 52px;
   }
 
