@@ -184,11 +184,6 @@ video {
   }
 }
 
-::selection {
-  background-color: $color-brand-2;
-  color: $color-brand-1;
-}
-
 body {
   display: flex;
   flex-direction: column;

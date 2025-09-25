@@ -305,6 +305,7 @@
   left: 0;
   right: 0;
   max-height: 1000px;
+  height: auto;
 
   @include tablet {
     border-radius: 0px 0px 50px 50px;

@@ -9,7 +9,7 @@ export const headerToggle = (() => {
     window.addEventListener(
       'resize',
       throttle(() => {
-        const isTabletNow = window.matchMedia('(min-width: 834px)').matches;
+        const isTabletNow = window.matchMedia('(min-width: 768px)').matches;
         const isDesktopNow = window.matchMedia('(min-width: 1440px)').matches;
         if (!isTabletNow) {
           setupResponsiveBehaviour(menuInners);
@@ -30,7 +30,7 @@ export const headerToggle = (() => {
           );
           if (!content) return;
 
-          const isDesktop = window.matchMedia('(min-width: 834px)').matches;
+          const isDesktop = window.matchMedia('(min-width: 768px)').matches;
 
           buttons.forEach((otherBtn) => {
             if (otherBtn !== btn) {
@@ -65,7 +65,7 @@ export const headerToggle = (() => {
   };
 
   function setupResponsiveBehaviour(menuInners) {
-    const mq = window.matchMedia('(min-width: 834px)');
+    const mq = window.matchMedia('(min-width: 768px)');
     const mq2 = window.matchMedia('(min-width: 1440px)');
 
     const apply = () => {
@@ -74,7 +74,7 @@ export const headerToggle = (() => {
         contents.forEach((contentItem) => {
           if (!mq.matches) {
             contentItem.classList.add('active');
-          } else if (mq2.matches){
+          } else if (mq2.matches) {
             contentItem.classList.add('active');
           } else {
             contentItem.classList.remove('active');

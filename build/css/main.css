@@ -971,16 +971,6 @@ video {
   height: 100%;
 }
 
-::-moz-selection {
-  background-color: #71B6CD;
-  color: #97BF0D;
-}
-
-::selection {
-  background-color: #71B6CD;
-  color: #97BF0D;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -2595,6 +2585,7 @@ a.button:active {
   left: 0;
   right: 0;
   max-height: 1000px;
+  height: auto;
 }
 
 .header__menu.active {
