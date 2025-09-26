@@ -68,6 +68,10 @@
   }
 }
 
+.header__logo>img:last-child {
+  display: none;
+}
+
 .header__menu-toggle svg,
 .header__menu-toggle span {
   pointer-events: none;

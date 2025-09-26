@@ -312,6 +312,10 @@
   }
 }
 
+.footer__logo>img:last-child {
+  display: none;
+}
+
 .footer__social-wrap {
   @include tablet {
     display: flex;

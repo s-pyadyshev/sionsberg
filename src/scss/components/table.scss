@@ -3,8 +3,6 @@
   width: calc(100% + 116px);
   margin-left: -58px;
   flex-direction: column;
-  border-right: 1px solid var(--color-theme);
-
 
   @include desktop {
     display: flex;
@@ -34,10 +32,12 @@
   scroll-behavior: smooth;
   scroll-padding-left: 0;
   border-left: 1px solid var(--color-theme);
+  border-right: 1px solid var(--color-theme);
 
   @include desktop {
     overflow-x: hidden;
     overflow-y: hidden;
+    border-right: none;
   }
 }
 
@@ -88,7 +88,7 @@
 
 .wrapper-freeze .scroll-area th {
   font-weight: 400;
-  background-color: #E3F0F5;
+  background-color: var(--color-table-th-bg);
 }
 
 .wrapper-freeze .scroll-area td {
@@ -115,7 +115,7 @@
 }
 
 .wrapper-freeze .scroll-area th.sticky-col {
-  background-color: #E3F0F5;
+  background-color: var(--color-table-th-bg);
 
   @include desktop {
     width: 120px !important;
@@ -175,6 +175,7 @@
 
 .wrapper-freeze .scroll-area th.sticky-col.has-shadow,
 .wrapper-freeze .scroll-area td.sticky-col.has-shadow {
+  border-right: 0;
 
   &:after {
     content: '';
@@ -185,5 +186,6 @@
     height: 100%;
     pointer-events: none;
     box-shadow: 15px 0px 20px 0px #3333331A;
+    border-right: 1px solid var(--color-theme);
   }
 }

@@ -6,7 +6,7 @@ export const themeToggle = (function () {
     if (!themeToggleCheckbox) return;
 
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+    if (savedTheme === 'contrast') {
       htmlElement.classList.add('contrast-theme');
       themeToggleCheckbox.checked = true;
     }
@@ -14,10 +14,10 @@ export const themeToggle = (function () {
     themeToggleCheckbox.addEventListener('change', function () {
       if (this.checked) {
         htmlElement.classList.add('contrast-theme');
-        localStorage.setItem('theme', 'dark');
+        localStorage.setItem('theme', 'contrast');
       } else {
         htmlElement.classList.remove('contrast-theme');
-        localStorage.setItem('theme', 'light');
+        localStorage.setItem('theme', 'default');
       }
     });
   };
