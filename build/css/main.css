@@ -2504,8 +2504,8 @@ a.button:active {
   width: 100%;
   background-color: var(--background-default);
   border-radius: 0 0 20px 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 30px;
+  padding-right: 30px;
   transition: all 0.3s ease;
   padding-top: 0;
   box-shadow: 0 4px 30px 3px var(--box-shadow-default);
@@ -2539,15 +2539,14 @@ a.button:active {
 .header__menu-toggle {
   order: 1;
   width: 40px;
-  height: 40px;
-  border-radius: 20px;
+  min-height: 56px;
+  border-radius: 50px;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   color: var(--color-text);
   background-color: #f5f5f5;
-  padding: 10px 16px 11px;
-  font-weight: 400;
+  padding: 0 0 0 40px;
+  font-weight: 300;
   font-size: 16px;
   transition: all 0.3s ease;
   position: relative;
@@ -2559,8 +2558,7 @@ a.button:active {
 }
 
 .header__menu-toggle.active {
-  background-color: var(--color-brand-3);
-  color: var(--background-default);
+  color: var(--color-black);
 }
 
 .header__menu-toggle.active .header__toggle-icon span {
@@ -2606,6 +2604,7 @@ a.button:active {
 }
 
 .header__menu-content {
+  list-style-type: none;
   width: 100%;
 }
 
@@ -2652,6 +2651,7 @@ a.button:active {
   z-index: 5;
   display: flex;
   flex-direction: column;
+  gap: 28px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 20px;
@@ -2674,7 +2674,6 @@ a.button:active {
 }
 
 .header__menu-desktop.active {
-  box-shadow: 0px 4px 30px 3px var(--box-shadow-default);
   animation: bounceInDown;
   animation-fill-mode: both;
   animation-duration: 1s;
@@ -2683,6 +2682,22 @@ a.button:active {
 
 .header__menu-desktop {
   display: none;
+}
+
+.header__menu-desktop > li:first-child .header__item-icon {
+  background-color: var(--color-brand-3);
+}
+
+.header__menu-desktop > li:nth-child(2) .header__item-icon {
+  background-color: var(--color-brand-2);
+}
+
+.header__menu-desktop > li:nth-child(3) .header__item-icon {
+  background-color: var(--color-brand-4);
+}
+
+.header__menu-desktop > li:nth-child(4) .header__item-icon {
+  background-color: var(--color-brand-1);
 }
 
 .header__inner.active .header__menu-desktop {
@@ -2695,7 +2710,18 @@ a.button:active {
 }
 
 .header__menu-desktop .header__menu-toggle {
+  display: flex;
   width: 100%;
+}
+
+.header__menu-toggle.header__menu-toggle--menu {
+  padding: 2px;
+  min-height: 40px;
+  justify-content: center;
+}
+
+.header__menu-toggle.header__menu-toggle--menu.active {
+  background-color: var(--color-brand-3);
 }
 
 .header__menu-desktop .header__menu-toggle + .header__menu-content {
@@ -2704,7 +2730,6 @@ a.button:active {
 }
 
 .header__menu-desktop .header__menu-toggle.active + .header__menu-content {
-  box-shadow: 0px 4px 30px 3px var(--box-shadow-default);
   animation: bounceInDown;
   animation-fill-mode: both;
   animation-duration: 1s;
@@ -2713,7 +2738,7 @@ a.button:active {
   top: 0;
   right: 0;
   left: 0;
-  padding: 136px 30px 20px 30px;
+  padding: 20px 0 0;
   background-color: white;
   pointer-events: all;
   width: 100%;
@@ -2818,12 +2843,15 @@ a.button:active {
 .header__item-icon {
   display: flex;
   align-items: center;
-  width: 39px;
-  height: 39px;
-  padding-left: 11px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  justify-content: center;
+  width: 60px;
+  height: 56px;
+  padding-left: 0;
+  margin-left: auto;
   transition: transform 0.3s ease;
+  color: var(--color-white);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .header__item-icon > svg {
@@ -2848,12 +2876,14 @@ a.button:active {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 16px 13px;
+  padding: 16px;
   margin-bottom: 11px;
   font-weight: 300;
   font-size: 12px;
+  line-height: 16px;
   cursor: pointer;
   transition: color 0.2s;
+  word-break: break-all;
 }
 
 .header__item svg {
@@ -2894,7 +2924,7 @@ a.button:active {
 
 .header__nav-content:nth-child(1) .header__item-content {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: calc(50% - 5px) calc(50% - 5px);
   gap: 10px;
 }
 
@@ -2988,12 +3018,15 @@ a.button:active {
 
 .header__button-contact {
   cursor: pointer;
-  text-decoration: none;
-  font-size: 16px;
+  text-decoration: none !important;
+  font-size: 16px !important;
+  min-height: 56px;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin-bottom: 28px;
+  border-radius: 50px !important;
 }
 
 .header__button-contact > a {
@@ -3030,6 +3063,10 @@ a.button:active {
   background: linear-gradient(to right, var(--color-brand-2) 50%, var(--background-default) 50%);
   display: inline-block;
   cursor: pointer;
+}
+
+.header__menu-toggle.active .header__item-icon > svg {
+  transform: rotate(180deg);
 }
 
 .input {
@@ -7151,9 +7188,14 @@ address p {
   }
 
   .header__menu-toggle {
+    background: none;
+    padding: 0;
     width: 100px;
     margin-left: auto;
     font-size: 14px;
+    font-weight: 400;
+    color: #B1B3B4;
+    min-height: auto;
   }
 
   .header__toggle-icon {
@@ -7199,6 +7241,22 @@ address p {
     margin-left: 0;
     margin-right: 0;
     top: 78px;
+  }
+
+  .header__menu-desktop > li:first-child .header__item-icon {
+    background-color: transparent;
+  }
+
+  .header__menu-desktop > li:nth-child(2) .header__item-icon {
+    background-color: transparent;
+  }
+
+  .header__menu-desktop > li:nth-child(3) .header__item-icon {
+    background-color: transparent;
+  }
+
+  .header__menu-desktop > li:nth-child(4) .header__item-icon {
+    background-color: transparent;
   }
 
   .header__inner.active .header__menu-desktop {
@@ -9369,13 +9427,16 @@ address p {
   }
 
   .header__menu-toggle {
+    font-weight: 400;
+    border-radius: 20px;
+    height: 40px;
     width: -moz-fit-content;
     width: fit-content;
     height: 39px;
     margin-left: 25px;
     border-radius: 20px;
     background-color: transparent;
-    gap: 20px;
+    gap: 0;
   }
 
   .header__menu-toggle.active {
@@ -9452,14 +9513,33 @@ address p {
   }
 
   .header__menu-desktop {
+    position: static;
+    opacity: 1;
     margin-left: 100px;
     padding-bottom: 0;
-    top: 110px;
+    padding-left: 0;
+    top: 0;
     transform: none;
   }
 
   .header__menu-desktop {
     display: flex;
+  }
+
+  .header__menu-desktop > li:first-child .header__item-icon {
+    background-color: var(--color-brand-3);
+  }
+
+  .header__menu-desktop > li:nth-child(2) .header__item-icon {
+    background-color: var(--color-brand-2);
+  }
+
+  .header__menu-desktop > li:nth-child(3) .header__item-icon {
+    background-color: var(--color-brand-4);
+  }
+
+  .header__menu-desktop > li:nth-child(4) .header__item-icon {
+    background-color: var(--color-brand-1);
   }
 
   .header__inner.active .header__menu-desktop {
@@ -9471,6 +9551,11 @@ address p {
     animation: bounceInDown;
   }
 
+  .header__nav-toggle {
+    height: 40px;
+    border-radius: 20px;
+  }
+
   .header__nav-content > a:first-child {
     display: none;
   }
@@ -9479,6 +9564,8 @@ address p {
     width: 39px;
     height: 39px;
     padding-left: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .header__item-icon:hover svg {

@@ -4,7 +4,7 @@ header.header
             a(href="/").header__logo
                 img(src="images/logo.svg" alt="logo Sionsberg." width="179" height="40")
                 img(src="images/logo-contrast.svg" alt="logo Sionsberg." width="179" height="40")
-            ul.header__menu-desktop
+            ul.header__menu-desktop(data-collapse-content="menu")
                 li.menu-item.menu-item-has-children
                     button.header__menu-toggle(data-collapse-target="zorgaanbod")
                         span Zorgaanbod
@@ -120,17 +120,19 @@ header.header
                                 .header__item
                                     +svg('forum')
                                     span Comliment, tip of klacht
-            button.header__menu-toggle.hidden-desktop(data-collapse-target="menu")
+                li.hidden-tablet
+                    a(href="#").header__button-contact.button.button--brand-1 Contact
+            button.header__menu-toggle.header__menu-toggle--menu.hidden-desktop(data-collapse-target="menu")
                 .header__toggle-text Menu
                 .header__toggle-icon
                     span
                     span
-                span
+                    span
             .header__button-contact.visible-tablet
                 a(href="#").button.button--brand-1 Contact
             label.header__button-theme
                 input.visually-hidden(type="checkbox" id="theme-toggle")
-        //-         span.theme-indicator
+                span.theme-indicator
         //- .header__menu(data-collapse-content="menu")
         //-     .header__menu-nav.hidden-desktop
         //-         button.header__nav-toggle(data-collapse-target="zorgaanbod" data-open-delay="350")

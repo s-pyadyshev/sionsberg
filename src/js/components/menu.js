@@ -5,8 +5,8 @@ export const menu = (() => {
     const body = document.body;
     const menuToggles = document.querySelectorAll('.header__menu-toggle');
     const headerInner = document.querySelector('.header__inner');
-    const headerMenu = document.querySelector('.header__menu');
-    const allContents = document.querySelectorAll('.header__nav-content');
+    const headerMenu = document.querySelector('.header__menu-desktop');
+    const allContents = document.querySelectorAll('.header__menu-content');
 
     let activeButton = null;
 
@@ -14,7 +14,7 @@ export const menu = (() => {
       btn.addEventListener('click', () => {
         const target = btn.dataset.collapseTarget;
         const content = document.querySelector(
-          `.header__nav-content[data-collapse-content="${target}"]`
+          `.header__menu-content[data-collapse-content="${target}"]`
         );
 
         if (activeButton === btn) {

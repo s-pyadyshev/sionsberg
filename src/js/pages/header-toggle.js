@@ -2,18 +2,18 @@ import { throttle } from '../helpers.js';
 
 export const headerToggle = (() => {
   const init = () => {
-    const menuInners = document.querySelectorAll('.header__menu');
+    const menuInners = document.querySelectorAll('.header__menu-desktop');
 
     setupResponsiveBehaviour(menuInners);
 
     menuInners.forEach((menuInner) => {
-      const buttons = menuInner.querySelectorAll('.header__nav-toggle');
+      const buttons = menuInner.querySelectorAll('.header__menu-toggle');
 
       buttons.forEach((btn) => {
         btn.addEventListener('click', () => {
           const target = btn.dataset.collapseTarget;
           const content = menuInner.querySelector(
-            `.header__nav-content[data-collapse-content="${target}"]`
+            `.header__menu-content[data-collapse-content="${target}"]`
           );
           if (!content) return;
 
@@ -23,7 +23,7 @@ export const headerToggle = (() => {
             if (otherBtn !== btn) {
               const otherTarget = otherBtn.dataset.collapseTarget;
               const otherContent = menuInner.querySelector(
-                `.header__nav-content[data-collapse-content="${otherTarget}"]`
+                `.header__menu-content[data-collapse-content="${otherTarget}"]`
               );
 
               if (otherContent && otherContent.classList.contains('active')) {

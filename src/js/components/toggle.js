@@ -50,7 +50,7 @@ export const toggle = (() => {
   }
 
   function hideElement(element) {
-    if (document.querySelector('.header__menu').classList.contains('active')) {
+    if (document.querySelector('.header__menu-desktop').classList.contains('active')) {
       const menuToggles = document.querySelectorAll('.header__menu-toggle');
       const allContents = document.querySelectorAll('.header__nav-content');
       const navToggles = document.querySelectorAll('.header__nav-toggle');

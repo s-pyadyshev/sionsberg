@@ -16,14 +16,14 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="KEIM" />
 <link rel="manifest" href="/site.webmanifest" />
-		<link rel="stylesheet" href="./css/main.css?v=1760015050548">
+		<link rel="stylesheet" href="./css/main.css?v=1760044003297">
 	</head>
 	<body>
 		<div class="page-wrapper">
 			<header class="header">
 				<div class="container">
 					<div class="header__inner"><a class="header__logo" href="/"><img src="images/logo.svg" alt="logo Sionsberg." width="179" height="40"><img src="images/logo-contrast.svg" alt="logo Sionsberg." width="179" height="40"></a>
-						<ul class="header__menu-desktop">
+						<ul class="header__menu-desktop" data-collapse-content="menu">
 							<li class="menu-item menu-item-has-children">
 								<button class="header__menu-toggle" data-collapse-target="zorgaanbod"><span>Zorgaanbod</span>
 									<div class="header__item-icon">
@@ -217,14 +217,15 @@
 									</li>
 								</ul>
 							</li>
+							<li class="hidden-tablet"><a class="header__button-contact button button--brand-1" href="#">Contact</a></li>
 						</ul>
-						<button class="header__menu-toggle hidden-desktop" data-collapse-target="menu">
+						<button class="header__menu-toggle header__menu-toggle--menu hidden-desktop" data-collapse-target="menu">
 							<div class="header__toggle-text">Menu</div>
-							<div class="header__toggle-icon"><span></span><span></span></div><span></span>
+							<div class="header__toggle-icon"><span></span><span></span><span></span></div>
 						</button>
 						<div class="header__button-contact visible-tablet"><a class="button button--brand-1" href="#">Contact</a></div>
 						<label class="header__button-theme">
-							<input class="visually-hidden" type="checkbox" id="theme-toggle">
+							<input class="visually-hidden" type="checkbox" id="theme-toggle"><span class="theme-indicator"></span>
 						</label>
 					</div>
 				</div>
@@ -348,7 +349,7 @@
 				</div>
 			</footer>
 		</div>
-		<script src="./js/vendor.js?v=1760015050548"></script>
-		<script src="./js/main.js?v=1760015050548"></script>
+		<script src="./js/vendor.js?v=1760044003297"></script>
+		<script src="./js/main.js?v=1760044003297"></script>
 	</body>
 </html>
