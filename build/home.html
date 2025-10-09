@@ -16,233 +16,216 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="KEIM" />
 <link rel="manifest" href="/site.webmanifest" />
-		<link rel="stylesheet" href="./css/main.css?v=1758884924017">
+		<link rel="stylesheet" href="./css/main.css?v=1760015050272">
 	</head>
 	<body>
 		<div class="page-wrapper homepage">
 			<header class="header">
 				<div class="container">
 					<div class="header__inner"><a class="header__logo" href="/"><img src="images/logo.svg" alt="logo Sionsberg." width="179" height="40"><img src="images/logo-contrast.svg" alt="logo Sionsberg." width="179" height="40"></a>
-						<button class="header__menu-toggle visible-desktop" data-collapse-target="zorgaanbod"><span>Zorgaanbod</span>
-							<div class="header__item-icon">
-								<svg>
-									<use xlink:href="./images/sprites.svg#chevron-down"></use>
-								</svg>
-							</div>
-						</button>
-						<button class="header__menu-toggle visible-desktop" data-collapse-target="patiënten"><span>Patiënten</span>
-							<div class="header__item-icon">
-								<svg>
-									<use xlink:href="./images/sprites.svg#chevron-down"></use>
-								</svg>
-							</div>
-						</button>
-						<button class="header__menu-toggle visible-desktop" data-collapse-target="verwijzers"><span>Verwijzers</span>
-							<div class="header__item-icon">
-								<svg>
-									<use xlink:href="./images/sprites.svg#chevron-down"></use>
-								</svg>
-							</div>
-						</button>
-						<button class="header__menu-toggle visible-desktop" data-collapse-target="overons"><span>Over ons</span>
-							<div class="header__item-icon">
-								<svg>
-									<use xlink:href="./images/sprites.svg#chevron-down"></use>
-								</svg>
-							</div>
-						</button>
+						<ul class="header__menu-desktop">
+							<li class="menu-item menu-item-has-children">
+								<button class="header__menu-toggle" data-collapse-target="zorgaanbod"><span>Zorgaanbod</span>
+									<div class="header__item-icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#chevron-down"></use>
+										</svg>
+									</div>
+								</button>
+								<ul class="header__menu-content" data-collapse-content="zorgaanbod">
+									<li class="header__nav-content"><a href="#">Zorgaanbod</a>
+										<button class="header__item-toggle hidden-desktop" data-collapse-target="zorgaanbod"><span>Specialismen</span>
+											<div class="header__item-icon">
+												<svg>
+													<use xlink:href="./images/sprites.svg#chevron-down"></use>
+												</svg>
+											</div>
+										</button>
+										<div class="header__item-content">
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#surgery"></use>
+												</svg><span>Chirurgie</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#skin-cancer"></use>
+												</svg><span>Dermato&shy;logie</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#lungs"></use>
+												</svg><span>Long&shy;geneeskunde</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#gynecology"></use>
+												</svg><span>Gynaeco&shy;logie</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#brain"></use>
+												</svg><span>Neurologie</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#joints"></use>
+												</svg><span>Orthopedie</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#colon"></use>
+												</svg><span>Interne Geneeskunde</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#ambulance"></use>
+												</svg><span>Spoedpoli&shy;kliniek</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#ear-nose-throat"></use>
+												</svg><span>KNO (keel, neus oor)</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#urology"></use>
+												</svg><span>Urologie</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-has-children">
+								<button class="header__menu-toggle" data-collapse-target="patiënten"><span>Patiënten</span>
+									<div class="header__item-icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#chevron-down"></use>
+										</svg>
+									</div>
+								</button>
+								<ul class="header__menu-content" data-collapse-content="patiënten">
+									<li class="header__nav-content"><a href="#">Patiënten</a>
+										<button class="header__item-toggle hidden-desktop" data-collapse-target="patiënten"><span>Onderwerpen</span>
+											<div class="header__item-icon">
+												<svg>
+													<use xlink:href="./images/sprites.svg#chevron-down"></use>
+												</svg>
+											</div>
+										</button>
+										<div class="header__item-content">
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#calendar"></use>
+												</svg><span>Toegangstijden</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#coins"></use>
+												</svg><span>Vergoedingen & tarieven</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#clinical-f"></use>
+												</svg><span>Mijn gegevens</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#question"></use>
+												</svg><span>Veelgestelde vragen</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-has-children">
+								<button class="header__menu-toggle" data-collapse-target="verwijzers"><span>Verwijzers</span>
+									<div class="header__item-icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#chevron-down"></use>
+										</svg>
+									</div>
+								</button>
+								<ul class="header__menu-content" data-collapse-content="verwijzers">
+									<li class="header__nav-content"><a href="#">Verwijzers</a>
+										<button class="header__item-toggle hidden-desktop" data-collapse-target="verwijzers"><span>Verwijzers</span>
+											<div class="header__item-icon">
+												<svg>
+													<use xlink:href="./images/sprites.svg#chevron-down"></use>
+												</svg>
+											</div>
+										</button>
+										<div class="header__item-content">
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#zorgdomein"></use>
+												</svg><span>ZorgDomein</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#health-worker"></use>
+												</svg><span>Contact voor verwijzers</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#newsletter"></use>
+												</svg><span>Nieuwsbrief</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-has-children">
+								<button class="header__menu-toggle" data-collapse-target="overons"><span>Over ons</span>
+									<div class="header__item-icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#chevron-down"></use>
+										</svg>
+									</div>
+								</button>
+								<ul class="header__menu-content" data-collapse-content="overons">
+									<li class="header__nav-content"><a href="#">Over ons</a>
+										<button class="header__item-toggle hidden-desktop" data-collapse-target="overons"><span>Over ons</span>
+											<div class="header__item-icon">
+												<svg>
+													<use xlink:href="./images/sprites.svg#chevron-down"></use>
+												</svg>
+											</div>
+										</button>
+										<div class="header__item-content">
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#hospital"></use>
+												</svg><span>Over ons</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#health-data"></use>
+												</svg><span>Kwaliteit en veiligheid</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#healthcare-it"></use>
+												</svg><span>Werken bij</span>
+											</div>
+											<div class="header__item">
+												<svg>
+													<use xlink:href="./images/sprites.svg#forum"></use>
+												</svg><span>Comliment, tip of klacht</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
 						<button class="header__menu-toggle hidden-desktop" data-collapse-target="menu">
 							<div class="header__toggle-text">Menu</div>
-							<div class="header__toggle-icon"><span></span><span></span><span></span></div>
+							<div class="header__toggle-icon"><span></span><span></span></div><span></span>
 						</button>
 						<div class="header__button-contact visible-tablet"><a class="button button--brand-1" href="#">Contact</a></div>
 						<label class="header__button-theme">
-							<input class="visually-hidden" type="checkbox" id="theme-toggle"><span class="theme-indicator"></span>
+							<input class="visually-hidden" type="checkbox" id="theme-toggle">
 						</label>
-					</div>
-					<div class="header__menu" data-collapse-content="menu">
-						<div class="header__menu-nav hidden-desktop">
-							<button class="header__nav-toggle" data-collapse-target="zorgaanbod" data-open-delay="350"><span>Zorgaanbod</span>
-								<div class="header__nav-icon">
-									<svg>
-										<use xlink:href="./images/sprites.svg#chevron-down"></use>
-									</svg>
-								</div>
-							</button>
-							<button class="header__nav-toggle" data-collapse-target="patiënten" data-open-delay="350"><span>Patiënten</span>
-								<div class="header__nav-icon">
-									<svg>
-										<use xlink:href="./images/sprites.svg#chevron-down"></use>
-									</svg>
-								</div>
-							</button>
-							<button class="header__nav-toggle" data-collapse-target="verwijzers" data-open-delay="350"><span>Verwijzers</span>
-								<div class="header__nav-icon">
-									<svg>
-										<use xlink:href="./images/sprites.svg#chevron-down"></use>
-									</svg>
-								</div>
-							</button>
-							<button class="header__nav-toggle" data-collapse-target="overons" data-open-delay="350"><span>Over ons</span>
-								<div class="header__nav-icon">
-									<svg>
-										<use xlink:href="./images/sprites.svg#chevron-down"></use>
-									</svg>
-								</div>
-							</button>
-						</div>
-						<ul class="header__menu-content">
-							<li class="header__nav-content menu-item menu-item-has-children" data-collapse-content="zorgaanbod"><a href="#">Zorgaanbod</a>
-								<button class="header__item-toggle hidden-desktop" data-collapse-target="zorgaanbod2"><span>Specialismen</span>
-									<div class="header__item-icon">
-										<svg>
-											<use xlink:href="./images/sprites.svg#chevron-down"></use>
-										</svg>
-									</div>
-								</button>
-								<div class="header__item-content" data-collapse-content="zorgaanbod2">
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#surgery"></use>
-										</svg><span>Chirurgie</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#skin-cancer"></use>
-										</svg><span>Dermato&shy;logie</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#lungs"></use>
-										</svg><span>Long&shy;geneeskunde</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#gynecology"></use>
-										</svg><span>Gynaeco&shy;logie</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#brain"></use>
-										</svg><span>Neurologie</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#joints"></use>
-										</svg><span>Orthopedie</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#colon"></use>
-										</svg><span>Interne Geneeskunde</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#ambulance"></use>
-										</svg><span>Spoedpoli&shy;kliniek</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#ear-nose-throat"></use>
-										</svg><span>KNO (keel, neus oor)</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#urology"></use>
-										</svg><span>Urologie</span>
-									</div>
-								</div>
-							</li>
-							<li class="header__nav-content menu-item menu-item-has-children" data-collapse-content="patiënten"><a href="#">Patiënten</a>
-								<button class="header__item-toggle hidden-desktop" data-collapse-target="patiënten2"><span>Onderwerpen</span>
-									<div class="header__item-icon">
-										<svg>
-											<use xlink:href="./images/sprites.svg#chevron-down"></use>
-										</svg>
-									</div>
-								</button>
-								<div class="header__item-content" data-collapse-content="patiënten2">
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#calendar"></use>
-										</svg><span>Toegangstijden</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#coins"></use>
-										</svg><span>Vergoedingen & tarieven</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#clinical-f"></use>
-										</svg><span>Mijn gegevens</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#question"></use>
-										</svg><span>Veelgestelde vragen</span>
-									</div>
-								</div>
-							</li>
-							<li class="header__nav-content menu-item menu-item-has-children" data-collapse-content="verwijzers"><a href="#">Verwijzers</a>
-								<button class="header__item-toggle hidden-desktop" data-collapse-target="verwijzers2"><span>Verwijzers</span>
-									<div class="header__item-icon">
-										<svg>
-											<use xlink:href="./images/sprites.svg#chevron-down"></use>
-										</svg>
-									</div>
-								</button>
-								<div class="header__item-content" data-collapse-content="verwijzers2">
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#zorgdomein"></use>
-										</svg><span>ZorgDomein</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#health-worker"></use>
-										</svg><span>Contact voor verwijzers</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#newsletter"></use>
-										</svg><span>Nieuwsbrief</span>
-									</div>
-								</div>
-							</li>
-							<li class="header__nav-content menu-item menu-item-has-children" data-collapse-content="overons"><a href="#">Over ons</a>
-								<button class="header__item-toggle hidden-desktop" data-collapse-target="overons2"><span>Over ons</span>
-									<div class="header__item-icon">
-										<svg>
-											<use xlink:href="./images/sprites.svg#chevron-down"></use>
-										</svg>
-									</div>
-								</button>
-								<div class="header__item-content" data-collapse-content="overons2">
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#hospital"></use>
-										</svg><span>Over ons</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#health-data"></use>
-										</svg><span>Kwaliteit en veiligheid</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#healthcare-it"></use>
-										</svg><span>Werken bij</span>
-									</div>
-									<div class="header__item">
-										<svg>
-											<use xlink:href="./images/sprites.svg#forum"></use>
-										</svg><span>Comliment, tip of klacht</span>
-									</div>
-								</div>
-							</li>
-							<div class="header__button-contact hidden-tablet"><a class="button button--brand-1" href="#">Contact</a></div>
-						</ul>
 					</div>
 				</div>
 			</header>
@@ -491,7 +474,7 @@
 				</div>
 			</footer>
 		</div>
-		<script src="./js/vendor.js?v=1758884924018"></script>
-		<script src="./js/main.js?v=1758884924018"></script>
+		<script src="./js/vendor.js?v=1760015050272"></script>
+		<script src="./js/main.js?v=1760015050272"></script>
 	</body>
 </html>
