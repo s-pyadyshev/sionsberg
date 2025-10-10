@@ -2641,7 +2641,6 @@ a.button:active {
   animation: bounceInDown;
   animation-fill-mode: both;
   animation-duration: 1s;
-  padding-top: 16px;
 }
 
 .header__menu-desktop {
@@ -2677,7 +2676,7 @@ a.button:active {
   animation: bounceInDown;
   animation-fill-mode: both;
   animation-duration: 1s;
-  padding-top: 16px;
+  box-shadow: 0 30px 30px 3px var(--box-shadow-default);
 }
 
 .header__menu-desktop {
@@ -2690,9 +2689,18 @@ a.button:active {
 
 .header__menu-desktop > li:first-child .header__item-icon {
   background-color: var(--color-brand-3);
+  transition: all 0.3s;
+}
+
+.header__menu-desktop > li:first-child .header__item-icon:hover {
+  background-color: var(--color-brand-3);
 }
 
 .header__menu-desktop > li:nth-child(2) .header__item-icon {
+  background-color: var(--color-brand-2);
+}
+
+.header__menu-desktop > li:nth-child(2) .header__item-icon:hover {
   background-color: var(--color-brand-2);
 }
 
@@ -2700,7 +2708,15 @@ a.button:active {
   background-color: var(--color-brand-4);
 }
 
+.header__menu-desktop > li:nth-child(3) .header__item-icon:hover {
+  background-color: var(--color-brand-4);
+}
+
 .header__menu-desktop > li:nth-child(4) .header__item-icon {
+  background-color: var(--color-brand-1);
+}
+
+.header__menu-desktop > li:nth-child(4) .header__item-icon:hover {
   background-color: var(--color-brand-1);
 }
 
@@ -2742,6 +2758,7 @@ a.button:active {
 
 .header__menu-toggle.header__menu-toggle--menu.active {
   background-color: var(--color-brand-3);
+  color: white;
 }
 
 .header__menu-desktop .header__menu-toggle + .header__menu-content {
@@ -2762,10 +2779,11 @@ a.button:active {
   top: 0;
   right: 0;
   left: 0;
-  padding: 20px 0 0;
+  padding: 25px 0 0;
   background-color: white;
   pointer-events: all;
   width: 100%;
+  margin-bottom: -15px;
 }
 
 .header__menu[data-collapse-content] {
@@ -2889,7 +2907,8 @@ a.button:active {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  margin-top: 0px;
+  margin-top: 0;
+  list-style-type: none;
 }
 
 .header__item {
@@ -2900,7 +2919,7 @@ a.button:active {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 16px;
+  padding: 16px 12px;
   margin-bottom: 11px;
   font-weight: 300;
   font-size: 12px;
@@ -2908,6 +2927,7 @@ a.button:active {
   cursor: pointer;
   transition: color 0.2s;
   word-break: break-all;
+  text-decoration: none;
 }
 
 .header__item svg {
@@ -7199,12 +7219,14 @@ address p {
     padding-left: 60px;
     padding-right: 60px;
     padding-bottom: 50px;
-    padding-top: 18px;
+    padding-top: 45px;
     height: auto;
     width: auto;
     margin-left: 0;
     margin-right: 0;
     top: 78px;
+    gap: 34px;
+    min-height: 460px;
   }
 
   .header__menu-desktop > li .header__item-icon > svg {
@@ -7218,9 +7240,17 @@ address p {
     color: var(--color-brand-3);
   }
 
+  .header__menu-desktop > li:first-child .header__item-icon:hover {
+    background-color: transparent;
+  }
+
   .header__menu-desktop > li:nth-child(2) .header__item-icon {
     background-color: transparent;
     color: var(--color-brand-2);
+  }
+
+  .header__menu-desktop > li:nth-child(2) .header__item-icon:hover {
+    background-color: transparent;
   }
 
   .header__menu-desktop > li:nth-child(3) .header__item-icon {
@@ -7228,9 +7258,17 @@ address p {
     color: var(--color-brand-4);
   }
 
+  .header__menu-desktop > li:nth-child(3) .header__item-icon:hover {
+    background-color: transparent;
+  }
+
   .header__menu-desktop > li:nth-child(4) .header__item-icon {
     background-color: transparent;
     color: var(--color-brand-1);
+  }
+
+  .header__menu-desktop > li:nth-child(4) .header__item-icon:hover {
+    background-color: transparent;
   }
 
   .header__inner.active .header__menu-desktop {
@@ -7252,7 +7290,8 @@ address p {
   }
 
   .header__menu-desktop .header__menu-toggle.active + .header__menu-content {
-    padding: 20px 30px 20px 200px;
+    padding: 38px 30px 20px 232px;
+    margin-bottom: 0;
     animation: none;
   }
 
@@ -7325,6 +7364,7 @@ address p {
     height: 25px;
     align-items: center;
     padding: 0px;
+    margin-bottom: 8px;
   }
 
   .header__item-toggle span {
@@ -7336,6 +7376,7 @@ address p {
   }
 
   .header__item-icon {
+    width: 70px;
     height: 20px;
     margin-top: 0;
   }
@@ -9379,6 +9420,7 @@ address p {
     height: 120px;
     padding-right: 40px;
     justify-content: space-between;
+    gap: 28px;
   }
 
   .header__logo {
@@ -9387,6 +9429,11 @@ address p {
 
   .header__menu-toggle > a {
     padding-right: 17px;
+  }
+
+  .header__menu-toggle > span {
+    display: inline-block;
+    padding-right: 16px;
   }
 
   .header__menu-toggle {
@@ -9417,7 +9464,6 @@ address p {
   }
 
   .header__menu-toggle:nth-of-type(1) .header__item-icon:hover {
-    background-color: var(--color-brand-3);
     color: var(--color-white);
   }
 
@@ -9448,22 +9494,6 @@ address p {
     color: var(--color-white);
   }
 
-  .header__menu-toggle:nth-of-type(1).active svg {
-    color: var(--color-brand-3);
-  }
-
-  .header__menu-toggle:nth-of-type(2).active svg {
-    color: var(--color-brand-2);
-  }
-
-  .header__menu-toggle:nth-of-type(3).active svg {
-    color: var(--color-brand-4);
-  }
-
-  .header__menu-toggle:nth-of-type(4).active svg {
-    color: var(--color-brand-1);
-  }
-
   .header__menu-content {
     padding-left: 0;
     width: 100%;
@@ -9483,17 +9513,19 @@ address p {
     position: static;
     opacity: 1;
     margin-left: 100px;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
+    padding: 0;
     top: 0;
     transform: none;
+    gap: 45px;
+    margin-left: 75px;
+    min-height: auto;
   }
 
   .header__menu-desktop.active {
     animation: none;
     overflow: visible;
     padding-top: 0;
+    box-shadow: none;
   }
 
   .header__menu-desktop {
@@ -9501,27 +9533,40 @@ address p {
   }
 
   .header__menu-desktop > li .header__item-icon > svg {
+    transform: rotate(0) !important;
     opacity: 1;
   }
 
   .header__menu-desktop > li:first-child .header__item-icon {
-    background-color: var(--color-brand-3);
     color: var(--color-black);
+  }
+
+  .header__menu-desktop > li:first-child .header__item-icon:hover {
+    background-color: var(--color-brand-3);
   }
 
   .header__menu-desktop > li:nth-child(2) .header__item-icon {
-    background-color: var(--color-brand-2);
     color: var(--color-black);
+  }
+
+  .header__menu-desktop > li:nth-child(2) .header__item-icon:hover {
+    background-color: var(--color-brand-2);
   }
 
   .header__menu-desktop > li:nth-child(3) .header__item-icon {
-    background-color: var(--color-brand-4);
     color: var(--color-black);
   }
 
+  .header__menu-desktop > li:nth-child(3) .header__item-icon:hover {
+    background-color: var(--color-brand-4);
+  }
+
   .header__menu-desktop > li:nth-child(4) .header__item-icon {
-    background-color: var(--color-brand-1);
     color: var(--color-black);
+  }
+
+  .header__menu-desktop > li:nth-child(4) .header__item-icon:hover {
+    background-color: var(--color-brand-1);
   }
 
   .header__inner.active .header__menu-desktop {
@@ -9533,7 +9578,7 @@ address p {
     animation: bounceInDown;
     width: calc(50vw + 50%);
     max-width: 1180px;
-    margin-left: -378px;
+    margin-left: -343px;
     top: 79px;
     margin-top: 0;
     box-shadow: 0 20px 30px 3px var(--box-shadow-default);
@@ -9546,6 +9591,10 @@ address p {
 
   .header__nav-content > a:first-child {
     display: none;
+  }
+
+  .header__item-toggle {
+    margin-bottom: 0;
   }
 
   .header__item-icon {
@@ -9567,7 +9616,7 @@ address p {
 
   .header__item {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
   }
 
@@ -9599,6 +9648,22 @@ address p {
 
   .header__button-theme {
     margin-left: 0;
+  }
+
+  .header__menu-desktop > li:first-child > ul li .header__item-content {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .header__menu-desktop > li:nth-child(2) > ul li .header__item-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .header__menu-desktop > li:nth-child(3) > ul li .header__item-content {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .header__menu-desktop > li:nth-child(4) > ul li .header__item-content {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .label {
