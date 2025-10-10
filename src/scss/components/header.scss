@@ -55,6 +55,7 @@
   @include desktop {
     height: 120px;
     padding-right: 40px;
+    justify-content: space-between;
   }
 }
 
@@ -106,9 +107,9 @@
   &:focus,
   &:hover,
   &:active {
-    @include desktop {
-      background: linear-gradient(90deg, var(--color-gray) 0%, var(--color-gray) 67%, transparent 67%, transparent 100%);
-    }
+    // @include desktop {
+    //   background: linear-gradient(90deg, var(--color-gray) 0%, var(--color-gray) 67%, transparent 67%, transparent 100%);
+    // }
   }
 
   svg {
@@ -152,6 +153,7 @@
   }
 
   @include desktop {
+    color: var(--color-black);
     font-weight: 400;
     border-radius: 20px;
     height: 40px;
@@ -277,6 +279,8 @@
   @include desktop {
     padding-left: 0;
     width: 100%;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
 }
 
@@ -325,8 +329,8 @@
   @include desktop {
     margin-left: $container-padding-desktop;
     margin-right: 145px;
+    padding-top: 0;
     padding-bottom: 0;
-
     top: 110px;
   }
 
@@ -389,6 +393,7 @@
     position: static;
     opacity: 1;
     margin-left: $container-padding-desktop;
+    padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
     top: 0;
@@ -400,11 +405,16 @@
   }
 
   &.active {
-    // box-shadow: 0px 4px 30px 3px var(--box-shadow-default);
     animation: bounceInDown;
     animation-fill-mode: both;
     animation-duration: 1s;
     padding-top: 16px;
+
+    @include desktop {
+      animation: none;
+      overflow: visible;
+      padding-top: 0;
+    }
   }
 }
 
@@ -416,15 +426,35 @@
   }
 }
 
+.header__menu-desktop>li .header__item-icon>svg {
+
+
+  @include tablet {
+    transform: rotate(270deg) !important;
+    transition: none;
+    opacity: 0;
+  }
+
+  @include desktop {
+    opacity: 1;
+  }
+}
+
+.header__menu-desktop>li .header__menu-toggle.active .header__item-icon>svg {
+  opacity: 1;
+}
+
 .header__menu-desktop>li:first-child .header__item-icon {
   background-color: var(--color-brand-3);
 
   @include tablet {
     background-color: transparent;
+    color: var(--color-brand-3);
   }
 
   @include desktop {
     background-color: var(--color-brand-3);
+    color: var(--color-black);
   }
 }
 
@@ -433,10 +463,12 @@
 
   @include tablet {
     background-color: transparent;
+    color: var(--color-brand-2);
   }
 
   @include desktop {
     background-color: var(--color-brand-2);
+    color: var(--color-black);
   }
 }
 
@@ -445,10 +477,12 @@
 
   @include tablet {
     background-color: transparent;
+    color: var(--color-brand-4);
   }
 
   @include desktop {
     background-color: var(--color-brand-4);
+    color: var(--color-black);
   }
 }
 
@@ -457,11 +491,29 @@
 
   @include tablet {
     background-color: transparent;
+    color: var(--color-brand-1);
   }
 
   @include desktop {
     background-color: var(--color-brand-1);
+    color: var(--color-black);
   }
+}
+
+.header__menu-desktop>li:first-child .header__menu-toggle.active {
+  color: var(--color-brand-3);
+}
+
+.header__menu-desktop>li:nth-child(2) .header__menu-toggle.active {
+  color: var(--color-brand-2);
+}
+
+.header__menu-desktop>li:nth-child(3) .header__menu-toggle.active {
+  color: var(--color-brand-4);
+}
+
+.header__menu-desktop>li:nth-child(4) .header__menu-toggle.active {
+  color: var(--color-brand-1);
 }
 
 .header__inner.active .header__menu-desktop {
@@ -515,6 +567,10 @@
   }
 }
 
+.header__menu-desktop .header__menu-toggle.active {
+  color: inherit;
+}
+
 .header__menu-desktop .header__menu-toggle.active+.header__menu-content {
   // box-shadow: 0px 4px 30px 3px var(--box-shadow-default);
   animation: bounceInDown;
@@ -536,8 +592,14 @@
   }
 
   @include desktop {
-    padding: 136px 30px 20px 30px;
+    padding: 20px 60px 20px 60px;
     animation: bounceInDown;
+    width: calc(50vw + 50%);
+    max-width: 1180px;
+    margin-left: -378px;
+    top: 79px;
+    margin-top: 0;
+    box-shadow: 0 20px 30px 3px var(--box-shadow-default);
   }
 }
 
@@ -748,7 +810,7 @@
   @include desktop {
     width: 39px;
     height: 39px;
-    padding-left: 10px;
+    padding-left: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -854,17 +916,6 @@
 
 .header__nav-content:nth-child(1) {
 
-  .header__item:hover,
-  .header__item:hover svg,
-  .header__item-toggle.active,
-  .header__item-toggle:hover {
-    color: var(--color-brand-3);
-
-    .header__nav-icon svg {
-      color: var(--color-brand-3);
-    }
-  }
-
   .header__item-content {
     display: grid;
     grid-template-columns: calc(50% - 5px) calc(50% - 5px);
@@ -886,17 +937,6 @@
 }
 
 .header__nav-toggle:nth-child(2) {
-  .header__nav-icon {
-    background-color: var(--color-brand-2);
-
-    @include tablet {
-      background-color: transparent;
-
-      svg {
-        color: var(--background-default);
-      }
-    }
-  }
 
   &.active,
   &:hover {
@@ -918,17 +958,6 @@
 
 .header__nav-content:nth-child(2) {
 
-  .header__item:hover,
-  .header__item:hover svg,
-  .header__item-toggle.active,
-  .header__item-toggle:hover {
-    color: var(--color-brand-2);
-
-    .header__nav-icon svg {
-      color: var(--color-brand-2);
-    }
-  }
-
   .header__item-content {
     @include desktop {
       grid-template-columns: repeat(4, 1fr);
@@ -938,17 +967,6 @@
 
 .header__nav-content:nth-child(3) {
 
-  .header__item:hover,
-  .header__item:hover svg,
-  .header__item-toggle.active,
-  .header__item-toggle:hover {
-    color: var(--color-brand-2);
-
-    .header__nav-icon svg {
-      color: var(--color-brand-2);
-    }
-  }
-
   .header__item-content {
     @include desktop {
       grid-template-columns: repeat(4, 1fr);
@@ -957,18 +975,6 @@
 }
 
 .header__nav-content:nth-child(4) {
-
-  .header__item:hover,
-  .header__item:hover svg,
-  .header__item-toggle.active,
-  .header__item-toggle:hover {
-    color: var(--color-brand-1);
-
-    .header__nav-icon svg {
-      color: var(--color-brand-1);
-    }
-  }
-
   .header__item-content {
     @include desktop {
       grid-template-columns: repeat(4, 1fr);
@@ -1063,7 +1069,7 @@
   @include desktop {
     font-size: 14px;
     font-weight: 400;
-    margin-left: 5px;
+    margin-left: 0;
   }
 
   >a {
@@ -1090,6 +1096,17 @@
   margin-right: 20px;
   padding-left: 20px;
 
+  @include tablet {
+    order: 1;
+    margin-left: 30px;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  @include desktop {
+    margin-left: 0;
+  }
+
   &:focus,
   &:hover,
   &:active {
@@ -1099,12 +1116,7 @@
     }
   }
 
-  @include tablet {
-    order: 1;
-    margin-left: 30px;
-    margin-right: 0;
-    padding-left: 0;
-  }
+
 }
 
 .header__toggle-text {

@@ -138,6 +138,11 @@ body {
 
   &.menu-active {
     overflow: hidden;
+
+
+    @include desktop {
+      overflow: visible;
+    }
   }
 }
 

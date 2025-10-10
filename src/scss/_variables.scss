@@ -96,7 +96,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px) !default;
+  xxl: 1440px) !default;
 
 @each $breakpoint, $value in $grid-breakpoints {
   .hidden-#{$breakpoint} {
