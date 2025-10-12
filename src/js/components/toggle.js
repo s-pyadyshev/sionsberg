@@ -55,7 +55,7 @@ export const toggle = (() => {
       const allContents = document.querySelectorAll('.header__nav-content');
       const navToggles = document.querySelectorAll('.header__nav-toggle');
 
-      menuToggles.forEach((c) => c.classList.remove('active'));
+      // menuToggles.forEach((c) => c.classList.remove('active'));
       allContents.forEach((c) => c.classList.remove('active'));
       navToggles.forEach((c) => c.classList.remove('inactive'));
       navToggles.forEach((c) => c.classList.remove('active'));

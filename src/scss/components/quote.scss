@@ -53,12 +53,16 @@
   margin-left: calc(#{$container-padding} + 30px);
   margin-right: 0px;
   border-radius: 20px 0px 0px 20px;
+  border-left: 20px solid var(--color-brand-2);
+
 
   @include tablet {
     margin-left: 0px;
     margin-right: 100px;
     flex-direction: row;
     border-radius: 0px 20px 20px 0px;
+    border-left: 0;
+    border-right: 20px solid var(--color-brand-2);
   }
 
   @include desktop {
@@ -70,17 +74,6 @@
   }
 }
 
-.quote span {
-  background-color: var(--color-brand-2);
-  display: block;
-  width: 20px;
-  border-radius: 20px 0px 0px 20px;
-
-  @include tablet {
-    border-radius: 0px 20px 20px 0px;
-  }
-}
-
 .quote__text {
   margin-left: 0px;
   margin-right: auto;
@@ -89,7 +82,7 @@
   height: fit-content;
 
   @include tablet {
-    width: 305px;
+    width: 260px;
     padding: 40px 55px 20px 0px;
     margin-left: auto;
     margin-right: 0px;
@@ -165,7 +158,7 @@
 .quote__img img {
   object-fit: cover;
   max-width: calc(100% + 20px);
-  width: calc(100% + 20px);
+  width: 100%;
   height: 224px;
   margin-left: 0px;
   transition: transform 0.3s ease;

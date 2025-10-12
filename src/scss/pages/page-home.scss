@@ -144,6 +144,7 @@
   background-color: transparent;
   border-radius: 20px;
   background-color: var(--color-white-80);
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.123);
   text-decoration: none;
@@ -318,6 +319,7 @@
   background-color: transparent;
   border-radius: 20px;
   background-color: var(--color-white-80);
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
   text-decoration: none;
@@ -433,6 +435,7 @@
   background-color: transparent;
   border-radius: 20px;
   background-color: var(--color-white-80);
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
   text-decoration: none;

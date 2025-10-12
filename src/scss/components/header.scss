@@ -96,13 +96,15 @@
   flex-direction: row;
   align-items: center;
   color: var(--color-text);
-  background-color: #f5f5f5;
+  background-color: var(--color-gray);
   padding: 0 0 0 40px;
   font-weight: 300;
   font-size: 16px;
   transition: all 0.3s ease;
   position: relative;
   z-index: 10;
+  text-decoration: none;
+  flex-shrink: 0;
 
   >span {
     @include desktop {
@@ -159,6 +161,7 @@
     border-radius: 20px;
     background-color: transparent;
     gap: 0;
+    padding-left: 20px;
 
     &.active {
       background-color: transparent;
@@ -206,22 +209,6 @@
         background-color: var(--color-brand-1);
         color: var(--color-white);
       }
-    }
-
-    &:nth-of-type(1).active svg {
-      color: var(--color-brand-3);
-    }
-
-    &:nth-of-type(2).active svg {
-      color: var(--color-brand-2);
-    }
-
-    &:nth-of-type(3).active svg {
-      color: var(--color-brand-4);
-    }
-
-    &:nth-of-type(4).active svg {
-      color: var(--color-brand-1);
     }
   }
 }
@@ -295,7 +282,6 @@
   transform: translateY(-150px);
   background-color: var(--background-default);
   border-radius: 0px 0px 20px 20px;
-  // overflow: auto;
   height: 100dvh;
   width: calc(100% - 60px);
   margin-left: auto;
@@ -368,9 +354,10 @@
   max-height: 1000px;
   height: auto;
   list-style-type: none;
+  display: none;
 
   @include tablet {
-    border-radius: 0px 0px 50px 50px;
+    border-radius: 0 0 50px 50px;
     flex-direction: row;
     padding-left: 60px;
     padding-right: 60px;
@@ -386,14 +373,16 @@
   }
 
   @include desktop {
+    display: flex;
+    border-radius: 0;
     position: static;
     opacity: 1;
     margin-left: $container-padding-desktop;
     padding: 0;
     top: 0;
     transform: none;
-    gap: 45px;
-    margin-left: 75px;
+    gap: 25px;
+    margin-left: auto;
     min-height: auto;
   }
 
@@ -416,14 +405,6 @@
   }
 }
 
-.header__menu-desktop {
-  display: none;
-
-  @include desktop {
-    display: flex;
-  }
-}
-
 .header__menu-desktop>li .header__item-icon>svg {
 
   @include tablet {
@@ -442,6 +423,14 @@
   opacity: 1;
 }
 
+.header__menu-desktop>li ul>li .header__item-icon>svg {
+  @include tablet {
+    opacity: 1;
+    transform: rotate(0deg) !important;
+    color: var(--color-black);
+  }
+}
+
 .header__menu-desktop>li:first-child .header__item-icon {
   background-color: var(--color-brand-3);
   transition: all 0.3s;
@@ -454,6 +443,78 @@
   @include desktop {
     color: var(--color-black);
   }
+}
+
+.header__menu-desktop>li:first-child .header__nav-content .header__item-toggle.active,
+.header__menu-desktop>li:first-child .header__nav-content .header__item-toggle.active svg {
+  @include tablet {
+    color: var(--color-brand-3);
+  }
+}
+
+.header__menu-desktop>li:nth-child(2) .header__nav-content .header__item-toggle.active,
+.header__menu-desktop>li:nth-child(2) .header__nav-content .header__item-toggle.active svg {
+  @include tablet {
+    color: var(--color-brand-2);
+  }
+}
+
+.header__menu-desktop>li:nth-child(3) .header__nav-content .header__item-toggle.active,
+.header__menu-desktop>li:nth-child(3) .header__nav-content .header__item-toggle.active svg {
+  @include tablet {
+    color: var(--color-brand-4);
+  }
+}
+
+.header__menu-desktop>li:nth-child(4) .header__nav-content .header__item-toggle.active,
+.header__menu-desktop>li:nth-child(4) .header__nav-content .header__item-toggle.active svg {
+  @include tablet {
+    color: var(--color-brand-1);
+  }
+}
+
+.header__menu-desktop>li:first-child .header__menu-toggle.active .header__item-icon>svg {
+  @include tablet {
+    color: var(--color-brand-3);
+  }
+}
+
+.header__menu-desktop>li:nth-child(2) .header__menu-toggle.active .header__item-icon>svg {
+  @include tablet {
+    color: var(--color-brand-2);
+  }
+}
+
+.header__menu-desktop>li:nth-child(3) .header__menu-toggle.active .header__item-icon>svg {
+  @include tablet {
+    color: var(--color-brand-4);
+  }
+}
+
+.header__menu-desktop>li:nth-child(4) .header__menu-toggle.active .header__item-icon>svg {
+  @include tablet {
+    color: var(--color-brand-1);
+  }
+}
+
+.header__menu-desktop>li:first-child .header__item-content .header__item:hover,
+.header__menu-desktop>li:first-child .header__item-content .header__item:hover>svg {
+  color: var(--color-brand-3);
+}
+
+.header__menu-desktop>li:nth-child(2) .header__item-content .header__item:hover,
+.header__menu-desktop>li:nth-child(2) .header__item-content .header__item:hover>svg {
+  color: var(--color-brand-2);
+}
+
+.header__menu-desktop>li:nth-child(3) .header__item-content .header__item:hover,
+.header__menu-desktop>li:nth-child(3) .header__item-content .header__item:hover>svg {
+  color: var(--color-brand-4);
+}
+
+.header__menu-desktop>li:nth-child(4) .header__item-content .header__item:hover,
+.header__menu-desktop>li:nth-child(4) .header__item-content .header__item:hover>svg {
+  color: var(--color-brand-1);
 }
 
 .header__menu-desktop>li:first-child .header__item-icon:hover {
@@ -543,8 +604,10 @@
   }
 }
 
-.header__menu-desktop>li:first-child .header__menu-toggle.active {
-  color: var(--color-brand-3);
+.header__menu-desktop>li:hover {
+  @include desktop {
+    background: linear-gradient(90deg, var(--color-gray) 0%, var(--color-gray) calc(100% - 39px), transparent calc(100% - 39px), transparent 100%);
+  }
 }
 
 .header__menu-desktop>li:nth-child(2) .header__menu-toggle.active {
@@ -577,6 +640,11 @@
 
   @include tablet {
     flex-direction: row;
+  }
+
+  @include desktop {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 }
 
@@ -616,7 +684,6 @@
 }
 
 .header__menu-desktop .header__menu-toggle.active+.header__menu-content {
-  // box-shadow: 0px 4px 30px 3px var(--box-shadow-default);
   animation: bounceInDown;
   animation-fill-mode: both;
   animation-duration: 1s;
@@ -625,11 +692,13 @@
   top: 0;
   right: 0;
   left: 0;
-  padding: 25px 0 0;
+  padding: 30px 0 0;
   background-color: white;
   pointer-events: all;
   width: 100%;
   margin-bottom: -15px;
+  max-height: 1000px;
+  opacity: 1;
 
   @include tablet {
     padding: 38px 30px 20px 232px;
@@ -642,7 +711,7 @@
     animation: bounceInDown;
     width: calc(50vw + 50%);
     max-width: 1180px;
-    margin-left: -343px;
+    margin-left: -325px;
     top: 79px;
     margin-top: 0;
     box-shadow: 0 20px 30px 3px var(--box-shadow-default);
@@ -812,6 +881,12 @@
   }
 }
 
+.header__nav-content .header__item-content {
+  @include tablet {
+    display: none !important;
+  }
+}
+
 .header__item-toggle {
   display: none;
 
@@ -862,6 +937,7 @@
   @include desktop {
     width: 39px;
     height: 39px;
+    padding-right: 0;
     padding-left: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -909,7 +985,7 @@
   line-height: 16px;
   cursor: pointer;
   transition: color 0.2s;
-  word-break: break-all;
+  word-break: break-word;
   text-decoration: none;
 
   svg {
@@ -970,7 +1046,7 @@
 
 .header__nav-content:nth-child(1) {
 
-  .header__item-content {
+  .header__item-toggle.active+.header__item-content {
     display: grid;
     grid-template-columns: calc(50% - 5px) calc(50% - 5px);
     gap: 10px;
@@ -1036,6 +1112,11 @@
   }
 }
 
+.header__nav-content .header__item-toggle.active+.header__item-content {
+  @include tablet {
+    display: grid !important;
+  }
+}
 
 .header__nav-toggle:nth-child(3) {
   .header__nav-icon {
@@ -1117,7 +1198,7 @@
     height: 40px;
     margin-bottom: 0px;
     margin-right: 0px;
-    margin-left: 30px;
+    margin-left: 10px;
   }
 
   @include desktop {
@@ -1160,17 +1241,6 @@
   @include desktop {
     margin-left: 0;
   }
-
-  &:focus,
-  &:hover,
-  &:active {
-    .theme-indicator {
-      border: 2px solid var(--color-theme-black);
-      background: linear-gradient(to right, var(--color-theme-black) 50%, var(--background-default) 50%);
-    }
-  }
-
-
 }
 
 .header__toggle-text {
@@ -1185,8 +1255,8 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  border: 2px solid var(--color-brand-2);
-  background: linear-gradient(to right, var(--color-brand-2) 50%, var(--background-default) 50%);
+  border: 2px solid var(--color-theme-black);
+  background: linear-gradient(to right, var(--color-theme-black) 50%, var(--background-default) 50%);
   display: inline-block;
   cursor: pointer;
 }

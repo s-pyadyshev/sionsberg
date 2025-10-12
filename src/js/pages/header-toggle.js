@@ -7,17 +7,20 @@ export const headerToggle = (() => {
     setupResponsiveBehaviour(menuInners);
 
     menuInners.forEach((menuInner) => {
-      const buttons = menuInner.querySelectorAll('.header__menu-toggle');
+      const buttons = menuInner.querySelectorAll('.header__item-icon');
 
       buttons.forEach((btn) => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (event) => {
+          event.preventDefault();
           const target = btn.dataset.collapseTarget;
-          const content = menuInner.querySelector(
+          const content = btn.querySelector(
             `.header__menu-content[data-collapse-content="${target}"]`
           );
-          if (!content) return;
 
-          const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+          btn.classList.toggle('active');
+
+          if (!content) return;
+          const isTablet = window.matchMedia('(min-width: 768px)').matches;
 
           buttons.forEach((otherBtn) => {
             if (otherBtn !== btn) {
@@ -31,7 +34,7 @@ export const headerToggle = (() => {
                 otherBtn.classList.remove('active');
               }
 
-              if (!isDesktop) {
+              if (!isTablet) {
                 setTimeout(() => {
                   if (content.classList.contains('active')) {
                     otherBtn.classList.add('inactive');

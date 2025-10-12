@@ -3,12 +3,26 @@ import { throttle } from '../helpers.js';
 export const menu = (() => {
   const init = () => {
     const body = document.body;
+    const headerMenuToggles = document
+      .querySelector('.header__menu-desktop')
+      .querySelectorAll('.header__menu-toggle');
     const menuToggles = document.querySelectorAll('.header__menu-toggle');
     const headerInner = document.querySelector('.header__inner');
     const headerMenu = document.querySelector('.header__menu-desktop');
     const allContents = document.querySelectorAll('.header__menu-content');
 
     let activeButton = null;
+
+    const isTablet = window.matchMedia('(min-width: 768px) and (max-width: 1439px)').matches;
+    const isDesktop = window.matchMedia('(min-width: 1440px)').matches;
+
+    if (isTablet) {
+      headerMenuToggles.forEach((btn) => {
+        btn.addEventListener('click', (event) => {
+          event.preventDefault();
+        });
+      });
+    }
 
     menuToggles.forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -19,11 +33,14 @@ export const menu = (() => {
 
         if (activeButton === btn) {
           btn.classList.remove('active');
-          headerInner.classList.remove('active');
-          headerMenu.classList.remove('active');
+          if (isDesktop) {
+            headerInner.classList.remove('active');
+            headerMenu.classList.remove('active');
+          }
+
           allContents.forEach((c) => c.classList.remove('active'));
           activeButton = null;
-          body.classList.remove('menu-active');
+          // body.classList.remove('menu-active');
           return;
         } else {
           body.classList.add('menu-active');
