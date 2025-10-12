@@ -369,7 +369,7 @@
     margin-right: 0;
     top: 78px;
     gap: 34px;
-    min-height: 460px;
+    min-height: 500px;
   }
 
   @include desktop {
@@ -384,6 +384,7 @@
     gap: 25px;
     margin-left: auto;
     min-height: auto;
+    transform: none !important;
   }
 
   @media (min-width: 1600px) {
@@ -684,9 +685,9 @@
 }
 
 .header__menu-desktop .header__menu-toggle.active+.header__menu-content {
-  animation: bounceInDown;
-  animation-fill-mode: both;
-  animation-duration: 1s;
+  animation: bounceInDown !important;
+  animation-fill-mode: both !important;
+  animation-duration: 1s !important;
   padding-top: 16px;
   transform: none;
   top: 0;
@@ -709,10 +710,7 @@
   @include desktop {
     padding: 20px 60px 20px 60px;
     animation: bounceInDown;
-    width: calc(50vw + 50%);
-    max-width: 1180px;
-    margin-left: -325px;
-    top: 79px;
+    top: 120px;
     margin-top: 0;
     box-shadow: 0 20px 30px 3px var(--box-shadow-default);
   }
@@ -1052,8 +1050,9 @@
     gap: 10px;
 
     @include tablet {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0;
+      grid-template-columns: repeat(2, auto);
+      justify-content: start;
+      column-gap: 50px;
     }
 
     @include desktop {
@@ -1088,7 +1087,7 @@
 
 .header__nav-content:nth-child(2) {
 
-  .header__item-content {
+  .header__item-toggle.active+.header__item-content {
     @include desktop {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -1097,7 +1096,7 @@
 
 .header__nav-content:nth-child(3) {
 
-  .header__item-content {
+  .header__item-toggle.active+.header__item-content {
     @include desktop {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -1105,7 +1104,7 @@
 }
 
 .header__nav-content:nth-child(4) {
-  .header__item-content {
+  .header__item-toggle.active+.header__item-content {
     @include desktop {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -1274,20 +1273,20 @@
 .header__menu-desktop>li:nth-child(2)>ul li .header__item-content {
 
   @include desktop {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 }
 
 .header__menu-desktop>li:nth-child(3)>ul li .header__item-content {
 
   @include desktop {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr) !important;
   }
 }
 
 .header__menu-desktop>li:nth-child(4)>ul li .header__item-content {
 
   @include desktop {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 }

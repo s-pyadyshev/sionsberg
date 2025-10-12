@@ -228,10 +228,12 @@
 @keyframes bounceInDown {
   0% {
     transform: translateY(-78px);
+    opacity: 0;
   }
 
   20% {
     transform: translateY(-8px);
+    opacity: 1;
   }
 
   60% {

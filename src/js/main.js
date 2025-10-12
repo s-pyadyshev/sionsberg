@@ -42,7 +42,6 @@ window.addEventListener(
     }
 
     updateStickyShadow();
-    window.addEventListener('resize', updateStickyShadow);
 
     document.querySelector('body').classList.add('page-loaded');
   },
