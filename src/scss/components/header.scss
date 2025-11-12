@@ -416,12 +416,17 @@
 
   @include desktop {
     transform: rotate(0) !important;
+    transition: all 0.3s;
     opacity: 1;
   }
 }
 
 .header__menu-desktop>li .header__menu-toggle.active .header__item-icon>svg {
   opacity: 1;
+
+  @include desktop {
+    transform: rotate(180deg) !important;
+  }
 }
 
 .header__menu-desktop>li ul>li .header__item-icon>svg {
@@ -439,10 +444,6 @@
   @include tablet {
     background-color: transparent;
     color: var(--color-brand-3);
-  }
-
-  @include desktop {
-    color: var(--color-black);
   }
 }
 
@@ -537,10 +538,6 @@
     background-color: transparent;
     color: var(--color-brand-2);
   }
-
-  @include desktop {
-    color: var(--color-black);
-  }
 }
 
 .header__menu-desktop>li:nth-child(2) .header__item-icon:hover {
@@ -562,10 +559,6 @@
     background-color: transparent;
     color: var(--color-brand-4);
   }
-
-  @include desktop {
-    color: var(--color-black);
-  }
 }
 
 .header__menu-desktop>li:nth-child(3) .header__item-icon:hover {
@@ -586,10 +579,6 @@
   @include tablet {
     background-color: transparent;
     color: var(--color-brand-1);
-  }
-
-  @include desktop {
-    color: var(--color-black);
   }
 }
 

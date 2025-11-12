@@ -386,14 +386,15 @@
 
 .hero__nav-calendar .nav__item-title span {
   font-size: 12px;
-  margin-left: 0px;
+  margin-left: 0;
   height: 46px;
   background-color: var(--color-brand-2);
   color: var(--color-white);
   width: 100%;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0 0 15px 15px;
   text-align: center;
   padding-top: 6px;
+  line-height: 1.5;
 
   @include tablet {
     font-size: 14px;
@@ -404,7 +405,7 @@
     width: fit-content;
     border-radius: none;
     text-align: left;
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   @include desktop {
