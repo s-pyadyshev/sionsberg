@@ -5900,6 +5900,7 @@ address p {
   border-radius: 20px;
   background-color: var(--color-white-80);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.123);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
@@ -5962,6 +5963,7 @@ address p {
   border-radius: 20px;
   background-color: var(--color-white-80);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
@@ -6021,6 +6023,7 @@ address p {
   border-radius: 20px;
   background-color: var(--color-white-80);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
