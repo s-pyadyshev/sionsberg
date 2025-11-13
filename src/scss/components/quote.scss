@@ -8,20 +8,9 @@
   margin-top: 45px;
   margin-bottom: 79px;
 
-  @media (min-width: 355px) {
-    height: 520px;
-  }
-
-  @media (min-width: 373px) {
-    height: 500px;
-  }
 
   @media (min-width: 429px) {
     height: 470px;
-  }
-
-  @media (min-width: 487px) {
-    height: 450px;
   }
 
   @media (min-width: 586px) {
@@ -46,46 +35,34 @@
 }
 
 .quote {
-  background-color: #F1F8FA;
   display: flex;
   flex-direction: row-reverse;
   height: fit-content;
   margin-left: calc(#{$container-padding} + 30px);
   margin-right: 0px;
-  border-radius: 20px 0px 0px 20px;
-  border-left: 20px solid var(--color-brand-2);
 
   @include tablet {
     align-items: center;
-    margin-left: 0px;
-    margin-right: 20px;
+    margin-left: 0;
+    margin-right: 110px;
     flex-direction: row;
-    border-radius: 0px 20px 20px 0px;
-    border-left: 0;
-    border-right: 20px solid var(--color-brand-2);
-    padding-left: 80px;
+    border-radius: 0 20px 20px 0;
+
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 80px 40px 260px 30px 260px 52px 0 minmax(0, 1fr);
   }
 
   @include laptop {
+    grid-template-columns: minmax(0, 1fr) 80px 40px 320px 60px 230px 52px 0 minmax(0, 1fr);
     margin-right: 100px;
-    margin-left: auto;
   }
 
   @include desktop {
+    grid-template-columns: minmax(0, 1fr) 240px 420px 60px minmax(0, 1fr);
     margin-right: auto;
     margin-left: auto;
   }
-}
-
-.quote__text:before {
-  content: "";
-  background-color: #F1F8FA;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -50%;
-  z-index: -1;
 }
 
 .quote__text {
@@ -94,16 +71,23 @@
   width: fit-content;
   padding: 143px 40px 32px 35px;
   height: fit-content;
+  background-color: #F1F8FA;
+  border-radius: 20px 0px 0px 20px;
+  border-left: 20px solid var(--color-brand-2);
 
   @include tablet {
-    width: 400px;
-    padding: 40px 55px 20px 0px;
-    margin-left: 30px;
+    position: relative;
+    padding: 40px 40px 20px 0px;
+    margin-left: 0;
     margin-right: 0;
+    grid-column: 5 / 7;
+    border-left: 0;
+    border-right: 20px solid var(--color-brand-2);
+    border-radius: 0 20px 20px 0;
   }
 
   @include laptop {
-    margin-left: 60px;
+    grid-column: 6 / 8;
   }
 
   @include desktop {
@@ -114,15 +98,20 @@
   }
 
   &:before {
-    @include desktop {
+    @include tablet {
       content: "";
       z-index: -1;
-      width: 50vw;
+      width: 75vw;
       height: 100%;
       position: absolute;
       top: 0;
-      left: -50vw;
+      left: -75vw;
       background-color: #F1F8FA;
+    }
+
+    @include desktop {
+      left: -75vw;
+      width: 75vw;
     }
   }
 }
@@ -171,6 +160,7 @@
   @include tablet {
     position: static;
     margin-left: 0;
+    grid-column: 3 / 5;
   }
 
   @include desktop {

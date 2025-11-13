@@ -67,7 +67,7 @@
         var(--background-default) 100%);
     display: grid;
     grid-template-columns: 28% repeat(2, 36%);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 0;
   }
 
@@ -266,14 +266,33 @@
 }
 
 .footer__legal {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  max-width: 320px !important;
+  gap: 0 20px;
+  padding: 0 40px;
+
+  @include tablet {
+    padding: 0 40px 0 0;
+    height: auto !important;
+    max-width: 100% !important;
+    justify-content: flex-start;
+    grid-area: 4 / 1 / 4 / 4;
+  }
+
+  @include laptop {
+    gap: 0 45px;
+  }
 
   @include desktop {
-    display: flex;
+    padding: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
     grid-area: 3 / 2 / 4 / 4;
+    height: 100% !important;
   }
 }
 

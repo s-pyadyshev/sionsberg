@@ -49,6 +49,7 @@ html {
   font-family: $font-primary;
   color: var(--color-text);
   scroll-behavior: smooth;
+  scroll-padding-top: 120px;
 
   @include laptop {
     font-size: $font-size-desktop;

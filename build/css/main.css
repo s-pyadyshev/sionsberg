@@ -868,6 +868,7 @@ html {
   font-family: ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", roboto, oxygen-sans, cantarell, "Helvetica Neue", sans-serif;
   color: var(--color-text);
   scroll-behavior: smooth;
+  scroll-padding-top: 120px;
 }
 
 html.brand-1-theme {
@@ -2298,7 +2299,13 @@ a.button:active {
 }
 
 .footer__legal {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  max-width: 320px !important;
+  gap: 0 20px;
+  padding: 0 40px;
 }
 
 .footer__legal > a {
@@ -4819,26 +4826,12 @@ a.button:active {
 }
 
 .quote {
-  background-color: #F1F8FA;
   display: flex;
   flex-direction: row-reverse;
   height: -moz-fit-content;
   height: fit-content;
   margin-left: calc(30px + 30px);
   margin-right: 0px;
-  border-radius: 20px 0px 0px 20px;
-  border-left: 20px solid var(--color-brand-2);
-}
-
-.quote__text:before {
-  content: "";
-  background-color: #F1F8FA;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -50%;
-  z-index: -1;
 }
 
 .quote__text {
@@ -4849,6 +4842,9 @@ a.button:active {
   padding: 143px 40px 32px 35px;
   height: -moz-fit-content;
   height: fit-content;
+  background-color: #F1F8FA;
+  border-radius: 20px 0px 0px 20px;
+  border-left: 20px solid var(--color-brand-2);
 }
 
 .quote__text blockquote {
@@ -6735,18 +6731,6 @@ address p {
   }
 }
 
-@media (min-width: 355px) {
-  .section-quote {
-    height: 520px;
-  }
-}
-
-@media (min-width: 373px) {
-  .section-quote {
-    height: 500px;
-  }
-}
-
 @media (min-width: 393px) {
   .swiper-navigation {
     margin-right: 7px;
@@ -6777,12 +6761,6 @@ address p {
 @media (min-width: 429px) {
   .section-quote {
     height: 470px;
-  }
-}
-
-@media (min-width: 487px) {
-  .section-quote {
-    height: 450px;
   }
 }
 
@@ -6984,7 +6962,7 @@ address p {
     background-image: linear-gradient(to left, var(--color-brand-1) 0%, var(--color-brand-1) 38px, var(--background-default) 38px, var(--background-default) 100%);
     display: grid;
     grid-template-columns: 28% repeat(2, 36%);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 0;
   }
 
@@ -7034,6 +7012,14 @@ address p {
   .footer__icons > img {
     width: 90px;
     height: 20px;
+  }
+
+  .footer__legal {
+    padding: 0 40px 0 0;
+    height: auto !important;
+    max-width: 100% !important;
+    justify-content: flex-start;
+    grid-area: 4/1/4/4;
   }
 
   .footer__logo {
@@ -7986,20 +7972,35 @@ address p {
 
   .quote {
     align-items: center;
-    margin-left: 0px;
-    margin-right: 20px;
+    margin-left: 0;
+    margin-right: 110px;
     flex-direction: row;
-    border-radius: 0px 20px 20px 0px;
-    border-left: 0;
-    border-right: 20px solid var(--color-brand-2);
-    padding-left: 80px;
+    border-radius: 0 20px 20px 0;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 80px 40px 260px 30px 260px 52px 0 minmax(0, 1fr);
   }
 
   .quote__text {
-    width: 400px;
-    padding: 40px 55px 20px 0px;
-    margin-left: 30px;
+    position: relative;
+    padding: 40px 40px 20px 0px;
+    margin-left: 0;
     margin-right: 0;
+    grid-column: 5/7;
+    border-left: 0;
+    border-right: 20px solid var(--color-brand-2);
+    border-radius: 0 20px 20px 0;
+  }
+
+  .quote__text:before {
+    content: "";
+    z-index: -1;
+    width: 75vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -75vw;
+    background-color: #F1F8FA;
   }
 
   .quote__text blockquote p {
@@ -8015,6 +8016,7 @@ address p {
   .quote__img {
     position: static;
     margin-left: 0;
+    grid-column: 3/5;
   }
 
   .quote__img img {
@@ -8858,6 +8860,10 @@ address p {
     width: auto;
   }
 
+  .footer__legal {
+    gap: 0 45px;
+  }
+
   .list.list--services {
     font-size: 20px;
     line-height: normal;
@@ -8938,12 +8944,12 @@ address p {
   }
 
   .quote {
+    grid-template-columns: minmax(0, 1fr) 80px 40px 320px 60px 230px 52px 0 minmax(0, 1fr);
     margin-right: 100px;
-    margin-left: auto;
   }
 
   .quote__text {
-    margin-left: 60px;
+    grid-column: 6/8;
   }
 }
 
@@ -9343,11 +9349,12 @@ address p {
   }
 
   .footer__legal {
-    display: flex;
+    padding: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
     grid-area: 3/2/4/4;
+    height: 100% !important;
   }
 
   .footer__logo {
@@ -10302,6 +10309,7 @@ address p {
   }
 
   .quote {
+    grid-template-columns: minmax(0, 1fr) 240px 420px 60px minmax(0, 1fr);
     margin-right: auto;
     margin-left: auto;
   }
@@ -10314,14 +10322,8 @@ address p {
   }
 
   .quote__text:before {
-    content: "";
-    z-index: -1;
-    width: 50vw;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -50vw;
-    background-color: #F1F8FA;
+    left: -75vw;
+    width: 75vw;
   }
 
   .quote__text blockquote p {
