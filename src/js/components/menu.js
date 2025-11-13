@@ -1,5 +1,3 @@
-import { throttle } from '../helpers.js';
-
 export const menu = (() => {
   const init = () => {
     const body = document.body;
@@ -16,6 +14,21 @@ export const menu = (() => {
     const isTablet = window.matchMedia('(min-width: 768px) and (max-width: 1439px)').matches;
     const isDesktop = window.matchMedia('(min-width: 1440px)').matches;
 
+    const closeAllMenus = () => {
+      menuToggles.forEach((b) => b.classList.remove('active'));
+      allContents.forEach((c) => c.classList.remove('active'));
+      headerInner.classList.remove('active');
+      headerMenu.classList.remove('active');
+      body.classList.remove('menu-active');
+      activeButton = null;
+    };
+
+    const handleClickOutside = (event) => {
+      if (!headerMenu.contains(event.target)) {
+        closeAllMenus();
+      }
+    };
+
     if (isTablet) {
       headerMenuToggles.forEach((btn) => {
         btn.addEventListener('click', (event) => {
@@ -25,22 +38,15 @@ export const menu = (() => {
     }
 
     menuToggles.forEach((btn) => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (event) => {
+        event.stopPropagation();
         const target = btn.dataset.collapseTarget;
         const content = document.querySelector(
           `.header__menu-content[data-collapse-content="${target}"]`
         );
 
         if (activeButton === btn) {
-          btn.classList.remove('active');
-          if (isDesktop) {
-            headerInner.classList.remove('active');
-            headerMenu.classList.remove('active');
-          }
-
-          allContents.forEach((c) => c.classList.remove('active'));
-          activeButton = null;
-          // body.classList.remove('menu-active');
+          closeAllMenus();
           return;
         } else {
           body.classList.add('menu-active');
@@ -60,15 +66,7 @@ export const menu = (() => {
       });
     });
 
-    // const onResize = throttle(() => {
-    //   headerInner.classList.remove('active');
-    //   headerMenu.classList.remove('active');
-    //   menuToggles.forEach((b) => b.classList.remove('active'));
-    //   allContents.forEach((c) => c.classList.remove('active'));
-    //   activeButton = null;
-    // }, 200);
-
-    // window.addEventListener('resize', onResize);
+    document.addEventListener('click', handleClickOutside);
   };
 
   return { init };

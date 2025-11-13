@@ -1,5 +1,3 @@
-import { throttle } from '../helpers.js';
-
 export const headerToggle = (() => {
   const init = () => {
     const menuInners = document.querySelectorAll('.header__menu-desktop');

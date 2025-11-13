@@ -1,5 +1,3 @@
-import { throttle } from '../helpers.js';
-
 export const toggle = (() => {
   const init = () => {
     const collapseLinks = document.querySelectorAll('[data-collapse-target]');
@@ -28,15 +26,6 @@ export const toggle = (() => {
         });
       });
     });
-
-    // const onResize = throttle(() => {
-    //   document.querySelectorAll('[data-collapse-content].active').forEach(hideElement);
-    //   document
-    //     .querySelectorAll('[data-collapse-target].active')
-    //     .forEach((btn) => btn.classList.remove('active'));
-    // }, 200);
-
-    // window.addEventListener('resize', onResize);
   };
 
   function showElement(element, delay = 0) {
@@ -55,7 +44,7 @@ export const toggle = (() => {
       const allContents = document.querySelectorAll('.header__nav-content');
       const navToggles = document.querySelectorAll('.header__nav-toggle');
 
-      // menuToggles.forEach((c) => c.classList.remove('active'));
+      menuToggles.forEach((c) => c.classList.remove('active'));
       allContents.forEach((c) => c.classList.remove('active'));
       navToggles.forEach((c) => c.classList.remove('inactive'));
       navToggles.forEach((c) => c.classList.remove('active'));

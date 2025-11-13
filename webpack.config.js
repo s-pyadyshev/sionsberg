@@ -1,14 +1,15 @@
-import path from "path";
-import { fileURLToPath } from "url";
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default {
-  entry: "./src/js/main.js",
+  mode: 'production',
+  entry: './src/js/main.js',
   output: {
-    path: path.resolve(__dirname, "build/js"),
-    filename: "[name].js",
+    path: path.resolve(__dirname, 'build/js'),
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -16,44 +17,39 @@ export default {
         test: /\.js$/,
         exclude: /[\\/]node_modules[\\/]/,
         use: {
-          loader: "babel-loader",
-        },
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
-          "style-loader",
-          "css-loader",
+          'style-loader',
+          'css-loader',
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
               sassOptions: {
-                silenceDeprecations: [
-                  "mixed-decls",
-                  "color-functions",
-                  "global-builtin",
-                  "import",
-                ],
-              },
-            },
-          },
-        ],
-      },
-    ],
+                silenceDeprecations: ['mixed-decls', 'color-functions', 'global-builtin', 'import']
+              }
+            }
+          }
+        ]
+      }
+    ]
   },
   resolve: {
-    extensions: [".js"],
+    extensions: ['.js']
   },
   optimization: {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          chunks: "initial",
-          name: "vendor",
+          chunks: 'initial',
+          name: 'vendor',
           test: /[\\/]node_modules[\\/]/,
-          enforce: true,
-        },
-      },
-    },
-  },
+          enforce: true
+        }
+      }
+    }
+  }
 };
